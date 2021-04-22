@@ -1,3 +1,3 @@
 # alowree.github.io
 
-This is the Github repository for my blog saved under /d/bsite crated by Hexo on my local PC. 
+This is a Github repository for my blog saved under /d/bsite as created by Hexo on my personal PC. 
