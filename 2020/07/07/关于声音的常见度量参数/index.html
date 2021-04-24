@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"alowree.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":5,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="声压，声强和声功率声压 Sound Pressure声压，$p$，就是大气压受到声波扰动后产生的压强变化，它相当于在标准的大气压强上叠加了一个声波扰动之后，所引起的压强变化。也就是说，空气中有声场时的压强 $p_s$ 与没有声场时的压强 $p_0$ 之差即为声压。 声压的单位是帕斯卡，$Pa$，声压的参考值是 $20\mu Pa$，这个数值表示人耳在 $4000Hz$ 处的平均可听阀值，换句话说，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于声音的常见度量参数">
+<meta property="og:url" content="https://alowree.github.io/2020/07/07/%E5%85%B3%E4%BA%8E%E5%A3%B0%E9%9F%B3%E7%9A%84%E5%B8%B8%E8%A7%81%E5%BA%A6%E9%87%8F%E5%8F%82%E6%95%B0/index.html">
+<meta property="og:site_name" content="MaraPython">
+<meta property="og:description" content="声压，声强和声功率声压 Sound Pressure声压，$p$，就是大气压受到声波扰动后产生的压强变化，它相当于在标准的大气压强上叠加了一个声波扰动之后，所引起的压强变化。也就是说，空气中有声场时的压强 $p_s$ 与没有声场时的压强 $p_0$ 之差即为声压。 声压的单位是帕斯卡，$Pa$，声压的参考值是 $20\mu Pa$，这个数值表示人耳在 $4000Hz$ 处的平均可听阀值，换句话说，">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://alowree.github.io/2020/07/07/%E5%85%B3%E4%BA%8E%E5%A3%B0%E9%9F%B3%E7%9A%84%E5%B8%B8%E8%A7%81%E5%BA%A6%E9%87%8F%E5%8F%82%E6%95%B0/%E7%AD%89%E5%93%8D%E5%BA%A6%E6%9B%B2%E7%BA%BF.jpg">
+<meta property="article:published_time" content="2020-07-07T00:28:31.000Z">
+<meta property="article:modified_time" content="2021-04-22T01:38:07.874Z">
+<meta property="article:author" content="Alowree XU">
+<meta property="article:tag" content="分贝">
+<meta property="article:tag" content="声音">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://alowree.github.io/2020/07/07/%E5%85%B3%E4%BA%8E%E5%A3%B0%E9%9F%B3%E7%9A%84%E5%B8%B8%E8%A7%81%E5%BA%A6%E9%87%8F%E5%8F%82%E6%95%B0/%E7%AD%89%E5%93%8D%E5%BA%A6%E6%9B%B2%E7%BA%BF.jpg">
+
+<link rel="canonical" href="https://alowree.github.io/2020/07/07/%E5%85%B3%E4%BA%8E%E5%A3%B0%E9%9F%B3%E7%9A%84%E5%B8%B8%E8%A7%81%E5%BA%A6%E9%87%8F%E5%8F%82%E6%95%B0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>关于声音的常见度量参数 | MaraPython</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">MaraPython</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Marketing Analytics with Python and Marathon</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-guestbook">
+
+    <a href="/guestbook/" rel="section"><i class="fa fa-book fa-fw"></i>留言</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://alowree.github.io/2020/07/07/%E5%85%B3%E4%BA%8E%E5%A3%B0%E9%9F%B3%E7%9A%84%E5%B8%B8%E8%A7%81%E5%BA%A6%E9%87%8F%E5%8F%82%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Alowree XU">
+      <meta itemprop="description" content="涉猎的内容有 Marketing 和 Python">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MaraPython">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          关于声音的常见度量参数
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-07-07 08:28:31" itemprop="dateCreated datePublished" datetime="2020-07-07T08:28:31+08:00">2020-07-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-22 09:38:07" itemprop="dateModified" datetime="2021-04-22T09:38:07+08:00">2021-04-22</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">信号处理</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/07/07/%E5%85%B3%E4%BA%8E%E5%A3%B0%E9%9F%B3%E7%9A%84%E5%B8%B8%E8%A7%81%E5%BA%A6%E9%87%8F%E5%8F%82%E6%95%B0/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/07/%E5%85%B3%E4%BA%8E%E5%A3%B0%E9%9F%B3%E7%9A%84%E5%B8%B8%E8%A7%81%E5%BA%A6%E9%87%8F%E5%8F%82%E6%95%B0/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="声压，声强和声功率"><a href="#声压，声强和声功率" class="headerlink" title="声压，声强和声功率"></a>声压，声强和声功率</h2><h3 id="声压-Sound-Pressure"><a href="#声压-Sound-Pressure" class="headerlink" title="声压 Sound Pressure"></a>声压 Sound Pressure</h3><p><strong>声压</strong>，$p$，就是大气压受到声波扰动后产生的压强变化，它相当于在标准的大气压强上叠加了一个声波扰动之后，所引起的压强变化。也就是说，空气中有声场时的压强 $p_s$ 与没有声场时的压强 $p_0$ 之差即为声压。</p>
+<p>声压的单位是帕斯卡，$Pa$，声压的参考值是 $20\mu Pa$，这个数值表示人耳在 $4000Hz$ 处的平均可听阀值，换句话说，是人耳在 $4000Hz$ 处可被感知的平均最小声压波动值。</p>
+<p><strong>听阀下限</strong>：要注意，我们这里所说的是，年轻、健康的人耳其听觉的声压<strong>阀值下限</strong>大约是 $2\times 10^{-5} N/m^2$，或者说 $20\mu Pa$，低于这个阀值人耳是无法感知的。最低可听声压点大约位于 $4,000Hz$ ，这是一个由分子热运动所造成的物理极限。 国际上一般公认地将这个阀值下限定义为<strong>参考声压</strong>$p_{ref}$。 </p>
+<p><strong>听阀上限</strong>：对正常的人耳来说，当声源产生的有效声压达到了$60Pa$级别的时候，就会感到疼痛。 为什么要使用有效声压$$p_{rms}$$？这是因为，测量的声压是变化的声压$$p_s$$与静压强$$p_0$$之差，声压的变化时正时负，其平均值为零，所以，平均声压不是一个有用的参量。而人耳对瞬时声压波动也没有响应，但对动态声压的均方根值（$RMS$）有响应，且平均响应时间间隔约为$35ms$ 。因此，声压测量的是<strong>有效声压</strong>$p_{rms}$ 。</p>
+<span id="more"></span>
+
+<h3 id="声强-Sound-Intensity"><a href="#声强-Sound-Intensity" class="headerlink" title="声强 Sound Intensity"></a>声强 Sound Intensity</h3><p><strong>声强</strong>，$I$，在物理学中指的是，单位时间内通过垂直于声波传播方向的单位面积的<strong>平均声能</strong>。声强用 $I$ 表示，单位为瓦/平方米 $\left(W/{m^2}\right)$。<br>$$<br>I = \frac{p_{rms}^2}{\rho\cdot c}<br>$$<br>其中</p>
+<ul>
+<li>$\rho$ 是空气密度，单位是千克/立方米 $\left(kg/m^3\right)$</li>
+<li>$c$ 是声音的速度，单位是米/秒 $\left(m/s\right)$</li>
+<li>$ {\rho\cdot c}$ 的乘积被称为<strong>声阻抗</strong>，是界面上平均有效声压对通过该界面的有效体积速度之比，为复值函数，实部对应声阻，虚部对应声抗。声波传播时引起介质振动需要克服阻力，声阻抗越大，则推动介质所需要的声压就越大，声阻抗越小则所需声压就越小。</li>
+</ul>
+<h3 id="声功率-Sound-Power"><a href="#声功率-Sound-Power" class="headerlink" title="声功率 Sound Power"></a>声功率 Sound Power</h3><p><strong>声功率</strong>，$W$，通常是指声源的声功率，是<strong>声源</strong>在单位时间内发射出的<strong>总能量</strong>。声功率不能直接测量，可用声压法或声强法间接测量得到。 $$W = \int A I\cdot n\quad dA$$ 其中，$I$ 是声强， $n$ 是单位向量，点乘 $I\cdot n$ 表示与包围面正交的声强。实际工程实现时，通常使用球面积分法。如果声源是理想状态，向四面八方均匀地进行球面传播，那么上面的公式可以进一步写成: $$W = 4\pi r^2 I$$ 其中，$r$ 是被测球面的半径。 </p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>这一部分，我们按照从“可测量”到“可计算”的逻辑，依次介绍声压，声强和声功率 三个概念。这三个参数的数值都是绝对值，并且可以看出，它们的取值范围数量级跨度比较大。仅以人耳听觉范围来说，从听阀下限 $20\mu Pa$ 至 听阀上限 $60Pa$ ，声压数量级的跨度是$10^6$。人脑的机制并不擅长处理跨度巨大的<strong>线性数值范围</strong>，所以，在实际应用中，人们需要一种新的表述方法来描述这种跨度巨大的动态范围，这就是<strong>分贝</strong>，英文是Decibel，也简写作$dB$。</p>
+<h2 id="分贝-Decibel"><a href="#分贝-Decibel" class="headerlink" title="分贝 Decibel"></a>分贝 Decibel</h2><p><strong>分贝</strong>最初使用是在电信行业，是为了量化长导线传输电报和电话信号时的功率损失而开发出来的。是为了纪念美国电话发明家亚历山大·格雷厄姆·贝尔（Alexander Graham Bell），以他的名字命名的。虽然分贝定义为 1/10 贝尔，但单位“贝尔”（Bel）却很少用。</p>
+<h3 id="分贝的定义"><a href="#分贝的定义" class="headerlink" title="分贝的定义"></a>分贝的定义</h3><p>分贝$dB$ 定义为两个数值比率的对数，这两个数值分别是测量值和参考值（也称为基准值）。在学术界和工程界一般存在两种定义情况。</p>
+<p>一种是<strong>功率之比</strong>的对数：<br>$$<br>1 dB = 10log_{10}\left(\frac{W}{W_{ref}}\right)<br>$$<br>另一种是<strong>幅值平方之比</strong>的对数：<br>$$<br>1 dB = 10log_{10}\left(\frac{X^2}{X^2_{ref}}\right) = 20log_{10}\left(\frac{X}{X_{ref}}\right)<br>$$</p>
+<h3 id="什么时候使用平方的比值？"><a href="#什么时候使用平方的比值？" class="headerlink" title="什么时候使用平方的比值？"></a>什么时候使用平方的比值？</h3><p>度量<strong>功率</strong>的时候，可以直接对功率的比率取对数，那为什么在度量<strong>幅值</strong>的时候，是对幅值平方的比率取对数呢？这是因为，分贝最初是为了量化（长导线传输电报和电话信号时的）<strong>功率损失</strong>而设计出来的，它的标定对象最初就是<strong>功率</strong>。而功率又可以根据物理公式，使用<strong>幅值</strong>标称的参数进行表示，并且功率通常表现为这些个参数的平方。 </p>
+<p>例如，电路的功率：</p>
+<p>$$<br>W = UI = U^2/R = I^2 \cdot R<br>$$<br>其中，电压 $U$ 和电流 $I$ 都是以幅值标称的参数，当以它们两个中的任意一个来表示功率的时候，都需要以自身的平方形式出现。 </p>
+<p>再例如，声学中的声功率：<br>$$<br>W = I \cdot A = \frac{p^2_{rms}}{\rho \cdot c} \cdot A<br>$$<br>其中，声压 $p_{rms}$ 也是以幅值标称的参数，当使用它来表示声功率的时候，也是以自身的平方形式出现。 </p>
+<p>所以，在使用分贝作为相对度量单位的时候，一定要先弄清楚，比较的对象究竟是功率本身还是幅值参数。 </p>
+<p>如果研究对象是<strong>功率</strong>，这时分贝公式为： $$1 dB = 10log_{10}\left(\frac{W}{W_{ref}}\right) $$ </p>
+<p>如果研究对象是<strong>幅值</strong>，这时分贝公式为： $$1 dB = 10log_{10}\left(\frac{X^2}{X^2_{ref}}\right) = 20log_{10}\left(\frac{X}{X_{ref}}\right)$$</p>
+<h3 id="±3dB-±6dB"><a href="#±3dB-±6dB" class="headerlink" title="±3dB? ±6dB?"></a>±3dB? ±6dB?</h3><p>如果研究对象为<strong>功率</strong>，当功率以等比数列（2的倍数）增长，则其以分贝为计量形式的数值，即<strong>功率增益的分贝数</strong>，以等差数列（$3dB$）增长； 如果研究对象为<strong>幅值</strong>，当幅值以等比数列（2的倍数）增长，则其以分贝为计量形式的数值，即<strong>幅值增益的分贝数</strong>，以等差数列（$6dB$）增长。</p>
+<table>
+<thead>
+<tr>
+<th>比率</th>
+<th>比率<br>($2^x$)</th>
+<th>功率增益<br>(dB)</th>
+<th>幅值增益<br>(dB)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0.0009765625</td>
+<td>$2^{ -10}$</td>
+<td>-30</td>
+<td>-60</td>
+</tr>
+<tr>
+<td>0.001953125</td>
+<td>$2^{  -9}$</td>
+<td>-27</td>
+<td>-54</td>
+</tr>
+<tr>
+<td>0.00390625</td>
+<td>$2^{  -8}$</td>
+<td>-24</td>
+<td>-48</td>
+</tr>
+<tr>
+<td>0.0078125</td>
+<td>$2^{  -7}$</td>
+<td>-21</td>
+<td>-42</td>
+</tr>
+<tr>
+<td>0.015625</td>
+<td>$2^{  -6}$</td>
+<td>-18</td>
+<td>-36</td>
+</tr>
+<tr>
+<td>0.03125</td>
+<td>$2^{  -5}$</td>
+<td>-15</td>
+<td>-30</td>
+</tr>
+<tr>
+<td>0.0625</td>
+<td>$2^{  -4}$</td>
+<td>-12</td>
+<td>-24</td>
+</tr>
+<tr>
+<td>0.125</td>
+<td>$2^{  -3}$</td>
+<td>-9</td>
+<td>-18</td>
+</tr>
+<tr>
+<td>0.25</td>
+<td>$2^{  -2}$</td>
+<td>-6</td>
+<td>-12</td>
+</tr>
+<tr>
+<td>0.5</td>
+<td>$2^{  -1}$</td>
+<td>-3</td>
+<td>-6</td>
+</tr>
+<tr>
+<td>1</td>
+<td>$2^{   0}$</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>$2^{   1}$</td>
+<td>3</td>
+<td>6</td>
+</tr>
+<tr>
+<td>4</td>
+<td>$2^{   2}$</td>
+<td>6</td>
+<td>12</td>
+</tr>
+<tr>
+<td>8</td>
+<td>$2^{   3}$</td>
+<td>9</td>
+<td>18</td>
+</tr>
+<tr>
+<td>16</td>
+<td>$2^{   4}$</td>
+<td>12</td>
+<td>24</td>
+</tr>
+<tr>
+<td>32</td>
+<td>$2^{   5}$</td>
+<td>15</td>
+<td>30</td>
+</tr>
+<tr>
+<td>64</td>
+<td>$2^{   6}$</td>
+<td>18</td>
+<td>36</td>
+</tr>
+<tr>
+<td>128</td>
+<td>$2^{   7}$</td>
+<td>21</td>
+<td>42</td>
+</tr>
+<tr>
+<td>256</td>
+<td>$2^{   8}$</td>
+<td>24</td>
+<td>48</td>
+</tr>
+<tr>
+<td>512</td>
+<td>$2^{   9}$</td>
+<td>27</td>
+<td>54</td>
+</tr>
+<tr>
+<td>1024</td>
+<td>$2^{  10}$</td>
+<td>30</td>
+<td>60</td>
+</tr>
+</tbody></table>
+<p>分贝，在本质上是一种<strong>对数化</strong>的计量方法。有了分贝这种计量方法，我们可以将数量级跨度较大的等比数列，转化为数量级跨度稍小的等差数列。由上面例子我们可以看到，<strong>功率</strong>从 $2^{-10}$ 至 $2^{10}$ 这样远超亿万级别的一个跨度，转化成分贝表示后，其跨度仅为 $60dB$；<strong>幅值</strong>从 $2^{-10}$ 至 $2^{10}$ 这样远超亿万级别的一个跨度，转化成分贝表示后，其跨度也仅为 $120dB$。在处理跨数量级的数字范围时，显然使用分贝这种计量方法更为方便。</p>
+<h2 id="声功率级，声强级和声压级"><a href="#声功率级，声强级和声压级" class="headerlink" title="声功率级，声强级和声压级"></a>声功率级，声强级和声压级</h2><p>真正理解了关于分贝的基础知识，我们回过头来再看如何使用分贝表示声功率、声强、以及声压，就是非常简单的一件事情了。</p>
+<h3 id="声功率级-Sound-Power-Level"><a href="#声功率级-Sound-Power-Level" class="headerlink" title="声功率级 Sound Power Level"></a>声功率级 Sound Power Level</h3><p><strong>声功率级</strong>，$L_W$，可以定义如下：<br>$$<br>L_W = 10log_{10}\frac{sound;power}{reference;power}\quad(dB)<br>$$<br>一般地，国际公认的<strong>参考声功率</strong>是 $10^{-12};W$，这样，上面的公式可以进一步写成：<br>$$<br>L_W = 10log_{10}W + 120 \quad(dB)<br>$$<br>其中，功率，$W$，单位是瓦。 </p>
+<p>为什么将<strong>参考声功率</strong>设定为 $10^{-12};W$ 呢？因为这是我们可以进行测量的最安静的声音所对应的功率数量级别。</p>
+<h3 id="声强级-Sound-Intensity-Level"><a href="#声强级-Sound-Intensity-Level" class="headerlink" title="声强级 Sound Intensity Level"></a>声强级 Sound Intensity Level</h3><p><strong>声强级</strong>，$L_I$，可以定义如下：<br>$$<br>L_I = 10log_{10}\frac{sound;intensity}{ref.;sound;intensity}\quad(dB)<br>$$<br>一般地，国际公认的参考声强是 $10^{-12}\quad W/m^2$，这样，上面的公式可以进一步写成：<br>$$<br>L_I = 10log_{10}I + 120 \quad(dB)<br>$$</p>
+<h3 id="声压级-Sound-Pressure-Level"><a href="#声压级-Sound-Pressure-Level" class="headerlink" title="声压级 Sound Pressure Level"></a>声压级 Sound Pressure Level</h3><p><strong>声压级</strong>，$L_p$，按照上文中介绍的第二种分贝的定义形式，可以写成：<br>$$<br>L_p = 10log_{10} \frac{p^2_{rms}}{p^2_{ref}}\quad(dB)<br>$$<br>对于任意的声音信号，假设其有效声压记作 $$p_{rms}$$，则根据下面公式，我们可以说：相对于参考声压 $p_{ref}$ ，其声压级是 $$L_p$$ 分贝 $(dB)$。<br>$$<br>\begin{align}<br>L_p &amp;= 10log_{10} \frac{p^2_{rms}}{p^2_{ref}}\<br>&amp;= 20log_{10} \frac{p_{rms}}{p_{ref}}\<br>&amp;= 20log_{10}p_{rms} -;20log_{10}p_{ref}\<br>&amp;= 20log_{10}p_{rms} +;94\quad(dB)<br>\end{align}<br>$$<br>由公式可以看得出来，有效声压 $p_{rms}$将以$1P_a$作为分界点：</p>
+<ul>
+<li><p>当$p_{rms} \geq 1P_a$时，声压级 $L_p$ 将从94分贝的位置往上递增，一直去到痛阀，$130dB$或者更高；</p>
+</li>
+<li><p>当$p_{rms} \leq 1P_a$时，声压级 $L_p$ 将从94分贝的位置向下递减，一直去到人耳的听阀下限，$0dB$。</p>
+</li>
+</ul>
+<h3 id="常见的声音测量工具"><a href="#常见的声音测量工具" class="headerlink" title="常见的声音测量工具"></a>常见的声音测量工具</h3><ul>
+<li>  传统的声压计 Sound Level Meter</li>
+<li>  智能手机配合下载的 App</li>
+</ul>
+<h3 id="声压水平-声压-声强之对照表"><a href="#声压水平-声压-声强之对照表" class="headerlink" title="声压水平 - 声压 - 声强之对照表"></a>声压水平 - 声压 - 声强之对照表</h3><p>一个标准大气压约等于 $101.3 \times 10^3 Pa$，即 $10^5 Pa$ ，而人耳的<strong>听阀下限</strong> 约为$20\mu Pa$ ，经过换算，这个听阀下限大约等于 $2 \times 10^{-10}$ 个大气压。 与此相对，人耳的<strong>听阀上限</strong>大约是 $60Pa$ 或者 $6 \times 10^{-4}$ 个大气压，声压超过这个上限，人耳会感觉到疼痛。</p>
+<table>
+<thead>
+<tr>
+<th>声源实例<br>附加距离信息</th>
+<th>声压水平 $L_p$<br>($dB$ SPL)​</th>
+<th>声压 $p_{rms}$<br>$(Pa)$</th>
+<th>声强 $I$<br>$(W/m^2)$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>喷气式飞机，50米</td>
+<td>140</td>
+<td>200</td>
+<td>10</td>
+</tr>
+<tr>
+<td>疼痛阀值</td>
+<td>130</td>
+<td>63.2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>感觉不适阀值</td>
+<td>120</td>
+<td>20</td>
+<td>0.1</td>
+</tr>
+<tr>
+<td>电锯，1米</td>
+<td>110</td>
+<td>6.3</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>迪斯科舞厅，距离音响1米</td>
+<td>100</td>
+<td>2</td>
+<td>0.001</td>
+</tr>
+<tr>
+<td>柴油卡车，10米</td>
+<td>90</td>
+<td>0.63</td>
+<td>0.0001</td>
+</tr>
+<tr>
+<td>繁忙公路的路边，5米</td>
+<td>80</td>
+<td>0.2</td>
+<td>0.000 01</td>
+</tr>
+<tr>
+<td>真空吸尘器，1米</td>
+<td>70</td>
+<td>0.063</td>
+<td>0.000 001</td>
+</tr>
+<tr>
+<td>正常对话，1米</td>
+<td>60</td>
+<td>0.02</td>
+<td>0.000 000 1</td>
+</tr>
+<tr>
+<td>一般的家庭</td>
+<td>50</td>
+<td>0.0063</td>
+<td>0.000 000 1</td>
+</tr>
+<tr>
+<td>安静的图书馆</td>
+<td>40</td>
+<td>0.002</td>
+<td>0.000 000 01</td>
+</tr>
+<tr>
+<td>夜间安静的卧室</td>
+<td>30</td>
+<td>0.000 63</td>
+<td>0.000 000 001</td>
+</tr>
+<tr>
+<td>演播室背景</td>
+<td>20</td>
+<td>0.000 2</td>
+<td>0.000 000 000 1</td>
+</tr>
+<tr>
+<td>远处树叶的唦唦声</td>
+<td>10</td>
+<td>0.000 063</td>
+<td>0.000 000 000 01</td>
+</tr>
+<tr>
+<td>听阀下限</td>
+<td>0</td>
+<td>0.000 02</td>
+<td>0.000 000 000 001</td>
+</tr>
+</tbody></table>
+<h2 id="从声学到心理声学"><a href="#从声学到心理声学" class="headerlink" title="从声学到心理声学"></a>从声学到心理声学</h2><p>正常人的听觉系统是极为灵敏的，人耳所能感觉的最低声压接近空气分子热运动产生的声压。一般来说，声音从右耳传至左大脑的速度比较快，声音从左耳传至右大脑的速度比较慢。即两耳传递速度不同。或者说，左大脑接收右耳传来的声音要快些，右大脑接收左耳传来的声音要慢些。至于接收语音的情况，两耳也有所不同，但它们辨听元音的能力大体一致。对于辅音，右耳比左耳强一些；听音调也是右耳较有优势。正常人可听声音的频率范围为$16Hz$~$16kHz$，年轻人可听到$20kHz$的声音，而老年人可听到的高频声音要减少到$10kHz$左右。 人类听觉器官对声波的音高、音强、声波的动态频谱具有分析感知能力。人耳对声音的强度和频率的主观感觉，是从响度及音调来体现的。 声压和声强都是客观物理量，声压越高，声音越强；声压越低，声音越弱，但是它们不能完全反映人耳对声音的感觉特性。 人耳对声音的感觉，不仅和声压有关，也和频率有关。一般对高频声音感觉灵敏，对低频声音感觉迟钝，声压级相同而频率不同的声音听起来可能不一样响。为了既考虑到声音的物理量效应，又考虑到声音对人耳听觉的生理效应，把声音的强度和频率用一个量统一起来，人们仿照声压级引出了一个响度级的概念。</p>
+<h3 id="响度级-Loudness-Level"><a href="#响度级-Loudness-Level" class="headerlink" title="响度级 Loudness Level"></a>响度级 Loudness Level</h3><p><strong>响度级</strong>，按人耳对声音的感觉特性，依据声压和频率定出人对声音的主观音响感觉量，称为响度级。取$1000Hz$的纯音作为参考，它的响度级就是它的声压级。举例来说，取$1000Hz$的纯音作为参考，如果它的声压级是$40dB$，它对应的响度级就是40方，如果它的声压级是$60dB$，那响度级就是60方。 方，$Phon$，响度级的单位，是响度的<strong>客观单位</strong>。简单来说，因为响度是一个主观感受量，并且会随频率不同被人耳感知程度不同，所以，将一个声音在$1000Hz$的声压数值，作为该声音响度的<strong>客观度量</strong>。</p>
+<h3 id="响度-Loudness"><a href="#响度-Loudness" class="headerlink" title="响度 Loudness"></a>响度 Loudness</h3><p><strong>响度</strong>，听觉判断声音强弱的属性，声音的强弱叫做响度。响度是人<strong>主观感觉</strong>判断的声音强弱，即声音响亮的程度，根据它可以把声音排成由轻到响的序列。如果一个$1000Hz$的纯音的响度级为 $L$ 方，那么它的<strong>响度</strong>可以表示为： $$N = 2^{(L - 40)/10}$$ </p>
+<p>宋，$Sone$，响度的单位。 举例来说，如果我们仍然选用$1000Hz$的纯音作为研究对象，其响度级和响度的对应关系如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th>响度级<br>客观单位：方</th>
+<th>响度<br>主观单位：宋</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>30</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>40</td>
+<td>1</td>
+</tr>
+<tr>
+<td>50</td>
+<td>2</td>
+</tr>
+<tr>
+<td>60</td>
+<td>4</td>
+</tr>
+<tr>
+<td>70</td>
+<td>8</td>
+</tr>
+</tbody></table>
+<p>这表示响度级每增加10方（$10Phon$），响度增加一倍；响度级每减小10方（$10Phon$），响度减小一半。这样的主观量与客观量之间的幂函数关系，在人对外界刺激的感知中是普遍存在的。这张对照表大约是在表示，响度级或者声压级客观上加/减$10dB$，人们主观听觉到的响度就会翻倍/减半。</p>
+<h3 id="声音度量之比率变化对比表"><a href="#声音度量之比率变化对比表" class="headerlink" title="声音度量之比率变化对比表"></a>声音度量之比率变化对比表</h3><p>主观的感知响度（音量），客观的测量声压（电压），以及理论上计算出来的声强（声功率），多少分贝（dB）的变化对应该度量指标的加倍，减半或四倍变化？ 下面列出了所有不同的比率对照表，这里的“比率”表示声音的度量指标翻了多少倍。   </p>
+<table>
+<thead>
+<tr>
+<th>Level Change</th>
+<th>Volume Loudness</th>
+<th>Voltage<br>Sound Pressure</th>
+<th>Acoustic Power<br>Sound Intensity</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>+60 dB</td>
+<td>64</td>
+<td>1 000</td>
+<td>1 000 000</td>
+</tr>
+<tr>
+<td>+50 dB</td>
+<td>32</td>
+<td>316</td>
+<td>100 000</td>
+</tr>
+<tr>
+<td>+40 dB</td>
+<td>16</td>
+<td>100</td>
+<td>10 000</td>
+</tr>
+<tr>
+<td>+30 dB</td>
+<td>8</td>
+<td>31.6</td>
+<td>1 000</td>
+</tr>
+<tr>
+<td>+20 dB</td>
+<td>4</td>
+<td>10</td>
+<td>100</td>
+</tr>
+<tr>
+<td><strong>+10 dB</strong></td>
+<td>2.0 = double</td>
+<td>3.16 = $\sqrt{10}$</td>
+<td><strong>10</strong></td>
+</tr>
+<tr>
+<td>+6 dB</td>
+<td>1.52 times</td>
+<td>2.0 = double</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>+3 dB</td>
+<td>1.23 times</td>
+<td>1.414 times = $\sqrt{2}$</td>
+<td>2.0 = double</td>
+</tr>
+<tr>
+<td><strong>- - - -</strong> ±0 dB <strong>- - - -</strong></td>
+<td><strong>- - - -</strong> 1.0 <strong>- - - - -</strong></td>
+<td><strong>- - - -</strong> 1.0 <strong>- - - - -</strong></td>
+<td><strong>- - – -</strong> 1.0 <strong>- - - -</strong></td>
+</tr>
+<tr>
+<td>−3 dB</td>
+<td>0.816 times</td>
+<td>0.707 times</td>
+<td>0.5 = half</td>
+</tr>
+<tr>
+<td>−6 dB</td>
+<td>0.660 times</td>
+<td>0.5 = half</td>
+<td>0.25</td>
+</tr>
+<tr>
+<td><strong>−10 dB</strong></td>
+<td>0.5 = half</td>
+<td>0.316</td>
+<td>0.1</td>
+</tr>
+<tr>
+<td>−20 dB</td>
+<td>1/4 = 0.25</td>
+<td>0.100</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>−30 dB</td>
+<td>1/8 = 0.125</td>
+<td>0.031 6</td>
+<td>0.001</td>
+</tr>
+<tr>
+<td>−40 dB</td>
+<td>1/16 = 0.062 5</td>
+<td>0.010 0</td>
+<td>0.000 1</td>
+</tr>
+<tr>
+<td>−50 dB</td>
+<td>1/32 = 0.031 2</td>
+<td>0.003 2</td>
+<td>0.000 01</td>
+</tr>
+<tr>
+<td>−60 dB</td>
+<td>1/64 = 0.015 6</td>
+<td>0.001 0</td>
+<td>0.000 001</td>
+</tr>
+<tr>
+<td><strong>Log. size</strong></td>
+<td><strong>Psycho size</strong></td>
+<td><strong>Field size</strong></td>
+<td><strong>Energy size</strong></td>
+</tr>
+<tr>
+<td><strong>dB change</strong></td>
+<td><strong>Loudness multipl.</strong></td>
+<td><strong>Amplitude multiplier</strong></td>
+<td><strong>Power multiplier</strong></td>
+</tr>
+</tbody></table>
+<p>响度（音量）的加倍或减半对应的声级变化究竟是$10 dB$还是$6 dB$呢？关于声级和响度之间的联系，学界有各种理论。得到广泛传播的是心理声学先驱史丹利·史密斯·史蒂文斯（Stanley Smith Stevens）的理论，它指出，感知响度的加倍或减半对应$10 dB$的声级差别。理查德·M·沃伦（Richard M. Warren）在上世纪70年代的研究则指出，这个声级差别仅为$6dB$。这意味着声压的翻倍相当于响度的翻倍。心理学家约翰·诺伊霍夫（John G. Neuhoff）发现，与声音下降相比，我们的听力对声音上升更为敏感。对于相同的声级差异，从安静到响亮的响度变化，要比从响亮到安静更为强烈一些。以宋为单位的响度度量方法，反映了已知实验偏差的影响，所以并不能表示刺激和感觉之间的一种基本关系。当消除已知的实验偏差时，响度减半对应于声压水平的减半（$-6 dB$）。因此，确定音量（响度）不应该固守教条上的定义，而应采取更贴近现实的主张：感知音量（响度）的加倍大致等效于声压级$6 dB - 10 dB$的变化。</p>
+<h3 id="等响度曲线"><a href="#等响度曲线" class="headerlink" title="等响度曲线"></a>等响度曲线</h3><p>使用等响实验方法，可以得到一族不同频率、不同声压级的等响度曲线。实验时用$1000Hz$的某一强度（例如$40dB$）的声音为基准，用人耳试听的办法与其它频率（例如$100Hz$）声音进行比较，调节此声音的声压级，使它与$1000Hz$声音听起来响度相同，记下此频率的声压级（例如$50dB$）。再用其它频率试验并记下它们与$1000Hz$声音响度相等的声压级，将这些数据画在坐标上，就得到一条与$1000Hz$、$40dB$声压级等响的曲线。这条曲线用$1000Hz$时的声压级数值来表示它们的响度级值，单位为方，这里就是40方。同样以$1000Hz$其它声压级的声音为基准，进行不同频率的响度比较，可以得出其它的等响度曲线。经过大量试验得到的并由国际标准化组织（ISO）推荐为标准的等响度曲线示于图。 </p>
+<img src="/2020/07/07/%E5%85%B3%E4%BA%8E%E5%A3%B0%E9%9F%B3%E7%9A%84%E5%B8%B8%E8%A7%81%E5%BA%A6%E9%87%8F%E5%8F%82%E6%95%B0/%E7%AD%89%E5%93%8D%E5%BA%A6%E6%9B%B2%E7%BA%BF.jpg" class="">
+
+<h3 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h3><p>严格来讲，术语“响度 Loudness”或“音量 Volume”都属于有问题的说法，因为它们都属于心理声学的范畴，而这种个人感觉通常是无法准确定义的。响度，其实可以理解为一种客观物理指标（振幅）的心理关联或者心理映射，除了声压以外，还受其他的参数影响，包括频率，带宽，频谱组成，信息内容，时间结构以及声音信号的持续时间。相同的声音信号所产生的感知响度，不会人人相同，而是因人而异。所以，在科学界或者工程界，交流时应该尽量避免使用心理声学的术语，例如感知响度（Loudness Perception）或者音量（Volume），因为这种主观的声音感觉常常是无法清晰测量的，容易引起歧义。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>[1]Colin H Hansen: <a target="_blank" rel="noopener" href="https://www.who.int/occupational_health/publications/noise1.pdf">FUNDAMENTALS OF ACOUSTICS</a> </p>
+<p>[2]Chris Parker-Jones: <a target="_blank" rel="noopener" href="https://www.parkerjonesacoustics.com/insights/articles/sound-pressure-sound-power">Sound Pressure and Sound Power - what’s the difference?</a> </p>
+<p>[3]thegeeke: <a target="_blank" rel="noopener" href="https://www.instructables.com/id/The-Concept-Of-Sound-Pressure-SPL/">The Concept of Sound Pressure (SPL)</a> </p>
+<p>[4]谭祥军：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzI5NTM0MTQwNA==&mid=2247485338&idx=1&sn=741701e666506ec58d1b0ea311d70800&chksm=ec545ba9db23d2bf1e363e2e25e5a771e368507d9d1b6494264c1dc407b22d25c82b36315e7b&scene=21#wechat_redirect">什么是声波？</a> </p>
+<p>[5]《语音信号处理（第3版）》，韩纪庆，张磊，郑铁然 编著，清华大学出版社，2019-5，ISBN 978-7-302-51760-3 [6]sengpielaudio.com: <a target="_blank" rel="noopener" href="http://www.sengpielaudio.com/TableOfSoundPressureLevels.htm">Decibel Table − SPL − Loudness Comparison Chart</a> </p>
+<p>[7]shaniadolphin: <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/25f0139637b7">markdown中公式编辑教程</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%88%86%E8%B4%9D/" rel="tag"># 分贝</a>
+              <a href="/tags/%E5%A3%B0%E9%9F%B3/" rel="tag"># 声音</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/01/14/Soundfreaq%E5%93%81%E7%89%8C%E7%AE%80%E4%BB%8B/" rel="next" title="Soundfreaq品牌简介">
+      Soundfreaq品牌简介 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A3%B0%E5%8E%8B%EF%BC%8C%E5%A3%B0%E5%BC%BA%E5%92%8C%E5%A3%B0%E5%8A%9F%E7%8E%87"><span class="nav-number">1.</span> <span class="nav-text">声压，声强和声功率</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A3%B0%E5%8E%8B-Sound-Pressure"><span class="nav-number">1.1.</span> <span class="nav-text">声压 Sound Pressure</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A3%B0%E5%BC%BA-Sound-Intensity"><span class="nav-number">1.2.</span> <span class="nav-text">声强 Sound Intensity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A3%B0%E5%8A%9F%E7%8E%87-Sound-Power"><span class="nav-number">1.3.</span> <span class="nav-text">声功率 Sound Power</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%8F%E7%BB%93"><span class="nav-number">1.4.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E8%B4%9D-Decibel"><span class="nav-number">2.</span> <span class="nav-text">分贝 Decibel</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E8%B4%9D%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">2.1.</span> <span class="nav-text">分贝的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E4%BD%BF%E7%94%A8%E5%B9%B3%E6%96%B9%E7%9A%84%E6%AF%94%E5%80%BC%EF%BC%9F"><span class="nav-number">2.2.</span> <span class="nav-text">什么时候使用平方的比值？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%C2%B13dB-%C2%B16dB"><span class="nav-number">2.3.</span> <span class="nav-text">±3dB? ±6dB?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A3%B0%E5%8A%9F%E7%8E%87%E7%BA%A7%EF%BC%8C%E5%A3%B0%E5%BC%BA%E7%BA%A7%E5%92%8C%E5%A3%B0%E5%8E%8B%E7%BA%A7"><span class="nav-number">3.</span> <span class="nav-text">声功率级，声强级和声压级</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A3%B0%E5%8A%9F%E7%8E%87%E7%BA%A7-Sound-Power-Level"><span class="nav-number">3.1.</span> <span class="nav-text">声功率级 Sound Power Level</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A3%B0%E5%BC%BA%E7%BA%A7-Sound-Intensity-Level"><span class="nav-number">3.2.</span> <span class="nav-text">声强级 Sound Intensity Level</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A3%B0%E5%8E%8B%E7%BA%A7-Sound-Pressure-Level"><span class="nav-number">3.3.</span> <span class="nav-text">声压级 Sound Pressure Level</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E5%A3%B0%E9%9F%B3%E6%B5%8B%E9%87%8F%E5%B7%A5%E5%85%B7"><span class="nav-number">3.4.</span> <span class="nav-text">常见的声音测量工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A3%B0%E5%8E%8B%E6%B0%B4%E5%B9%B3-%E5%A3%B0%E5%8E%8B-%E5%A3%B0%E5%BC%BA%E4%B9%8B%E5%AF%B9%E7%85%A7%E8%A1%A8"><span class="nav-number">3.5.</span> <span class="nav-text">声压水平 - 声压 - 声强之对照表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E5%A3%B0%E5%AD%A6%E5%88%B0%E5%BF%83%E7%90%86%E5%A3%B0%E5%AD%A6"><span class="nav-number">4.</span> <span class="nav-text">从声学到心理声学</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%93%8D%E5%BA%A6%E7%BA%A7-Loudness-Level"><span class="nav-number">4.1.</span> <span class="nav-text">响度级 Loudness Level</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%93%8D%E5%BA%A6-Loudness"><span class="nav-number">4.2.</span> <span class="nav-text">响度 Loudness</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A3%B0%E9%9F%B3%E5%BA%A6%E9%87%8F%E4%B9%8B%E6%AF%94%E7%8E%87%E5%8F%98%E5%8C%96%E5%AF%B9%E6%AF%94%E8%A1%A8"><span class="nav-number">4.3.</span> <span class="nav-text">声音度量之比率变化对比表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AD%89%E5%93%8D%E5%BA%A6%E6%9B%B2%E7%BA%BF"><span class="nav-number">4.4.</span> <span class="nav-text">等响度曲线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%8F%E7%BB%93-1"><span class="nav-number">4.5.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Alowree XU"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Alowree XU</p>
+  <div class="site-description" itemprop="description">涉猎的内容有 Marketing 和 Python</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Alowree XU</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'neutral',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'kr9Smll5Vl7bbMpMaJew7FbN-gzGzoHsz',
+      appKey     : 'n5YBFhzkMELoLWfcgtEY6uG6',
+      placeholder: "心里有什么想法，赶快来吐槽吧",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+    </div>
+</body>
+</html>
