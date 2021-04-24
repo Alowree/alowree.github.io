@@ -364,7 +364,6 @@
           <p>文件，就是计算机中由操作系统管理的具有名字的存储区域。内置<code>open()</code>函数会创建一个Python文件对象，可以作为计算机上的一个文件链接。与我们目前见过的类型相比，文件对象多少有点不寻常，它们不是数字、序列、也不是映射。</p>
 <h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><p>在 Python 中，如果想要操作文件，首先需要创建或者打开指定的文件，并创建一个文件对象，而这些工作可以通过内置的 <code>open()</code> 函数实现。</p>
 <h3 id="完整语法格式："><a href="#完整语法格式：" class="headerlink" title="完整语法格式："></a>完整语法格式：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(file_name [, mode=<span class="string">&#x27;r&#x27;</span> [ , buffering=-<span class="number">1</span> [ , encoding = <span class="literal">None</span> ]]])</span><br></pre></td></tr></table></figure>
-
 <p>此格式中，用 <code>[]</code> 括起来的部分为可选参数，即可以使用也可以省略。其中，各个参数所代表的含义如下： </p>
 <ul>
 <li><code>file</code>：表示要创建的文件对象。 </li>
@@ -468,46 +467,37 @@
 
       
           <h2 id="关于Soundfreaq"><a href="#关于Soundfreaq" class="headerlink" title="关于Soundfreaq"></a>关于Soundfreaq</h2><img src="/2021/01/14/Soundfreaq%E5%93%81%E7%89%8C%E7%AE%80%E4%BB%8B/Soundfreaq-logo_1500x1500.jpg" class="">
-
 <p>Soundfreaq是一个在欧洲和北美市场运营了10年的年轻音响品牌，在零售渠道和星级连锁酒店渠道都有相当的知名度和美誉度。 音乐是我们每个人的生活中必不可少的一个组成部分。没有了音乐，生活会失色不少。而好的音响设备会将欣赏音乐的欢愉情感体验成倍地提升。 </p>
 <p>市场上很多音箱，包括一些语音助手音箱，并不适合用来欣赏和享受音乐。对于敏感细腻、讲究品质、追求细节的人来讲，某些音响设备根本无法接受。 在Soundfreaq，音质永远是第一位的。我们是热爱音乐的发烧友，我们是秉承工匠精神的设计师，我们是探索声音的工程师，我们是长期主义者，执着于品质和细节，只为把握最原始和最纯真的声音。</p>
 <h2 id="Soundfreaq口碑"><a href="#Soundfreaq口碑" class="headerlink" title="Soundfreaq口碑"></a>Soundfreaq口碑</h2><img src="/2021/01/14/Soundfreaq%E5%93%81%E7%89%8C%E7%AE%80%E4%BB%8B/maclife_logo.png" class="">
-
 <blockquote>
 <p>对于我们的耳朵来说，SOUNDFREAQ听起来棒极了，对于那么小尺寸的产品来说，非常优秀的低频表现。对于我们的耳朵来说，SOUNDFREAQ听起来棒极了，对于那么小尺寸的产品来说，非常优秀的低频表现。</p>
 </blockquote>
 <img src="/2021/01/14/Soundfreaq%E5%93%81%E7%89%8C%E7%AE%80%E4%BB%8B/Ilounge_Logo.png" class="">
-
 <blockquote>
 <p>Sound Step Recharge整体为说是一件很棒的产品：它提供了可靠的音质和一些创新性的设计，真正是一款支持iPad的产品。 </p>
 </blockquote>
 <img src="/2021/01/14/Soundfreaq%E5%93%81%E7%89%8C%E7%AE%80%E4%BB%8B/Engadget_Logo_old_full.png" class="">
-
 <blockquote>
 <p>典范地演绎了“美丽绝伦”。 </p>
 </blockquote>
 <img src="/2021/01/14/Soundfreaq%E5%93%81%E7%89%8C%E7%AE%80%E4%BB%8B/Cnet-logo-2011.png" class="">
-
 <blockquote>
 <p>SOUNDFREAQ凭空而出，交出了一款鲜有匹敌的产品。他们做出了许多额外的小功能，而这些功能在其他知名的品牌如索尼、罗技、菲利浦和创新，却都没有。 </p>
 </blockquote>
 <img src="/2021/01/14/Soundfreaq%E5%93%81%E7%89%8C%E7%AE%80%E4%BB%8B/Wired_logo_logotipo.png" class="">
-
 <blockquote>
 <p>声音就是棒极了。使用SOUND STACK我可更清晰地听辨每个拨弦的音符，低频调校良好，没有失真。多种音源连接方式，性感的外观。 </p>
 </blockquote>
 <img src="/2021/01/14/Soundfreaq%E5%93%81%E7%89%8C%E7%AE%80%E4%BB%8B/Mashable-logo.png" class="">
-
 <blockquote>
 <p>没错，确实是一件好货。听起来是音乐应该有的样子，没有杂音，没有失真。即便如此，面对B&amp;O的强劲竞争，我仍然倾向选择SOUND STACK。 </p>
 </blockquote>
 <img src="/2021/01/14/Soundfreaq%E5%93%81%E7%89%8C%E7%AE%80%E4%BB%8B/Engadget_Logo_old_full.png" class="">
-
 <blockquote>
 <p>在我的评测过程，感觉这件音箱声音的音质，听起来就像是来自一件更大、更昂贵的设备。</p>
 </blockquote>
 <img src="/2021/01/14/Soundfreaq%E5%93%81%E7%89%8C%E7%AE%80%E4%BB%8B/Time_logo_red.png" class="">
-
 <blockquote>
 <p>SOUNDFREAQ不怎么经常性地发布新的产品，但是一旦发布新品，就可以说必定是引人入胜的。对于最近发布的面向音乐发烧友的SOUND STACK而言，情况恰恰正是如此。</p>
 </blockquote>
@@ -561,7 +551,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-22 09:38:07" itemprop="dateModified" datetime="2021-04-22T09:38:07+08:00">2021-04-22</time>
+                <time title="修改时间：2021-04-24 17:05:59" itemprop="dateModified" datetime="2021-04-24T17:05:59+08:00">2021-04-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -601,7 +591,7 @@
           <h2 id="声压，声强和声功率"><a href="#声压，声强和声功率" class="headerlink" title="声压，声强和声功率"></a>声压，声强和声功率</h2><h3 id="声压-Sound-Pressure"><a href="#声压-Sound-Pressure" class="headerlink" title="声压 Sound Pressure"></a>声压 Sound Pressure</h3><p><strong>声压</strong>，$p$，就是大气压受到声波扰动后产生的压强变化，它相当于在标准的大气压强上叠加了一个声波扰动之后，所引起的压强变化。也就是说，空气中有声场时的压强 $p_s$ 与没有声场时的压强 $p_0$ 之差即为声压。</p>
 <p>声压的单位是帕斯卡，$Pa$，声压的参考值是 $20\mu Pa$，这个数值表示人耳在 $4000Hz$ 处的平均可听阀值，换句话说，是人耳在 $4000Hz$ 处可被感知的平均最小声压波动值。</p>
 <p><strong>听阀下限</strong>：要注意，我们这里所说的是，年轻、健康的人耳其听觉的声压<strong>阀值下限</strong>大约是 $2\times 10^{-5} N/m^2$，或者说 $20\mu Pa$，低于这个阀值人耳是无法感知的。最低可听声压点大约位于 $4,000Hz$ ，这是一个由分子热运动所造成的物理极限。 国际上一般公认地将这个阀值下限定义为<strong>参考声压</strong>$p_{ref}$。 </p>
-<p><strong>听阀上限</strong>：对正常的人耳来说，当声源产生的有效声压达到了$60Pa$级别的时候，就会感到疼痛。 为什么要使用有效声压$$p_{rms}$$？这是因为，测量的声压是变化的声压$$p_s$$与静压强$$p_0$$之差，声压的变化时正时负，其平均值为零，所以，平均声压不是一个有用的参量。而人耳对瞬时声压波动也没有响应，但对动态声压的均方根值（$RMS$）有响应，且平均响应时间间隔约为$35ms$ 。因此，声压测量的是<strong>有效声压</strong>$p_{rms}$ 。</p>
+<p><strong>听阀上限</strong>：对正常的人耳来说，当声源产生的有效声压达到了$60Pa$级别的时候，就会感到疼痛。 为什么要使用有效声压<script type="math/tex">p_{rms}</script>？这是因为，测量的声压是变化的声压<script type="math/tex">p_s</script>与静压强<script type="math/tex">p_0</script>之差，声压的变化时正时负，其平均值为零，所以，平均声压不是一个有用的参量。而人耳对瞬时声压波动也没有响应，但对动态声压的均方根值（$RMS$）有响应，且平均响应时间间隔约为$35ms$ 。因此，声压测量的是<strong>有效声压</strong>$p_{rms}$ 。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/07/07/%E5%85%B3%E4%BA%8E%E5%A3%B0%E9%9F%B3%E7%9A%84%E5%B8%B8%E8%A7%81%E5%BA%A6%E9%87%8F%E5%8F%82%E6%95%B0/#more" rel="contents">
@@ -896,6 +886,7 @@ if (document.querySelectorAll('pre.mermaid').length) {
   if (typeof MathJax === 'undefined') {
     window.MathJax = {
       loader: {
+          load: ['[tex]/mhchem'],
         source: {
           '[tex]/amsCd': '[tex]/amscd',
           '[tex]/AMScd': '[tex]/amscd'
@@ -903,6 +894,7 @@ if (document.querySelectorAll('pre.mermaid').length) {
       },
       tex: {
         inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
         tags: 'ams'
       },
       options: {
