@@ -2,7 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://alowree.github.io/2021/04/30/Soundfreaq%E6%97%97%E8%88%B0%E8%93%9D%E7%89%99%E9%9F%B3%E7%AE%B1Sound-Stack%E9%9C%80%E8%A6%81%E7%85%B2%E6%9C%BA%E5%90%97%EF%BC%9F/</loc>
+    
+    <lastmod>2021-04-30</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://alowree.github.io/2021/04/20/Soundfreaq%E8%93%9D%E7%89%99%E9%9F%B3%E7%AE%B1%E4%B9%8BSound-Platform-2/</loc>
+    
+    <lastmod>2021-04-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://alowree.github.io/2020/07/07/%E5%85%B3%E4%BA%8E%E5%A3%B0%E9%9F%B3%E7%9A%84%E5%B8%B8%E8%A7%81%E5%BA%A6%E9%87%8F%E5%8F%82%E6%95%B0/</loc>
     
     <lastmod>2021-04-30</lastmod>
     
@@ -12,13 +26,6 @@
     <loc>https://alowree.github.io/2021/01/14/Soundfreaq%E5%93%81%E7%89%8C%E7%AE%80%E4%BB%8B/</loc>
     
     <lastmod>2021-04-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://alowree.github.io/2020/07/07/%E5%85%B3%E4%BA%8E%E5%A3%B0%E9%9F%B3%E7%9A%84%E5%B8%B8%E8%A7%81%E5%BA%A6%E9%87%8F%E5%8F%82%E6%95%B0/</loc>
-    
-    <lastmod>2021-04-24</lastmod>
     
   </url>
   
@@ -81,7 +88,14 @@
   </url>
   
   <url>
-    <loc>https://alowree.github.io/tags/%E5%B8%82%E5%9C%BA%E8%90%A5%E9%94%80/</loc>
+    <loc>https://alowree.github.io/tags/Sound-Stack-SFQ-03-%E7%85%B2%E6%9C%BA/</loc>
+    <lastmod>2021-04-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://alowree.github.io/tags/Sound-Platform-2-SFQ-06/</loc>
     <lastmod>2021-04-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -112,13 +126,6 @@
   
   <url>
     <loc>https://alowree.github.io/categories/%E5%B8%82%E5%9C%BA%E8%90%A5%E9%94%80/</loc>
-    <lastmod>2021-04-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://alowree.github.io/categories/Marketing/</loc>
     <lastmod>2021-04-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
