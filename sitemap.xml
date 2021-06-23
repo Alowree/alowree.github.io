@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://alowree.github.io/2021/04/30/Soundfreaq%E6%97%97%E8%88%B0%E8%93%9D%E7%89%99%E9%9F%B3%E7%AE%B1Sound-Stack%E9%9C%80%E8%A6%81%E7%85%B2%E6%9C%BA%E5%90%97%EF%BC%9F/</loc>
+    
+    <lastmod>2021-06-23</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://alowree.github.io/about/index.html</loc>
     
-    <lastmod>2021-06-22</lastmod>
+    <lastmod>2021-06-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://alowree.github.io/2021/04/20/Soundfreaq%E8%93%9D%E7%89%99%E9%9F%B3%E7%AE%B1%E4%B9%8BSound-Platform-2/</loc>
+    
+    <lastmod>2021-06-23</lastmod>
     
   </url>
   
@@ -19,20 +33,6 @@
     <loc>https://alowree.github.io/2021/06/07/SFQ-06%E5%8F%AF%E4%BB%A5%E4%B8%80%E8%BE%B9%E5%85%85%E7%94%B5%E4%B8%80%E8%BE%B9%E6%94%BE%E6%AD%8C%E5%90%97%EF%BC%9F/</loc>
     
     <lastmod>2021-06-06</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://alowree.github.io/2021/04/30/Soundfreaq%E6%97%97%E8%88%B0%E8%93%9D%E7%89%99%E9%9F%B3%E7%AE%B1Sound-Stack%E9%9C%80%E8%A6%81%E7%85%B2%E6%9C%BA%E5%90%97%EF%BC%9F/</loc>
-    
-    <lastmod>2021-05-25</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://alowree.github.io/2021/04/20/Soundfreaq%E8%93%9D%E7%89%99%E9%9F%B3%E7%AE%B1%E4%B9%8BSound-Platform-2/</loc>
-    
-    <lastmod>2021-04-30</lastmod>
     
   </url>
   
@@ -208,13 +208,6 @@
   
   <url>
     <loc>https://alowree.github.io/tags/Surround/</loc>
-    <lastmod>2021-06-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://alowree.github.io/tags/Sound-Platform-2-SFQ-06/</loc>
     <lastmod>2021-06-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
