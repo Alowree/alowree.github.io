@@ -11,9 +11,9 @@
         <category>Soundfreaq</category>
       </categories>
       <tags>
-        <tag>Soundfreaq</tag>
         <tag>Sound Stack</tag>
         <tag>SFQ-03</tag>
+        <tag>Soundfreaq</tag>
         <tag>音质</tag>
       </tags>
   </entry>
@@ -148,9 +148,9 @@
         <category>声学</category>
       </categories>
       <tags>
-        <tag>Soundfreaq</tag>
         <tag>Sound Stack</tag>
         <tag>SFQ-03</tag>
+        <tag>Soundfreaq</tag>
         <tag>煲机</tag>
         <tag>老化测试</tag>
         <tag>Burn-in</tag>
@@ -161,139 +161,6 @@
         <tag>Suspension</tag>
         <tag>折环</tag>
         <tag>Surround</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python的文件</title>
-    <url>/2021/01/22/python%E7%9A%84%E6%96%87%E4%BB%B6/</url>
-    <content><![CDATA[<p>文件，就是计算机中由操作系统管理的具有名字的存储区域。内置<code>open()</code>函数会创建一个Python文件对象，可以作为计算机上的一个文件链接。与我们目前见过的类型相比，文件对象多少有点不寻常，它们不是数字、序列、也不是映射。</p>
-<h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><p>在 Python 中，如果想要操作文件，首先需要创建或者打开指定的文件，并创建一个文件对象，而这些工作可以通过内置的 <code>open()</code> 函数实现。</p>
-<h3 id="完整语法格式："><a href="#完整语法格式：" class="headerlink" title="完整语法格式："></a>完整语法格式：</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(file_name [, mode=<span class="string">&#x27;r&#x27;</span> [ , buffering=-<span class="number">1</span> [ , encoding = <span class="literal">None</span> ]]])</span><br></pre></td></tr></table></figure>
-<p>此格式中，用 <code>[]</code> 括起来的部分为可选参数，即可以使用也可以省略。其中，各个参数所代表的含义如下： </p>
-<ul>
-<li><code>file</code>：表示要创建的文件对象。 </li>
-<li><code>file_name</code>：要创建或打开文件的文件名称，该名称要用引号（单引号或双引号都可以）括起来。需要注意的是，如果要打开的文件和当前执行的代码文件位于同一目录，则直接写文件名即可；否则，此参数需要指定打开文件所在的完整路径。 </li>
-<li><code>mode</code>：可选参数，用于指定文件的打开模式。可选的打开模式如表-1 所示。如果不写，则默认以只读（<code>r</code>）模式打开文件。 </li>
-<li><code>buffering</code>：可选参数，用于指定对文件做读写操作时，是否使用缓冲区。 </li>
-<li><code>encoding</code>：手动设定打开文件时所使用的编码格式，不同平台的 <code>encoding</code> 参数值也不同，以 Windows 为例，其默认为 <code>cp936</code>（实际上就是 <code>GBK</code> 编码）。</li>
-</ul>
-<span id="more"></span>
-<h3 id="常见用法："><a href="#常见用法：" class="headerlink" title="常见用法："></a>常见用法：</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(file_name,<span class="string">&#x27;r&#x27;</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="推荐用法："><a href="#推荐用法：" class="headerlink" title="推荐用法："></a>推荐用法：</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(file_name,<span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">    对文件进行操作</span><br></pre></td></tr></table></figure>
-<h3 id="1、打开现有的文件"><a href="#1、打开现有的文件" class="headerlink" title="1、打开现有的文件"></a>1、打开现有的文件</h3><p>如果当前目录不存在想要打开的目标文件，此时调用<code>open()</code>函数将会报错。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>file = <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>)</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">FileNotFoundError: [Errno <span class="number">2</span>] No such file <span class="keyword">or</span> directory: <span class="string">&#x27;a.txt&#x27;</span></span><br></pre></td></tr></table></figure>
-<h3 id="2、创建当前并不存在的文件"><a href="#2、创建当前并不存在的文件" class="headerlink" title="2、创建当前并不存在的文件"></a>2、创建当前并不存在的文件</h3><p>可以通过传递<code>mode</code>参数，以写入模式打开文件的方式，来生成一个全新的文件，并在文件对象中写入内容。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>file = <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>, <span class="string">&#x27;w&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>file.write(<span class="string">&#x27;This is a new file!&#x27;</span>)</span><br><span class="line"><span class="number">19</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>file.close()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>file.closed</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> os</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>os.getcwd()</span><br><span class="line"><span class="string">&#x27;C:\\Users\\Administrator&#x27;</span></span><br></pre></td></tr></table></figure>
-<h3 id="3、写入和读取文件"><a href="#3、写入和读取文件" class="headerlink" title="3、写入和读取文件"></a>3、写入和读取文件</h3><p>在任何情况下，Python程序中的文件都采用字符串的形式进行读写。读取文件时会返回字符串<code>str</code>形式的文本，写文件的时候是将文本以字符串<code>str</code>形式传递给<code>write()</code>方法。文件对象常用的写入和读取方法有下面5个：</p>
-<ul>
-<li><code>file.write(str)</code></li>
-<li><code>file.writelines(list)</code></li>
-<li><code>file.read([size])</code></li>
-<li><code>file.readline()</code></li>
-<li><code>file.readlines()</code></li>
-</ul>
-<p>我们现在有一个目标文件了，存储在当前目录<code>C:\Users\Administrator</code>下面。对于新手来说，除非你对当前路径、相对路径和绝对路径等相关知识非常熟悉，否则建议使用清晰明确的绝对路径<code>C:\Users\Administrator\a.txt</code>来指定需要操作的文件。下面，我们先往文件里面多添加一些内容，然后再来进行打开和读取操作。我们使用<code>with</code>语句管理上下文。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>,<span class="string">&#x27;a&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line"><span class="meta">... </span>    f.write(<span class="string">&#x27;I write some more data.\n2nd line. \n3rd line. \nI love Python.&#x27;</span>)</span><br><span class="line">...</span><br><span class="line"><span class="number">60</span>              <span class="comment"># 返回写入的字符数</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">len</span>(<span class="string">&#x27;I write some more data.\n2nd line. \n3rd line. \nI love Python.&#x27;</span>)</span><br><span class="line"><span class="number">60</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line"><span class="meta">... </span>    data_1 = <span class="built_in">list</span>(f)</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line"><span class="meta">... </span>    data_2 = f.readlines()</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(data_1)</span><br><span class="line">[<span class="string">&#x27;This is a new file!I write some more data.\n&#x27;</span>, <span class="string">&#x27;2nd line. \n&#x27;</span>, <span class="string">&#x27;3rd line. \n&#x27;</span>, <span class="string">&#x27;I love Python.&#x27;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(data_2)</span><br><span class="line">[<span class="string">&#x27;This is a new file!I write some more data.\n&#x27;</span>, <span class="string">&#x27;2nd line. \n&#x27;</span>, <span class="string">&#x27;3rd line. \n&#x27;</span>, <span class="string">&#x27;I love Python.&#x27;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>data_1 == data_2</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(f.read())                     <span class="comment"># 读取全部文件内容</span></span><br><span class="line">...</span><br><span class="line">This <span class="keyword">is</span> a new file!I write some more data.</span><br><span class="line">2nd line. </span><br><span class="line">3rd line. </span><br><span class="line">I love Python.</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(f.readline())                 <span class="comment"># 读取文件的第一行</span></span><br><span class="line">...</span><br><span class="line">This <span class="keyword">is</span> a new file!I write some more data.</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(f.readlines())                <span class="comment"># 按行读取文件，返回行内容的列表</span></span><br><span class="line">...</span><br><span class="line">[<span class="string">&#x27;This is a new file!I write some more data.\n&#x27;</span>, <span class="string">&#x27;2nd line. \n&#x27;</span>, <span class="string">&#x27;3rd line. \n&#x27;</span>, <span class="string">&#x27;I love Python.&#x27;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:           <span class="comment"># 覆盖原来文件内容</span></span><br><span class="line"><span class="meta">... </span>    f.write(<span class="string">&#x27;0123456789&#x27;</span>)               <span class="comment"># 返回写入的字符数</span></span><br><span class="line">...</span><br><span class="line"><span class="number">10</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(f.read())</span><br><span class="line">...</span><br><span class="line">0123456789</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>, <span class="string">&#x27;a&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line"><span class="meta">... </span>    f.writelines(<span class="built_in">list</span>(<span class="string">&#x27;ABCDEF&#x27;</span>))</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>,<span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(f.read())</span><br><span class="line">...</span><br><span class="line">0123456789ABCDEF            <span class="comment"># writelines()先把列表拼接成字符串，再写入，没有换行</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>, <span class="string">&#x27;a&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line"><span class="meta">... </span>    f.writelines([<span class="string">&#x27;\n&#x27;</span>,<span class="string">&#x27;I\n&#x27;</span>, <span class="string">&#x27;Love\n&#x27;</span>, <span class="string">&#x27;Shenzhen\n&#x27;</span>])</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(f.read())</span><br><span class="line">...</span><br><span class="line">0123456789ABCDEF            <span class="comment"># 如果换行，需要手动加入\n</span></span><br><span class="line">I</span><br><span class="line">Love</span><br><span class="line">Shenzhen</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>f                       <span class="comment"># f变量仍然可用</span></span><br><span class="line">&lt;_io.TextIOWrapper name=<span class="string">&#x27;a.txt&#x27;</span> mode=<span class="string">&#x27;r&#x27;</span> encoding=<span class="string">&#x27;cp936&#x27;</span>&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>f.closed, f.encoding    <span class="comment"># 可以读取f对象的属性</span></span><br><span class="line">(<span class="literal">True</span>, <span class="string">&#x27;cp936&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>f.read()                <span class="comment"># 但是不能在f上执行I/O操作，因为在with块的末尾，调用TextIOWrapper.__exit__方法把文件关闭了。</span></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">ValueError: I/O operation on closed file.</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(f.readline())         <span class="comment"># 体会readline()和文件指针的关系</span></span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(f.readline())</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(f.readline())</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(f.readline())</span><br><span class="line">...</span><br><span class="line">0123456789ABCDEF</span><br><span class="line"></span><br><span class="line">I</span><br><span class="line"></span><br><span class="line">Love</span><br><span class="line"></span><br><span class="line">Shenzhen</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="4、文件打开模式"><a href="#4、文件打开模式" class="headerlink" title="4、文件打开模式"></a>4、文件打开模式</h3><p><strong>表-1 <code>open()</code>函数支持的文件打开模式</strong></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>模式</th>
-<th>意义</th>
-<th>注意事项</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>r</td>
-<td>只读模式打开文件，读文件内容的指针会放在文件的开头。</td>
-<td>文件必须存在。如果当前目录不存在想要打开的文件，解释器会报错。</td>
-</tr>
-<tr>
-<td>r+</td>
-<td>打开文件后，既可以从头读取文件内容，也可以从开头向文件中写入新的内容，写入的新内容会覆盖文件中等长度的原有内容。</td>
-<td></td>
-</tr>
-<tr>
-<td>rb</td>
-<td>以二进制格式、采用只读模式打开文件，读文件内容的指针位于文件的开头，一般用于非文本文件，如图片文件、音频文件等。</td>
-<td></td>
-</tr>
-<tr>
-<td>rb+</td>
-<td>以二进制格式、采用读写模式打开文件，读写文件的指针会放在文件的开头，通常针对非文本文件（如音频文件）。</td>
-<td></td>
-</tr>
-<tr>
-<td>w</td>
-<td>以只写模式打开文件，若该文件存在，打开时会清空文件中原有的内容。</td>
-<td>若文件存在，会清空其原有内容（覆盖文件）；反之，则创建新文件。</td>
-</tr>
-<tr>
-<td>w+</td>
-<td>打开文件后，会对原有内容进行清空，并对该文件有读写权限。<br><font color="red">都清空了，还怎么读取？！</font></td>
-<td></td>
-</tr>
-<tr>
-<td>wb</td>
-<td>正整数以二进制格式、只写模式打开文件，一般用于非文本文件（如音频文件）</td>
-<td></td>
-</tr>
-<tr>
-<td>wb+</td>
-<td>以二进制格式、读写模式打开文件，一般用于非文本文件</td>
-<td></td>
-</tr>
-<tr>
-<td>a</td>
-<td>以追加模式打开一个文件，对文件只有写入权限，如果文件已经存在，文件指针将放在文件的末尾（即新写入内容会位于已有内容之后）；反之，则会创建新文件。</td>
-<td></td>
-</tr>
-<tr>
-<td>a+</td>
-<td>以读写模式打开文件；如果文件存在，文件指针放在文件的末尾（新写入文件会位于已有内容之后）；反之，则创建新文件。<br><font color="red">在这个状态下，文件指针在文件的末尾，还怎么读取文件？</font></td>
-<td></td>
-</tr>
-<tr>
-<td>ab</td>
-<td>以二进制格式打开文件，并采用追加模式，对文件只有写权限。如果该文件已存在，文件指针位于文件末尾（新写入文件会位于已有内容之后）；反之，则创建新文件。</td>
-<td></td>
-</tr>
-<tr>
-<td>ab+</td>
-<td>以二进制模式打开文件，并采用追加模式，对文件具有读写权限，如果文件存在，则文件指针位于文件的末尾（新写入文件会位于已有内容之后）；反之，则创建新文件。<br><font color="red">在这个状态下，文件指针在文件的末尾，还怎么读取文件？</font></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>鉴于实施爬虫进行数据分析的时候，我们一般只需要处理文本文件，所以暂时先不研究以二进制格式（<code>b</code>和<code>b+</code>）打开文件。这样的话，处理文本文件我们暂时只需要研究下面六种读写模式，尤其需要验证表-1中红色字体提问的三种带<code>+</code>的模式。</p>
-<p><strong>表-2 文件打开模式之逻辑比较</strong></p>
-<pre class="mermaid">graph TD
-    start(打开文件) --> conditionA{用于}
-    conditionA -- 读 --> printR[r]
-    conditionA -- 写 --> conditionB{是否清空}
-    conditionA -- 读/写 --> conditionC{是否清空}
-
-    conditionB -- YES --> printW[w]
-    conditionB -- NO --> printA[a]
-
-    conditionC --YES --> printWW[w+]
-    conditionC --NO --> conditionD{指针位置}
-
-    conditionD --开头--> printRR[r+]
-    conditionD --结尾--> printAA[a+]</pre>
-
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>[1]<a href="http://c.biancheng.net/view/2544.html">Python open()函数详解：打开指定文件</a> </p>
-<p>[2]<a href="http://c.biancheng.net/view/7540.html">HTML<code>&lt;table&gt;</code>标签（表格）</a> </p>
-<p>[3]<a href="https://blog.csdn.net/qq_32042527/article/details/88084130">Markdown表格合并单元格</a> </p>
-<p>[4]<a href="http://soft.xiaoshujiang.com/docs/grammar/feature/mermaid/">小书匠语法说明之mermaid</a></p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>文件</tag>
       </tags>
   </entry>
   <entry>
@@ -457,6 +324,139 @@
         <tag>Soundfreaq</tag>
         <tag>Sound Platform 2</tag>
         <tag>SFQ-06</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python的文件</title>
+    <url>/2021/01/22/python%E7%9A%84%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<p>文件，就是计算机中由操作系统管理的具有名字的存储区域。内置<code>open()</code>函数会创建一个Python文件对象，可以作为计算机上的一个文件链接。与我们目前见过的类型相比，文件对象多少有点不寻常，它们不是数字、序列、也不是映射。</p>
+<h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><p>在 Python 中，如果想要操作文件，首先需要创建或者打开指定的文件，并创建一个文件对象，而这些工作可以通过内置的 <code>open()</code> 函数实现。</p>
+<h3 id="完整语法格式："><a href="#完整语法格式：" class="headerlink" title="完整语法格式："></a>完整语法格式：</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(file_name [, mode=<span class="string">&#x27;r&#x27;</span> [ , buffering=-<span class="number">1</span> [ , encoding = <span class="literal">None</span> ]]])</span><br></pre></td></tr></table></figure>
+<p>此格式中，用 <code>[]</code> 括起来的部分为可选参数，即可以使用也可以省略。其中，各个参数所代表的含义如下： </p>
+<ul>
+<li><code>file</code>：表示要创建的文件对象。 </li>
+<li><code>file_name</code>：要创建或打开文件的文件名称，该名称要用引号（单引号或双引号都可以）括起来。需要注意的是，如果要打开的文件和当前执行的代码文件位于同一目录，则直接写文件名即可；否则，此参数需要指定打开文件所在的完整路径。 </li>
+<li><code>mode</code>：可选参数，用于指定文件的打开模式。可选的打开模式如表-1 所示。如果不写，则默认以只读（<code>r</code>）模式打开文件。 </li>
+<li><code>buffering</code>：可选参数，用于指定对文件做读写操作时，是否使用缓冲区。 </li>
+<li><code>encoding</code>：手动设定打开文件时所使用的编码格式，不同平台的 <code>encoding</code> 参数值也不同，以 Windows 为例，其默认为 <code>cp936</code>（实际上就是 <code>GBK</code> 编码）。</li>
+</ul>
+<span id="more"></span>
+<h3 id="常见用法："><a href="#常见用法：" class="headerlink" title="常见用法："></a>常见用法：</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(file_name,<span class="string">&#x27;r&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="推荐用法："><a href="#推荐用法：" class="headerlink" title="推荐用法："></a>推荐用法：</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(file_name,<span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">    对文件进行操作</span><br></pre></td></tr></table></figure>
+<h3 id="1、打开现有的文件"><a href="#1、打开现有的文件" class="headerlink" title="1、打开现有的文件"></a>1、打开现有的文件</h3><p>如果当前目录不存在想要打开的目标文件，此时调用<code>open()</code>函数将会报错。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>file = <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>)</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">FileNotFoundError: [Errno <span class="number">2</span>] No such file <span class="keyword">or</span> directory: <span class="string">&#x27;a.txt&#x27;</span></span><br></pre></td></tr></table></figure>
+<h3 id="2、创建当前并不存在的文件"><a href="#2、创建当前并不存在的文件" class="headerlink" title="2、创建当前并不存在的文件"></a>2、创建当前并不存在的文件</h3><p>可以通过传递<code>mode</code>参数，以写入模式打开文件的方式，来生成一个全新的文件，并在文件对象中写入内容。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>file = <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>, <span class="string">&#x27;w&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>file.write(<span class="string">&#x27;This is a new file!&#x27;</span>)</span><br><span class="line"><span class="number">19</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>file.close()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>file.closed</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> os</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>os.getcwd()</span><br><span class="line"><span class="string">&#x27;C:\\Users\\Administrator&#x27;</span></span><br></pre></td></tr></table></figure>
+<h3 id="3、写入和读取文件"><a href="#3、写入和读取文件" class="headerlink" title="3、写入和读取文件"></a>3、写入和读取文件</h3><p>在任何情况下，Python程序中的文件都采用字符串的形式进行读写。读取文件时会返回字符串<code>str</code>形式的文本，写文件的时候是将文本以字符串<code>str</code>形式传递给<code>write()</code>方法。文件对象常用的写入和读取方法有下面5个：</p>
+<ul>
+<li><code>file.write(str)</code></li>
+<li><code>file.writelines(list)</code></li>
+<li><code>file.read([size])</code></li>
+<li><code>file.readline()</code></li>
+<li><code>file.readlines()</code></li>
+</ul>
+<p>我们现在有一个目标文件了，存储在当前目录<code>C:\Users\Administrator</code>下面。对于新手来说，除非你对当前路径、相对路径和绝对路径等相关知识非常熟悉，否则建议使用清晰明确的绝对路径<code>C:\Users\Administrator\a.txt</code>来指定需要操作的文件。下面，我们先往文件里面多添加一些内容，然后再来进行打开和读取操作。我们使用<code>with</code>语句管理上下文。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>,<span class="string">&#x27;a&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line"><span class="meta">... </span>    f.write(<span class="string">&#x27;I write some more data.\n2nd line. \n3rd line. \nI love Python.&#x27;</span>)</span><br><span class="line">...</span><br><span class="line"><span class="number">60</span>              <span class="comment"># 返回写入的字符数</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">len</span>(<span class="string">&#x27;I write some more data.\n2nd line. \n3rd line. \nI love Python.&#x27;</span>)</span><br><span class="line"><span class="number">60</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line"><span class="meta">... </span>    data_1 = <span class="built_in">list</span>(f)</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line"><span class="meta">... </span>    data_2 = f.readlines()</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(data_1)</span><br><span class="line">[<span class="string">&#x27;This is a new file!I write some more data.\n&#x27;</span>, <span class="string">&#x27;2nd line. \n&#x27;</span>, <span class="string">&#x27;3rd line. \n&#x27;</span>, <span class="string">&#x27;I love Python.&#x27;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(data_2)</span><br><span class="line">[<span class="string">&#x27;This is a new file!I write some more data.\n&#x27;</span>, <span class="string">&#x27;2nd line. \n&#x27;</span>, <span class="string">&#x27;3rd line. \n&#x27;</span>, <span class="string">&#x27;I love Python.&#x27;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>data_1 == data_2</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(f.read())                     <span class="comment"># 读取全部文件内容</span></span><br><span class="line">...</span><br><span class="line">This <span class="keyword">is</span> a new file!I write some more data.</span><br><span class="line">2nd line. </span><br><span class="line">3rd line. </span><br><span class="line">I love Python.</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(f.readline())                 <span class="comment"># 读取文件的第一行</span></span><br><span class="line">...</span><br><span class="line">This <span class="keyword">is</span> a new file!I write some more data.</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(f.readlines())                <span class="comment"># 按行读取文件，返回行内容的列表</span></span><br><span class="line">...</span><br><span class="line">[<span class="string">&#x27;This is a new file!I write some more data.\n&#x27;</span>, <span class="string">&#x27;2nd line. \n&#x27;</span>, <span class="string">&#x27;3rd line. \n&#x27;</span>, <span class="string">&#x27;I love Python.&#x27;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:           <span class="comment"># 覆盖原来文件内容</span></span><br><span class="line"><span class="meta">... </span>    f.write(<span class="string">&#x27;0123456789&#x27;</span>)               <span class="comment"># 返回写入的字符数</span></span><br><span class="line">...</span><br><span class="line"><span class="number">10</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(f.read())</span><br><span class="line">...</span><br><span class="line">0123456789</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>, <span class="string">&#x27;a&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line"><span class="meta">... </span>    f.writelines(<span class="built_in">list</span>(<span class="string">&#x27;ABCDEF&#x27;</span>))</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>,<span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(f.read())</span><br><span class="line">...</span><br><span class="line">0123456789ABCDEF            <span class="comment"># writelines()先把列表拼接成字符串，再写入，没有换行</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>, <span class="string">&#x27;a&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line"><span class="meta">... </span>    f.writelines([<span class="string">&#x27;\n&#x27;</span>,<span class="string">&#x27;I\n&#x27;</span>, <span class="string">&#x27;Love\n&#x27;</span>, <span class="string">&#x27;Shenzhen\n&#x27;</span>])</span><br><span class="line">...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(f.read())</span><br><span class="line">...</span><br><span class="line">0123456789ABCDEF            <span class="comment"># 如果换行，需要手动加入\n</span></span><br><span class="line">I</span><br><span class="line">Love</span><br><span class="line">Shenzhen</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>f                       <span class="comment"># f变量仍然可用</span></span><br><span class="line">&lt;_io.TextIOWrapper name=<span class="string">&#x27;a.txt&#x27;</span> mode=<span class="string">&#x27;r&#x27;</span> encoding=<span class="string">&#x27;cp936&#x27;</span>&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>f.closed, f.encoding    <span class="comment"># 可以读取f对象的属性</span></span><br><span class="line">(<span class="literal">True</span>, <span class="string">&#x27;cp936&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>f.read()                <span class="comment"># 但是不能在f上执行I/O操作，因为在with块的末尾，调用TextIOWrapper.__exit__方法把文件关闭了。</span></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">ValueError: I/O operation on closed file.</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;a.txt&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(f.readline())         <span class="comment"># 体会readline()和文件指针的关系</span></span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(f.readline())</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(f.readline())</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(f.readline())</span><br><span class="line">...</span><br><span class="line">0123456789ABCDEF</span><br><span class="line"></span><br><span class="line">I</span><br><span class="line"></span><br><span class="line">Love</span><br><span class="line"></span><br><span class="line">Shenzhen</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="4、文件打开模式"><a href="#4、文件打开模式" class="headerlink" title="4、文件打开模式"></a>4、文件打开模式</h3><p><strong>表-1 <code>open()</code>函数支持的文件打开模式</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>意义</th>
+<th>注意事项</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r</td>
+<td>只读模式打开文件，读文件内容的指针会放在文件的开头。</td>
+<td>文件必须存在。如果当前目录不存在想要打开的文件，解释器会报错。</td>
+</tr>
+<tr>
+<td>r+</td>
+<td>打开文件后，既可以从头读取文件内容，也可以从开头向文件中写入新的内容，写入的新内容会覆盖文件中等长度的原有内容。</td>
+<td></td>
+</tr>
+<tr>
+<td>rb</td>
+<td>以二进制格式、采用只读模式打开文件，读文件内容的指针位于文件的开头，一般用于非文本文件，如图片文件、音频文件等。</td>
+<td></td>
+</tr>
+<tr>
+<td>rb+</td>
+<td>以二进制格式、采用读写模式打开文件，读写文件的指针会放在文件的开头，通常针对非文本文件（如音频文件）。</td>
+<td></td>
+</tr>
+<tr>
+<td>w</td>
+<td>以只写模式打开文件，若该文件存在，打开时会清空文件中原有的内容。</td>
+<td>若文件存在，会清空其原有内容（覆盖文件）；反之，则创建新文件。</td>
+</tr>
+<tr>
+<td>w+</td>
+<td>打开文件后，会对原有内容进行清空，并对该文件有读写权限。<br><font color="red">都清空了，还怎么读取？！</font></td>
+<td></td>
+</tr>
+<tr>
+<td>wb</td>
+<td>正整数以二进制格式、只写模式打开文件，一般用于非文本文件（如音频文件）</td>
+<td></td>
+</tr>
+<tr>
+<td>wb+</td>
+<td>以二进制格式、读写模式打开文件，一般用于非文本文件</td>
+<td></td>
+</tr>
+<tr>
+<td>a</td>
+<td>以追加模式打开一个文件，对文件只有写入权限，如果文件已经存在，文件指针将放在文件的末尾（即新写入内容会位于已有内容之后）；反之，则会创建新文件。</td>
+<td></td>
+</tr>
+<tr>
+<td>a+</td>
+<td>以读写模式打开文件；如果文件存在，文件指针放在文件的末尾（新写入文件会位于已有内容之后）；反之，则创建新文件。<br><font color="red">在这个状态下，文件指针在文件的末尾，还怎么读取文件？</font></td>
+<td></td>
+</tr>
+<tr>
+<td>ab</td>
+<td>以二进制格式打开文件，并采用追加模式，对文件只有写权限。如果该文件已存在，文件指针位于文件末尾（新写入文件会位于已有内容之后）；反之，则创建新文件。</td>
+<td></td>
+</tr>
+<tr>
+<td>ab+</td>
+<td>以二进制模式打开文件，并采用追加模式，对文件具有读写权限，如果文件存在，则文件指针位于文件的末尾（新写入文件会位于已有内容之后）；反之，则创建新文件。<br><font color="red">在这个状态下，文件指针在文件的末尾，还怎么读取文件？</font></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>鉴于实施爬虫进行数据分析的时候，我们一般只需要处理文本文件，所以暂时先不研究以二进制格式（<code>b</code>和<code>b+</code>）打开文件。这样的话，处理文本文件我们暂时只需要研究下面六种读写模式，尤其需要验证表-1中红色字体提问的三种带<code>+</code>的模式。</p>
+<p><strong>表-2 文件打开模式之逻辑比较</strong></p>
+<pre class="mermaid">graph TD
+    start(打开文件) --> conditionA{用于}
+    conditionA -- 读 --> printR[r]
+    conditionA -- 写 --> conditionB{是否清空}
+    conditionA -- 读/写 --> conditionC{是否清空}
+
+    conditionB -- YES --> printW[w]
+    conditionB -- NO --> printA[a]
+
+    conditionC --YES --> printWW[w+]
+    conditionC --NO --> conditionD{指针位置}
+
+    conditionD --开头--> printRR[r+]
+    conditionD --结尾--> printAA[a+]</pre>
+
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>[1]<a href="http://c.biancheng.net/view/2544.html">Python open()函数详解：打开指定文件</a> </p>
+<p>[2]<a href="http://c.biancheng.net/view/7540.html">HTML<code>&lt;table&gt;</code>标签（表格）</a> </p>
+<p>[3]<a href="https://blog.csdn.net/qq_32042527/article/details/88084130">Markdown表格合并单元格</a> </p>
+<p>[4]<a href="http://soft.xiaoshujiang.com/docs/grammar/feature/mermaid/">小书匠语法说明之mermaid</a></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>文件</tag>
       </tags>
   </entry>
   <entry>
