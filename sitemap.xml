@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://alowree.github.io/speakers/cq1/index.html</loc>
+    
+    <lastmod>2021-07-05</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://alowree.github.io/gallery/chicago/index.html</loc>
     
     <lastmod>2021-07-04</lastmod>
@@ -17,13 +24,6 @@
   
   <url>
     <loc>https://alowree.github.io/gallery/index.html</loc>
-    
-    <lastmod>2021-07-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://alowree.github.io/speakers/cq1/index.html</loc>
     
     <lastmod>2021-07-04</lastmod>
     
@@ -88,7 +88,7 @@
 
   <url>
     <loc>https://alowree.github.io/</loc>
-    <lastmod>2021-07-04</lastmod>
+    <lastmod>2021-07-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -96,42 +96,42 @@
   
   <url>
     <loc>https://alowree.github.io/tags/Hexo/</loc>
-    <lastmod>2021-07-04</lastmod>
+    <lastmod>2021-07-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://alowree.github.io/tags/Butterfly/</loc>
-    <lastmod>2021-07-04</lastmod>
+    <lastmod>2021-07-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://alowree.github.io/tags/Github/</loc>
-    <lastmod>2021-07-04</lastmod>
+    <lastmod>2021-07-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://alowree.github.io/tags/Font-Awesome/</loc>
-    <lastmod>2021-07-04</lastmod>
+    <lastmod>2021-07-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://alowree.github.io/tags/icon/</loc>
-    <lastmod>2021-07-04</lastmod>
+    <lastmod>2021-07-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://alowree.github.io/tags/iconfont/</loc>
-    <lastmod>2021-07-04</lastmod>
+    <lastmod>2021-07-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -140,7 +140,7 @@
   
   <url>
     <loc>https://alowree.github.io/categories/Web/</loc>
-    <lastmod>2021-07-04</lastmod>
+    <lastmod>2021-07-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
