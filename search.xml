@@ -61,6 +61,87 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Soundfreaq Double Spot SFQ-09蓝牙音箱</title>
+    <url>/2021/07/08/Soundfreaq-Double-Spot-SFQ-09%E8%93%9D%E7%89%99%E9%9F%B3%E7%AE%B1/</url>
+    <content><![CDATA[<p>与Sound Spot一脉相承，Double Spot变成了双喇叭立体声。从其尺寸大小和声音效果而言，这应该算是Soundfreaq排名第三的蓝牙音箱产品，排名紧随Sound Stack和Sound Platform 2之后。</p>
+<p>这是一款设计极简的产品，音箱顶部只有7颗键位，除去电源键使用了Tact Switch之外，其他6颗功能键，全部都是触摸设计。</p>
+<p><img src="Soundfreaq-Double-Spot-SFQ-09蓝牙音箱/Double Spot Black QTR.jpg" alt="Double Spot Black QTR"></p>
+<h2 id="内置锂电池-支持6小时播放"><a href="#内置锂电池-支持6小时播放" class="headerlink" title="内置锂电池 支持6小时播放"></a>内置锂电池 支持6小时播放</h2><p><strong>类型：</strong> 可充电锂电池<br><strong>型号：</strong> LC18650<br><strong>额定电压：</strong> 7.4V<br><strong>容量：</strong> 1800mAh</p>
+<p><img src="Soundfreaq-Double-Spot-SFQ-09蓝牙音箱/Double Spot Wood White QTR.jpg" alt="Double Spot Wood White QTR"></p>
+<img src="/2021/07/08/Soundfreaq-Double-Spot-SFQ-09%E8%93%9D%E7%89%99%E9%9F%B3%E7%AE%B1/09_TOP_UI.png" class="">
+<ol>
+<li><strong>音量减：</strong></li>
+<li><strong>音量加：</strong></li>
+<li><strong>上一首：</strong>蓝牙音源状态下，<code>按一下</code>跳至上一首曲目，<code>按住</code>可以快速后退。</li>
+<li><strong>播放 / 暂停：</strong><code>开始</code>播放或者<code>暂停</code>播放</li>
+<li><strong>下一首：</strong>蓝牙音源状态下，<code>按一下</code>跳至下一首曲目，<code>按住</code>可以快速前进。</li>
+<li><strong>蓝牙配对键：</strong>按住不放3秒，音箱将进入<code>配对模式</code>，这时电源键的LED将会快闪。</li>
+<li><strong>电源开关：</strong>按一下，可以进行<code>开机 / 关机</code>操作</li>
+</ol>
+<img src="/2021/07/08/Soundfreaq-Double-Spot-SFQ-09%E8%93%9D%E7%89%99%E9%9F%B3%E7%AE%B1/09_BACK_UI-1625716275342.png" class="">
+<ol>
+<li><strong>电源输入接口：</strong>连接电源适配器供电</li>
+<li><strong>USB充电接口：</strong>可以给外接电子设备充电，提供5V 1A的充电输出</li>
+<li><strong>AUX IN输入：</strong>接驳外部设备的音源信号</li>
+<li><strong>UQ3滑动开关：</strong><code>开启</code>或者<code>关闭</code>立体声扩展功能</li>
+<li><strong>音色滑动开关：</strong>滑动至相应位置来选择不同的音色模式，有<code>温暖</code>，<code>平直</code>和<code>明亮</code>三种模式可选</li>
+</ol>
+<p><img src="Soundfreaq-Double-Spot-SFQ-09蓝牙音箱/Soundfreaq Sound Spot Stereo SFQ-09 Product Sheet-160830 副本.PNG" alt=""></p>
+<h2 id="规格参数"><a href="#规格参数" class="headerlink" title="规格参数"></a>规格参数</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>SFQ-09</th>
+<th>规格参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>颜色</td>
+<td>黑/白两种颜色可选</td>
+</tr>
+<tr>
+<td>品牌</td>
+<td>Soundfreaq 奇响</td>
+</tr>
+<tr>
+<td>音源接口</td>
+<td>无线蓝牙（BT）/  3.5mm音频接口（AUX）</td>
+</tr>
+<tr>
+<td>无线蓝牙</td>
+<td>A2DP，AVRCP</td>
+</tr>
+<tr>
+<td>充电接口</td>
+<td>USB接口，连接充电线给手机充电</td>
+</tr>
+<tr>
+<td>内置电池</td>
+<td>可充电锂电池，7.4V 1800mAh，可连续播放音乐 6 小时以上</td>
+</tr>
+<tr>
+<td>电源适配器</td>
+<td>输入：AC 100-240V, 50/60Hz;   输出：DC 12V 2.5A</td>
+</tr>
+<tr>
+<td>商品尺寸</td>
+<td>280 L x 80 D x 112 H mm</td>
+</tr>
+<tr>
+<td>商品重量</td>
+<td>1.23千克</td>
+</tr>
+<tr>
+<td>商品包装</td>
+<td>精美四色彩盒包装</td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content>
+  </entry>
+  <entry>
     <title>How to use icons from Font Awesome 5.x in your website?</title>
     <url>/2021/06/30/How-to-use-Font-Awesome-in-your-website/</url>
     <content><![CDATA[<h2 id="Referencing-Icons"><a href="#Referencing-Icons" class="headerlink" title="Referencing Icons"></a>Referencing Icons</h2><p>First of all, I suspect that the version of embedded Font Awesome to be 5, because New in Font Awesome 5 is the <strong>fas prefix</strong> or <strong>fab prefix</strong>, while Font Awesome 4 uses <strong>fa</strong>. Now let’s see which icons are already available from Font Awesome 5.x as embedded into the Butterfly theme. </p>
