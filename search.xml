@@ -61,85 +61,90 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Soundfreaq Double Spot SFQ-09蓝牙音箱</title>
-    <url>/2021/07/08/Soundfreaq-Double-Spot-SFQ-09%E8%93%9D%E7%89%99%E9%9F%B3%E7%AE%B1/</url>
-    <content><![CDATA[<p>与Sound Spot一脉相承，Double Spot变成了双喇叭立体声。从其尺寸大小和声音效果而言，这应该算是Soundfreaq排名第三的蓝牙音箱产品，排名紧随Sound Stack和Sound Platform 2之后。</p>
-<p>这是一款设计极简的产品，音箱顶部只有7颗键位，除去电源键使用了Tact Switch之外，其他6颗功能键，全部都是触摸设计。</p>
-<p><img src="Soundfreaq-Double-Spot-SFQ-09蓝牙音箱/Double Spot Black QTR.jpg" alt="Double Spot Black QTR"></p>
-<h2 id="内置锂电池-支持6小时播放"><a href="#内置锂电池-支持6小时播放" class="headerlink" title="内置锂电池 支持6小时播放"></a>内置锂电池 支持6小时播放</h2><p><strong>类型：</strong> 可充电锂电池<br><strong>型号：</strong> LC18650<br><strong>额定电压：</strong> 7.4V<br><strong>容量：</strong> 1800mAh</p>
-<p><img src="Soundfreaq-Double-Spot-SFQ-09蓝牙音箱/Double Spot Wood White QTR.jpg" alt="Double Spot Wood White QTR"></p>
-<img src="/2021/07/08/Soundfreaq-Double-Spot-SFQ-09%E8%93%9D%E7%89%99%E9%9F%B3%E7%AE%B1/09_TOP_UI.png" class="">
-<ol>
-<li><strong>音量减：</strong></li>
-<li><strong>音量加：</strong></li>
-<li><strong>上一首：</strong>蓝牙音源状态下，<code>按一下</code>跳至上一首曲目，<code>按住</code>可以快速后退。</li>
-<li><strong>播放 / 暂停：</strong><code>开始</code>播放或者<code>暂停</code>播放</li>
-<li><strong>下一首：</strong>蓝牙音源状态下，<code>按一下</code>跳至下一首曲目，<code>按住</code>可以快速前进。</li>
-<li><strong>蓝牙配对键：</strong>按住不放3秒，音箱将进入<code>配对模式</code>，这时电源键的LED将会快闪。</li>
-<li><strong>电源开关：</strong>按一下，可以进行<code>开机 / 关机</code>操作</li>
+    <title>About Tag Plugins</title>
+    <url>/2021/07/09/About-Tag-Plugins/</url>
+    <content><![CDATA[<h2 id="Tag-Plugins-in-Hexo"><a href="#Tag-Plugins-in-Hexo" class="headerlink" title="Tag Plugins in Hexo"></a>Tag Plugins in Hexo</h2><p>Tag plugins are different from post tags. They are ported from <code>Octopress</code> and provide a useful way for you to quickly add specific content to your posts.</p>
+<p>Although you can write your posts in any formats, but the tag plugins will always be available and syntax remains the same.</p>
+<p><em>Tag plugins should not be wrapped inside Markdown syntax, e.g. <code>[](&#123;% post_path lorem-ipsum %&#125;)</code> is not supported.</em></p>
+<h3 id="Block-Quote"><a href="#Block-Quote" class="headerlink" title="Block Quote"></a>Block Quote</h3><p>Perfect for adding quotes to your post, with optional author, source and title information.</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote [author[, source]] [link] [source<span class="emphasis">_link_</span>title] %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h4><p><strong>No arguments. Plain blockquote.</strong></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote %&#125;</span><br><span class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
+</blockquote>
+<p>When you editing in a markdown editor such as Typora, will see that the example paragraph above is not properly rendered.  So remember, Tag Plugins are formatting tools coming along with Hexo.  In my own production use case of <code>Hexo + Butterfly + Typora</code> , I’d rather use markdown grammar, <kbd>&gt; + Space + quoted text</kbd>, which would provide with you the the immediate preview of your post in editing.  </p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">​<span class="code">```</span></span><br><span class="line"><span class="code">&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</span></span><br><span class="line"><span class="code">​```</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
+</blockquote>
+<p><strong>Quote from a book</strong></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote David Levithan, Wide Awake %&#125;</span><br><span class="line">Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+<blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
+<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote>
+<h2 id="Tag-Plugins-in-Butterfly"><a href="#Tag-Plugins-in-Butterfly" class="headerlink" title="Tag Plugins in Butterfly"></a>Tag Plugins in Butterfly</h2><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
+<li><a href="https://hexo.io/docs/tag-plugins.html">Tag Plugins</a></li>
 </ol>
-<img src="/2021/07/08/Soundfreaq-Double-Spot-SFQ-09%E8%93%9D%E7%89%99%E9%9F%B3%E7%AE%B1/09_BACK_UI-1625716275342.png" class="">
-<ol>
-<li><strong>电源输入接口：</strong>连接电源适配器供电</li>
-<li><strong>USB充电接口：</strong>可以给外接电子设备充电，提供5V 1A的充电输出</li>
-<li><strong>AUX IN输入：</strong>接驳外部设备的音源信号</li>
-<li><strong>UQ3滑动开关：</strong><code>开启</code>或者<code>关闭</code>立体声扩展功能</li>
-<li><strong>音色滑动开关：</strong>滑动至相应位置来选择不同的音色模式，有<code>温暖</code>，<code>平直</code>和<code>明亮</code>三种模式可选</li>
-</ol>
-<p><img src="Soundfreaq-Double-Spot-SFQ-09蓝牙音箱/Soundfreaq Sound Spot Stereo SFQ-09 Product Sheet-160830 副本.PNG" alt=""></p>
-<h2 id="规格参数"><a href="#规格参数" class="headerlink" title="规格参数"></a>规格参数</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>SFQ-09</th>
-<th>规格参数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>颜色</td>
-<td>黑/白两种颜色可选</td>
-</tr>
-<tr>
-<td>品牌</td>
-<td>Soundfreaq 奇响</td>
-</tr>
-<tr>
-<td>音源接口</td>
-<td>无线蓝牙（BT）/  3.5mm音频接口（AUX）</td>
-</tr>
-<tr>
-<td>无线蓝牙</td>
-<td>A2DP，AVRCP</td>
-</tr>
-<tr>
-<td>充电接口</td>
-<td>USB接口，连接充电线给手机充电</td>
-</tr>
-<tr>
-<td>内置电池</td>
-<td>可充电锂电池，7.4V 1800mAh，可连续播放音乐 6 小时以上</td>
-</tr>
-<tr>
-<td>电源适配器</td>
-<td>输入：AC 100-240V, 50/60Hz;   输出：DC 12V 2.5A</td>
-</tr>
-<tr>
-<td>商品尺寸</td>
-<td>280 L x 80 D x 112 H mm</td>
-</tr>
-<tr>
-<td>商品重量</td>
-<td>1.23千克</td>
-</tr>
-<tr>
-<td>商品包装</td>
-<td>精美四色彩盒包装</td>
-</tr>
-</tbody>
-</table>
-</div>
 ]]></content>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Butterfly</tag>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown Style Preview</title>
+    <url>/2021/07/09/Markdown-Style-Preview/</url>
+    <content><![CDATA[<p>This post is used for testing markdown style. </p>
+<hr>
+<h2 id="Headers"><a href="#Headers" class="headerlink" title="Headers"></a>Headers</h2><p>We won’t bother to provide any examples on headers.</p>
+<h2 id="Emphasis"><a href="#Emphasis" class="headerlink" title="Emphasis"></a>Emphasis</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">Emphasis, aka italics, with <span class="emphasis">*asterisks*</span> or <span class="emphasis">_underscores_</span>.</span><br><span class="line"></span><br><span class="line">Strong emphasis, aka bold, with <span class="strong">**asterisks**</span> or <span class="strong">__underscores__</span>.</span><br><span class="line"></span><br><span class="line">Combined emphasis with <span class="strong">**asterisks and <span class="emphasis">_underscores_</span>**</span>.</span><br><span class="line"></span><br><span class="line">Strikethrough uses two tildes. ~~Scratch this.~~</span><br></pre></td></tr></table></figure>
+<p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p>
+<p>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>.</p>
+<p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
+<p>Strikethrough uses two tildes. <del>Scratch this.</del></p>
+<h2 id="Lists"><a href="#Lists" class="headerlink" title="Lists"></a>Lists</h2><p>Unordered list</p>
+<ul>
+<li>Humidifiers</li>
+<li>Lamps</li>
+<li>Speakers</li>
+</ul>
+<p>Ordered list</p>
+<ol>
+<li>Humidifiers<ol>
+<li>Big sizes</li>
+<li>Medium sizes</li>
+<li>Small sizes</li>
+</ol>
+</li>
+<li>Lamps<ul>
+<li>Floor lamps</li>
+<li>Table lamps</li>
+<li>Ceiling lamps</li>
+</ul>
+</li>
+<li>Speakers<ul>
+<li>Alarm clocks</li>
+<li>Bluetooth speakers</li>
+<li>Soundbars</li>
+</ul>
+</li>
+</ol>
+<h2 id="Inline-HTML-Tags"><a href="#Inline-HTML-Tags" class="headerlink" title="Inline HTML Tags"></a>Inline HTML Tags</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>To reboot your computer, press <span class="tag">&lt;<span class="name">kbd</span>&gt;</span>ctrl<span class="tag">&lt;/<span class="name">kbd</span>&gt;</span>+<span class="tag">&lt;<span class="name">kbd</span>&gt;</span>alt<span class="tag">&lt;/<span class="name">kbd</span>&gt;</span>+<span class="tag">&lt;<span class="name">kbd</span>&gt;</span>del<span class="tag">&lt;/<span class="name">kbd</span>&gt;</span>.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>To reboot your computer, press <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>del</kbd>.</p>
+
+<h2 id="Links"><a href="#Links" class="headerlink" title="Links"></a>Links</h2><h2 id="Images"><a href="#Images" class="headerlink" title="Images"></a>Images</h2><h2 id="Codes"><a href="#Codes" class="headerlink" title="Codes"></a>Codes</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">Inline <span class="code">`code`</span> has one pair of back-ticks around it.</span><br></pre></td></tr></table></figure>
+<p>Inline <code>code</code> has one pair of back-ticks around it.</p>
+<p><code>Code block</code> has three pairs of back-ticks around it.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="string">&quot;JavaScript syntax highlighting&quot;</span>;</span><br><span class="line">alert(s);</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">s = <span class="string">&quot;Python syntax highlighting&quot;</span></span><br><span class="line"><span class="built_in">print</span>(s)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">No language indicated, so no syntax highlighting.</span><br><span class="line">But let&#39;s throw in a &lt;b&gt;tag&lt;&#x2F;b&gt;.</span><br></pre></td></tr></table></figure>
+<h2 id="Tables"><a href="#Tables" class="headerlink" title="Tables"></a>Tables</h2><h2 id="Blockquotes"><a href="#Blockquotes" class="headerlink" title="Blockquotes"></a>Blockquotes</h2><h2 id="Horizontal-Rule"><a href="#Horizontal-Rule" class="headerlink" title="Horizontal Rule"></a>Horizontal Rule</h2><h2 id="Line-Breaks"><a href="#Line-Breaks" class="headerlink" title="Line Breaks"></a>Line Breaks</h2><h2 id="Videos"><a href="#Videos" class="headerlink" title="Videos"></a>Videos</h2>]]></content>
+      <categories>
+        <category>Markdown</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
   </entry>
   <entry>
     <title>How to use icons from Font Awesome 5.x in your website?</title>

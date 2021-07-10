@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2663193 */
+  src: url('//at.alicdn.com/t/font_2663193_kacbkwb2o2.woff2?t=1625907258291') format('woff2'),
+       url('//at.alicdn.com/t/font_2663193_kacbkwb2o2.woff?t=1625907258291') format('woff'),
+       url('//at.alicdn.com/t/font_2663193_kacbkwb2o2.ttf?t=1625907258291') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-time1:before {
+  content: "\e7ce";
+}
+
+.icon-lock1:before {
+  content: "\e61f";
+}
+
+.icon-usb-cord:before {
+  content: "\e8b1";
+}
+
+.icon-lock2:before {
+  content: "\e6c0";
+}
+
+.icon-sun1:before {
+  content: "\e642";
+}
+
+.icon-usb-c:before {
+  content: "\e8ba";
+}
+
+.icon-Wave:before {
+  content: "\e613";
+}
+
+.icon-home:before {
+  content: "\e61b";
+}
+
+.icon-radio:before {
+  content: "\ea28";
+}
+
+.icon-bolt:before {
+  content: "\e654";
+}
+
+.icon-bluetooth:before {
+  content: "\e8d4";
+}
+
+.icon-time:before {
+  content: "\e620";
+}
+
+.icon-usb-c-cord:before {
+  content: "\e8b2";
+}
+
+.icon-USBPort:before {
+  content: "\e6e4";
+}
+
+.icon-lock:before {
+  content: "\e605";
+}
+
+.icon-sun:before {
+  content: "\e6d2";
+}
+
