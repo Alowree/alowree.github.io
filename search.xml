@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>About Tag Plugins</title>
+    <url>/2021/07/09/About-Tag-Plugins/</url>
+    <content><![CDATA[<h2 id="Tag-Plugins-in-Hexo"><a href="#Tag-Plugins-in-Hexo" class="headerlink" title="Tag Plugins in Hexo"></a>Tag Plugins in Hexo</h2><p>Tag plugins are different from post tags. They are ported from <code>Octopress</code> and provide a useful way for you to quickly add specific content to your posts.</p>
+<p>Although you can write your posts in any formats, but the tag plugins will always be available and syntax remains the same.</p>
+<p><em>Tag plugins should not be wrapped inside Markdown syntax, e.g. <code>[](&#123;% post_path lorem-ipsum %&#125;)</code> is not supported.</em></p>
+<h3 id="Block-Quote"><a href="#Block-Quote" class="headerlink" title="Block Quote"></a>Block Quote</h3><p>Perfect for adding quotes to your post, with optional author, source and title information.</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote [author[, source]] [link] [source<span class="emphasis">_link_</span>title] %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h4><p><strong>No arguments. Plain blockquote.</strong></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote %&#125;</span><br><span class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
+</blockquote>
+<p>When you editing in a markdown editor such as Typora, will see that the example paragraph above is not properly rendered.  So remember, Tag Plugins are formatting tools coming along with Hexo.  In my own production use case of <code>Hexo + Butterfly + Typora</code> , I’d rather use markdown grammar, <kbd>&gt; + Space + quoted text</kbd>, which would provide with you the the immediate preview of your post in editing.  </p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">​<span class="code">```</span></span><br><span class="line"><span class="code">&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</span></span><br><span class="line"><span class="code">​```</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
+</blockquote>
+<p><strong>Quote from a book</strong></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote David Levithan, Wide Awake %&#125;</span><br><span class="line">Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+<blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
+<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote>
+<h2 id="Tag-Plugins-in-Butterfly"><a href="#Tag-Plugins-in-Butterfly" class="headerlink" title="Tag Plugins in Butterfly"></a>Tag Plugins in Butterfly</h2><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
+<li><a href="https://hexo.io/docs/tag-plugins.html">Tag Plugins</a></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Butterfly</tag>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>A Static Homepage based on Hexo + Butterfly + Github</title>
     <url>/2021/06/30/A-Static-Homepage-based-on-Hexo-Butterfly-Github/</url>
     <content><![CDATA[<h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><ul>
@@ -59,37 +90,6 @@
 <li>Copy external link to <code>![](external link)</code></li>
 </ol>
 ]]></content>
-  </entry>
-  <entry>
-    <title>About Tag Plugins</title>
-    <url>/2021/07/09/About-Tag-Plugins/</url>
-    <content><![CDATA[<h2 id="Tag-Plugins-in-Hexo"><a href="#Tag-Plugins-in-Hexo" class="headerlink" title="Tag Plugins in Hexo"></a>Tag Plugins in Hexo</h2><p>Tag plugins are different from post tags. They are ported from <code>Octopress</code> and provide a useful way for you to quickly add specific content to your posts.</p>
-<p>Although you can write your posts in any formats, but the tag plugins will always be available and syntax remains the same.</p>
-<p><em>Tag plugins should not be wrapped inside Markdown syntax, e.g. <code>[](&#123;% post_path lorem-ipsum %&#125;)</code> is not supported.</em></p>
-<h3 id="Block-Quote"><a href="#Block-Quote" class="headerlink" title="Block Quote"></a>Block Quote</h3><p>Perfect for adding quotes to your post, with optional author, source and title information.</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote [author[, source]] [link] [source<span class="emphasis">_link_</span>title] %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h4><p><strong>No arguments. Plain blockquote.</strong></p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote %&#125;</span><br><span class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
-<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
-</blockquote>
-<p>When you editing in a markdown editor such as Typora, will see that the example paragraph above is not properly rendered.  So remember, Tag Plugins are formatting tools coming along with Hexo.  In my own production use case of <code>Hexo + Butterfly + Typora</code> , I’d rather use markdown grammar, <kbd>&gt; + Space + quoted text</kbd>, which would provide with you the the immediate preview of your post in editing.  </p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">​<span class="code">```</span></span><br><span class="line"><span class="code">&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</span></span><br><span class="line"><span class="code">​```</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
-</blockquote>
-<p><strong>Quote from a book</strong></p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote David Levithan, Wide Awake %&#125;</span><br><span class="line">Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
-<blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
-<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote>
-<h2 id="Tag-Plugins-in-Butterfly"><a href="#Tag-Plugins-in-Butterfly" class="headerlink" title="Tag Plugins in Butterfly"></a>Tag Plugins in Butterfly</h2><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
-<li><a href="https://hexo.io/docs/tag-plugins.html">Tag Plugins</a></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Butterfly</tag>
-        <tag>Markdown</tag>
-      </tags>
   </entry>
   <entry>
     <title>Markdown Style Preview</title>
