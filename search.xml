@@ -32,37 +32,6 @@
       </tags>
   </entry>
   <entry>
-    <title>A Static Homepage based on Hexo + Butterfly + Github</title>
-    <url>/2021/06/30/A-Static-Homepage-based-on-Hexo-Butterfly-Github/</url>
-    <content><![CDATA[<h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><ul>
-<li>os: Windows_NT 10.0.19042 win32 x64</li>
-<li>node: 14.16.1</li>
-<li>hexo: 5.4.0</li>
-<li>butterfly: 3.7.8</li>
-</ul>
-<h2 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h2><p>Front-matter is the top area of each markdown file, used to designate various variables of certain files. </p>
-<ul>
-<li>Page Front-matter is used for <code>Page</code> configurations</li>
-<li>Post Front-matter is used for <code>Post</code> configurations</li>
-</ul>
-<h2 id="Tags-Page"><a href="#Tags-Page" class="headerlink" title="Tags Page"></a>Tags Page</h2><p>Remember to add <code>type: tags</code> into the Front-matter of Tages Page.</p>
-<h2 id="Categories-Page"><a href="#Categories-Page" class="headerlink" title="Categories Page"></a>Categories Page</h2><p>Remember to add <code>type: categories</code> into the Front-matter of Categories Page.</p>
-<h2 id="Link-Page"><a href="#Link-Page" class="headerlink" title="Link Page"></a>Link Page</h2><p>Remember to add <code>type: link</code> into the Front-matter of Link Page. So far I don’t have any link pages from any friends yet, therefore I leave it blank, to be added later on. </p>
-<h2 id="Gallery"><a href="#Gallery" class="headerlink" title="Gallery"></a>Gallery</h2><p>Just an ordinary page, so use <code>hexo new page xxxx</code> to create one page. </p>
-<p>Markdown grammar is as follows:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;gallery-group-main&quot;&gt;</span><br><span class="line">&#123;% galleryGroup &#39;壁紙&#39; &#39;收藏的一些壁紙&#39; &#39;&#x2F;Gallery&#x2F;wallpaper&#39; https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;10&#x2F;T7Mu8Aod3egmC4Q.png %&#125;</span><br><span class="line">&#123;% galleryGroup &#39;漫威&#39; &#39;關於漫威的圖片&#39; &#39;&#x2F;Gallery&#x2F;marvel&#39; https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;12&#x2F;25&#x2F;8t97aVlp4hgyBGu.jpg %&#125;</span><br><span class="line">&#123;% galleryGroup &#39;OH MY GIRL&#39; &#39;關於OH MY GIRL的圖片&#39; &#39;&#x2F;Gallery&#x2F;ohmygirl&#39; https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;12&#x2F;25&#x2F;hOqbQ3BIwa6KWpo.jpg %&#125;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-<p><code>https://fineq.cn/gallery</code> is an example how it looks.</p>
-]]></content>
-      <categories>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Butterfly</tag>
-        <tag>Github</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Auto Setting in Typora makes pictures missing in Pages</title>
     <url>/2021/06/30/Auto-Setting-in-Typora-makes-pictures-missing-in-Pages/</url>
     <content><![CDATA[<h2 id="Demo-1-Insert-from-local-drive-with-relative-path"><a href="#Demo-1-Insert-from-local-drive-with-relative-path" class="headerlink" title="Demo 1 -Insert from local drive with relative path"></a>Demo 1 -Insert from local drive with relative path</h2><p><code>&#123;% gallery %&#125; ![](src) &#123;% endgallery %&#125;</code></p>
@@ -90,6 +59,237 @@
 <li>Copy external link to <code>![](external link)</code></li>
 </ol>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Butterfly Manual</title>
+    <url>/2021/06/30/Butterfly-Manual/</url>
+    <content><![CDATA[<h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><ul>
+<li>os: Windows_NT 10.0.19042 win32 x64</li>
+<li>node: 14.16.1</li>
+<li>hexo: 5.4.0</li>
+<li>butterfly: 3.7.8</li>
+</ul>
+<h2 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h2><p>Front-matter is the top area of each markdown file, used to designate various variables of certain files. </p>
+<ul>
+<li>Page Front-matter is used for <code>Page</code> configurations</li>
+<li>Post Front-matter is used for <code>Post</code> configurations</li>
+</ul>
+<h2 id="Tags-Page"><a href="#Tags-Page" class="headerlink" title="Tags Page"></a>Tags Page</h2><p>Remember to add <code>type: tags</code> into the Front-matter of Tags Page.</p>
+<h2 id="Categories-Page"><a href="#Categories-Page" class="headerlink" title="Categories Page"></a>Categories Page</h2><p>Remember to add <code>type: categories</code> into the Front-matter of Categories Page.</p>
+<h2 id="Link-Page"><a href="#Link-Page" class="headerlink" title="Link Page"></a>Link Page</h2><p>Remember to add <code>type: link</code> into the Front-matter of Link Page. </p>
+<h2 id="Gallery"><a href="#Gallery" class="headerlink" title="Gallery"></a>Gallery</h2><h3 id="Gallery-Group-Page"><a href="#Gallery-Group-Page" class="headerlink" title="Gallery Group Page"></a>Gallery Group Page</h3><p>Just an ordinary page, so use <code>hexo new page xxxx</code> to create a page. </p>
+<p>To display Gallery Group in your page,  just directly use Tag Plugins galleryGroup in Typora editor.</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;gallery-group-main&quot;</span>&gt;</span></span></span><br><span class="line">&#123;% galleryGroup &#x27;Chicago&#x27; &#x27;这里的冬天很冷&#x27; &#x27;/gallery/chicago&#x27; https://i.loli.net/2021/07/01/lyzOQL5EPgRKxF8.jpg %&#125;</span><br><span class="line">&#123;% galleryGroup &#x27;SFO&#x27; &#x27;有人称之为旧金山&#x27; &#x27;/gallery/sfo&#x27; https://i.loli.net/2021/07/01/mAtZsVUPSXeMgNx.jpg %&#125;</span><br><span class="line">&#123;% galleryGroup &#x27;Minneapolis&#x27; &#x27;关于Minneapolis的图片&#x27; &#x27;/gallery/minneapolis&#x27; https://i.loli.net/2021/07/02/hwIYUPEBTaQOrAy.jpg %&#125;</span><br><span class="line">&#123;% galleryGroup &#x27;San Diego&#x27; &#x27;关于San Diego的图片&#x27; &#x27;/gallery/sandiego&#x27; https://i.loli.net/2021/07/02/LwrkBdy2CIu9VEh.jpg %&#125; </span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<div class="gallery-group-main">
+
+  <figure class="gallery-group">
+  <img class="gallery-group-img" src='https://i.loli.net/2021/07/01/lyzOQL5EPgRKxF8.jpg' alt="Group Image Gallery">
+  <figcaption>
+  <div class="gallery-group-name">Chicago</div>
+  <p>这里的冬天很冷</p>
+  <a href='/gallery/chicago'></a>
+  </figcaption>
+  </figure>
+  
+
+  <figure class="gallery-group">
+  <img class="gallery-group-img" src='https://i.loli.net/2021/07/01/mAtZsVUPSXeMgNx.jpg' alt="Group Image Gallery">
+  <figcaption>
+  <div class="gallery-group-name">SFO</div>
+  <p>有人称之为旧金山</p>
+  <a href='/gallery/sfo'></a>
+  </figcaption>
+  </figure>
+  
+
+  <figure class="gallery-group">
+  <img class="gallery-group-img" src='https://i.loli.net/2021/07/02/hwIYUPEBTaQOrAy.jpg' alt="Group Image Gallery">
+  <figcaption>
+  <div class="gallery-group-name">Minneapolis</div>
+  <p>关于Minneapolis的图片</p>
+  <a href='/gallery/minneapolis'></a>
+  </figcaption>
+  </figure>
+  
+
+  <figure class="gallery-group">
+  <img class="gallery-group-img" src='https://i.loli.net/2021/07/02/LwrkBdy2CIu9VEh.jpg' alt="Group Image Gallery">
+  <figcaption>
+  <div class="gallery-group-name">San Diego</div>
+  <p>关于San Diego的图片</p>
+  <a href='/gallery/sandiego'></a>
+  </figcaption>
+  </figure>
+   
+</div>
+
+
+
+<h3 id="Gallery-Sub-Page"><a href="#Gallery-Sub-Page" class="headerlink" title="Gallery Sub Page"></a>Gallery Sub Page</h3><p>Sub Page also being an ordinary page, so use <code>hexo new page xxxx</code> to create a page. </p>
+<p>Use Tags Plugin gallery, please refer to detailed instructions.</p>
+<div class="justified-gallery"><p><img src="https://gitee.com/Alowree/img/raw/master/IMG_20150527_184153.jpg" alt=""></p><p><img src="https://gitee.com/Alowree/img/raw/master/IMG_20150527_185001.jpg" alt="IMG_20150527_185001"></p><p><img src="https://gitee.com/Alowree/img/raw/master/IMG_20150528_153605.jpg" alt="IMG_20150528_153605"></p><p><img src="https://gitee.com/Alowree/img/raw/master/IMG_20150528_153611.jpg" alt="IMG_20150528_153611"></p><p><img src="https://gitee.com/Alowree/img/raw/master/IMG_20150528_180217.jpg" alt="IMG_20150528_180217"></p><p><img src="D:/alowree/Huawei%20Mate%202_20150626/IMG_20150528_180544.jpg" alt="IMG_20150528_180544"></p><p><img src="D:/alowree/Huawei%20Mate%202_20150626/IMG_20150529_154727.jpg" alt="IMG_20150529_154727"></p><p><img src="D:/alowree/Huawei%20Mate%202_20150626/IMG_20150529_154808.jpg" alt="IMG_20150529_154808"></p><p><img src="https://gitee.com/Alowree/img/raw/master/IMG_20150530_071209.jpg" alt="IMG_20150530_071209"></p>
+          </div>
+<p>If you want to use a <code>/gallery/chicago</code> link format to display your photo content, you could simply move the entire <code>chicago</code> folder into the <code>gallery</code> folder. </p>
+<h2 id="Tag-Plugins"><a href="#Tag-Plugins" class="headerlink" title="Tag Plugins"></a>Tag Plugins</h2><p>Tag Plugins comes along with Hexo, but not a standard Markdown, so you won’t get a actual preview in your Typora editor and you will have to stroke <code>hexo cl</code>, <code>hexo g</code>, and <code>hexo s</code> to feel it.</p>
+<p>These use examples are valid for Butterfly Only. </p>
+<h3 id="Note-Bootstrap-Callout"><a href="#Note-Bootstrap-Callout" class="headerlink" title="Note (Bootstrap Callout)"></a>Note (Bootstrap Callout)</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note [class] [no-icon] [style] %&#125;</span><br><span class="line">Any content (support inline tags too.io).</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>用法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>class</td>
+<td>【Optional】Different setting with different color<br/>（ default / primary / success / info / warning / danger ）</td>
+</tr>
+<tr>
+<td>no-icon</td>
+<td>【Optional】Do not show icon</td>
+</tr>
+<tr>
+<td>style</td>
+<td>【Optional】可以覆蓋配置中的 style<br/>（simple / modern / flat / disabled）</td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>Demo 1: simple</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note simple %&#125;</span><br><span class="line">When missing all optional parameters Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note default simple %&#125;</span><br><span class="line">default Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note primary simple %&#125;</span><br><span class="line">primary Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note success simple %&#125;</span><br><span class="line">success Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note info simple %&#125;</span><br><span class="line">info Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note warning simple %&#125;</span><br><span class="line">warning Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note danger simple %&#125;</span><br><span class="line">danger Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note simple"><p>When missing all optional parameters Reminder tag with message body</p>
+</div>
+<div class="note default simple"><p>default Reminder tag with message body</p>
+</div>
+<div class="note primary simple"><p>primary Reminder tag with message body</p>
+</div>
+<div class="note success simple"><p>success Reminder tag with message body</p>
+</div>
+<div class="note info simple"><p>info Reminder tag with message body</p>
+</div>
+<div class="note warning simple"><p>warning Reminder tag with message body</p>
+</div>
+<div class="note danger simple"><p>danger Reminder tag with message body</p>
+</div>
+<blockquote>
+<p>Demo 2: modern</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note modern %&#125;</span><br><span class="line">When missing all optional parameters Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note default modern %&#125;</span><br><span class="line">default Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note primary modern %&#125;</span><br><span class="line">primary Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note success modern %&#125;</span><br><span class="line">success Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note info modern %&#125;</span><br><span class="line">info Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note warning modern %&#125;</span><br><span class="line">warning Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note danger modern %&#125;</span><br><span class="line">danger Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note modern"><p>When missing all optional parameters Reminder tag with message body</p>
+</div>
+<div class="note default modern"><p>default Reminder tag with message body</p>
+</div>
+<div class="note primary modern"><p>primary Reminder tag with message body</p>
+</div>
+<div class="note success modern"><p>success Reminder tag with message body</p>
+</div>
+<div class="note info modern"><p>info Reminder tag with message body</p>
+</div>
+<div class="note warning modern"><p>warning Reminder tag with message body</p>
+</div>
+<div class="note danger modern"><p>danger Reminder tag with message body</p>
+</div>
+<blockquote>
+<p>Demo 3: flat</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note flat %&#125;</span><br><span class="line">When missing all optional parameters Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note default flat %&#125;</span><br><span class="line">default Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note primary flat %&#125;</span><br><span class="line">primary Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note success flat %&#125;</span><br><span class="line">success Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note info flat %&#125;</span><br><span class="line">info Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note warning flat %&#125;</span><br><span class="line">warning Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note danger flat %&#125;</span><br><span class="line">danger Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note flat"><p>When missing all optional parameters Reminder tag with message body</p>
+</div>
+<div class="note default flat"><p>default Reminder tag with message body</p>
+</div>
+<div class="note primary flat"><p>primary Reminder tag with message body</p>
+</div>
+<div class="note success flat"><p>success Reminder tag with message body</p>
+</div>
+<div class="note info flat"><p>info Reminder tag with message body</p>
+</div>
+<div class="note warning flat"><p>warning Reminder tag with message body</p>
+</div>
+<div class="note danger flat"><p>danger Reminder tag with message body</p>
+</div>
+<blockquote>
+<p>Demo 4: disabled</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note disabled %&#125;</span><br><span class="line">When missing all optional parameters Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note default disabled %&#125;</span><br><span class="line">default Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note primary disabled %&#125;</span><br><span class="line">primary Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note success disabled %&#125;</span><br><span class="line">success Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note info disabled %&#125;</span><br><span class="line">info Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note warning disabled %&#125;</span><br><span class="line">warning Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note danger disabled %&#125;</span><br><span class="line">danger Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note disabled"><p>When missing all optional parameters Reminder tag with message body</p>
+</div>
+<div class="note default disabled"><p>default Reminder tag with message body</p>
+</div>
+<div class="note primary disabled"><p>primary Reminder tag with message body</p>
+</div>
+<div class="note success disabled"><p>success Reminder tag with message body</p>
+</div>
+<div class="note info disabled"><p>info Reminder tag with message body</p>
+</div>
+<div class="note warning disabled"><p>warning Reminder tag with message body</p>
+</div>
+<div class="note danger disabled"><p>danger Reminder tag with message body</p>
+</div>
+<blockquote>
+<p>Demo 5: no-icon</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note no-icon %&#125;</span><br><span class="line">When missing all optional parameters Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note default no-icon %&#125;</span><br><span class="line">default Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note primary no-icon %&#125;</span><br><span class="line">primary Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note success no-icon %&#125;</span><br><span class="line">success Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note info no-icon %&#125;</span><br><span class="line">info Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note warning no-icon %&#125;</span><br><span class="line">warning Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note danger no-icon %&#125;</span><br><span class="line">danger Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note no-icon flat"><p>When missing all optional parameters Reminder tag with message body</p>
+</div>
+<div class="note default no-icon flat"><p>default Reminder tag with message body</p>
+</div>
+<div class="note primary no-icon flat"><p>primary Reminder tag with message body</p>
+</div>
+<div class="note success no-icon flat"><p>success Reminder tag with message body</p>
+</div>
+<div class="note info no-icon flat"><p>info Reminder tag with message body</p>
+</div>
+<div class="note warning no-icon flat"><p>warning Reminder tag with message body</p>
+</div>
+<div class="note danger no-icon flat"><p>danger Reminder tag with message body</p>
+</div>
+<blockquote>
+<p>Demo 6: inline tags</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note no-icon %&#125;</span><br><span class="line">When missing all optional parameters Reminder tag with message body: <span class="code">`inline code`</span></span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note default no-icon %&#125;</span><br><span class="line">default Reminder tag with message body: html tag <span class="xml"><span class="tag">&lt;<span class="name">kbd</span>&gt;</span></span>Ctrl + C<span class="xml"><span class="tag">&lt;/<span class="name">kbd</span>&gt;</span></span></span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note primary no-icon %&#125;</span><br><span class="line">primary Reminder tag with message body: <span class="strong">**Bold Font**</span></span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note success no-icon %&#125;</span><br><span class="line">success Reminder tag with message body:</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note info no-icon %&#125;</span><br><span class="line">info Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note warning no-icon %&#125;</span><br><span class="line">warning Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note danger no-icon %&#125;</span><br><span class="line">danger Reminder tag with message body</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note no-icon flat"><p>When missing all optional parameters Reminder tag with message body: <code>inline code</code></p>
+</div>
+<div class="note default no-icon flat"><p>default Reminder tag with message body: html tag <kbd>Ctrl + C</kbd></p>
+</div>
+<div class="note primary no-icon flat"><p>primary Reminder tag with message body: <strong>Bold Font</strong></p>
+</div>
+<div class="note success no-icon flat"><p>success Reminder tag with message body: </p>
+</div>
+<h3 id="Tabs"><a href="#Tabs" class="headerlink" title="Tabs"></a>Tabs</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% tabs Unique name, [index] %&#125;</span><br><span class="line">&lt;!-- tab [Tab caption] [@icon] --&gt;</span><br><span class="line">Any content (support inline tags too).</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br><span class="line"></span><br><span class="line">Unique name   : Unique name of tabs block tag without comma.</span><br><span class="line"><span class="code">                Will be used in #id&#x27;s as prefix for each tab with their index numbers.</span></span><br><span class="line"><span class="code">                If there are whitespaces in name, for generate #id all whitespaces will replaced by dashes.</span></span><br><span class="line"><span class="code">                Only for current url of post/page must be unique!</span></span><br><span class="line"><span class="code">[index]       : Index number of active tab.</span></span><br><span class="line"><span class="code">                If not specified, first tab (1) will be selected.</span></span><br><span class="line"><span class="code">                If index is -1, no tab will be selected. It&#x27;s will be something like spoiler.</span></span><br><span class="line"><span class="code">                Optional parameter.</span></span><br><span class="line"><span class="code">[Tab caption] : Caption of current tab.</span></span><br><span class="line"><span class="code">                If not caption specified, unique name with tab index suffix will be used as caption of tab.</span></span><br><span class="line"><span class="code">                If not caption specified, but specified icon, caption will empty.</span></span><br><span class="line"><span class="code">                Optional parameter.</span></span><br><span class="line"><span class="code">[@icon]       : FontAwesome icon name (full-name, look like &#x27;fas fa-font&#x27;)</span></span><br><span class="line"><span class="code">                Can be specified with or without space; e.g. &#x27;Tab caption @icon&#x27; similar to &#x27;Tab caption@icon&#x27;.</span></span><br><span class="line"><span class="code">                Optional parameter.</span></span><br></pre></td></tr></table></figure>
+<h2 id="Text-Styles"><a href="#Text-Styles" class="headerlink" title="Text Styles"></a>Text Styles</h2><p>To insert into a paragraph with different color tags, including <span class='p red'>红色</span>、<span class='p yellow'>黄色</span>、<span class='p green'>绿色</span>、<span class='p cyan'>青色</span>、<span class='p blue'>蓝色</span>、<span class='p gray'>灰色</span>。</p>
+<p>Also, you could define different sizes.</p>
+<p class='p center logo large'>[Large] FINEQ</p>
+<p class='p center small'>[Small] Flexibility Intelligence Network Engineers Quality</p>
+<p class='p center huge'>[Huge] FINEQ</p>
+<p class='p center h3'>[h3] Flexibility Intelligence Network Engineers Quality</p>
+<div class="tabs" id="unique-name"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#unique-name-1">Grammar</button></li><li class="tab"><button type="button" data-href="#unique-name-2">Parameters</button></li><li class="tab"><button type="button" data-href="#unique-name-3">Code</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="unique-name-1"><p>Inline</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% span 样式参数, 文本内容 %&#125;</span><br></pre></td></tr></table></figure>
+<p>Paragraph</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% p 样式参数, 文本内容 %&#125;</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="unique-name-2"><p>Font</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">logo, code</span><br></pre></td></tr></table></figure>
+<p>Color</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">red, yellow, green, cyan, blue, gray</span><br></pre></td></tr></table></figure>
+<p>Size</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">small, h4, h3, h2, h1, large, huge, ultra</span><br></pre></td></tr></table></figure>
+<p>Align</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">left, center, right</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="unique-name-3"><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">To insert into a paragraph with different color tags, including &#123;% span red, 红色 %&#125;、&#123;% span yellow, 黄色 %&#125;、&#123;% span green, 绿色 %&#125;、&#123;% span cyan, 青色 %&#125;、&#123;% span blue, 蓝色 %&#125;、&#123;% span gray, 灰色 %&#125;。</span><br><span class="line"></span><br><span class="line">Also, you could define different sizes.</span><br><span class="line"></span><br><span class="line">&#123;% p center logo large, [Large] FINEQ %&#125;</span><br><span class="line">&#123;% p center small, [Small] Flexibility Intelligence Network Engineers Quality %&#125;</span><br><span class="line">&#123;% p center huge, [Huge] FINEQ %&#125;</span><br><span class="line">&#123;% p center h3, [h3] Flexibility Intelligence Network Engineers Quality %&#125;</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h2 id="Inline-Color-Patches"><a href="#Inline-Color-Patches" class="headerlink" title="Inline Color Patches"></a>Inline Color Patches</h2><ul>
+<li>在路径 <code>D:\blog\themes\Butterfly\source\css\_layout\post.styl</code> 下添加色块的引用样式，写文章时调用标签即可。<figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 颜色块-黄</span></span><br><span class="line">  span<span class="selector-id">#inline-yellow</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>:inline;</span><br><span class="line">  padding:.2em .6em .3em;</span><br><span class="line">  <span class="attribute">font-size</span>:<span class="number">90%</span>;</span><br><span class="line">  <span class="attribute">font-weight</span>:normal;</span><br><span class="line">  <span class="attribute">line-height</span>:<span class="number">1</span>;</span><br><span class="line">  <span class="attribute">color</span>:<span class="number">#000</span>;</span><br><span class="line">  <span class="attribute">text-align</span>:center;</span><br><span class="line">  <span class="attribute">white-space</span>:nowrap;</span><br><span class="line">  <span class="attribute">vertical-align</span>:baseline;</span><br><span class="line">  <span class="attribute">border-radius</span>:<span class="number">0.1rem</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#FFD700</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  span<span class="selector-id">#inline-cadetblue</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>:inline;</span><br><span class="line">  padding:.2em .6em .3em;</span><br><span class="line">  <span class="attribute">font-size</span>:<span class="number">90%</span>;</span><br><span class="line">  <span class="attribute">font-weight</span>:normal;</span><br><span class="line">  <span class="attribute">line-height</span>:<span class="number">1</span>;</span><br><span class="line">  <span class="attribute">color</span>:<span class="number">#000</span>;</span><br><span class="line">  <span class="attribute">text-align</span>:center;</span><br><span class="line">  <span class="attribute">white-space</span>:nowrap;</span><br><span class="line">  <span class="attribute">vertical-align</span>:baseline;</span><br><span class="line">  <span class="attribute">border-radius</span>:<span class="number">0.1rem</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#788b8f</span>;</span><br><span class="line">  &#125;  </span><br><span class="line">  span<span class="selector-id">#inline-duststorm</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>:inline;</span><br><span class="line">  padding:.2em .6em .3em;</span><br><span class="line">  <span class="attribute">font-size</span>:<span class="number">90%</span>;</span><br><span class="line">  <span class="attribute">font-weight</span>:normal;</span><br><span class="line">  <span class="attribute">line-height</span>:<span class="number">1</span>;</span><br><span class="line">  <span class="attribute">color</span>:<span class="number">#000</span>;</span><br><span class="line">  <span class="attribute">text-align</span>:center;</span><br><span class="line">  <span class="attribute">white-space</span>:nowrap;</span><br><span class="line">  <span class="attribute">vertical-align</span>:baseline;</span><br><span class="line">  <span class="attribute">border-radius</span>:<span class="number">0.1rem</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#bc9d99</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  span<span class="selector-id">#inline-darkblue</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>:inline;</span><br><span class="line">  padding:.2em .6em .3em;</span><br><span class="line">  <span class="attribute">font-size</span>:<span class="number">90%</span>;</span><br><span class="line">  <span class="attribute">font-weight</span>:normal;</span><br><span class="line">  <span class="attribute">line-height</span>:<span class="number">1</span>;</span><br><span class="line">  <span class="attribute">color</span>:<span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">text-align</span>:center;</span><br><span class="line">  <span class="attribute">white-space</span>:nowrap;</span><br><span class="line">  <span class="attribute">vertical-align</span>:baseline;</span><br><span class="line">  <span class="attribute">border-radius</span>:<span class="number">0.1rem</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#4d4f68</span>;</span><br><span class="line">  &#125; </span><br><span class="line">  span<span class="selector-id">#inline-snow</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>:inline;</span><br><span class="line">  padding:.2em .6em .3em;</span><br><span class="line">  <span class="attribute">font-size</span>:<span class="number">90%</span>;</span><br><span class="line">  <span class="attribute">font-weight</span>:normal;</span><br><span class="line">  <span class="attribute">line-height</span>:<span class="number">1</span>;</span><br><span class="line">  <span class="attribute">color</span>:<span class="number">#000</span>;</span><br><span class="line">  <span class="attribute">text-align</span>:center;</span><br><span class="line">  <span class="attribute">white-space</span>:nowrap;</span><br><span class="line">  <span class="attribute">vertical-align</span>:baseline;</span><br><span class="line">  <span class="attribute">border-radius</span>:<span class="number">0.1rem</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fffafa</span>;</span><br><span class="line">  &#125;     </span><br></pre></td></tr></table></figure></li>
+<li><span id="inline-yellow">yellow色块</span> <span id="inline-cadetblue">cadetblue色块</span> <span id="inline-duststorm">duststorm色块</span> <span id="inline-darkblue">darkblue色块</span> <span id="inline-snow">snow色块</span><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;inline-yellow&quot;</span>&gt;</span></span>yellow色块<span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span> <span class="xml"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;inline-cadetblue&quot;</span>&gt;</span></span>cadetblue色块<span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span> <span class="xml"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;inline-duststorm&quot;</span>&gt;</span></span>duststorm色块<span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span> <span class="xml"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;inline-darkblue&quot;</span>&gt;</span></span>darkblue色块<span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span> <span class="xml"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;inline-snow&quot;</span>&gt;</span></span>snow色块<span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Butterfly</tag>
+      </tags>
   </entry>
   <entry>
     <title>Markdown Style Preview</title>
