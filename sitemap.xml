@@ -4,14 +4,63 @@
   <url>
     <loc>https://alowree.github.io/2021/06/30/Butterfly-Manual/</loc>
     
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://alowree.github.io/2021/07/19/A-Simple-Introduction-to-Humidifiers/</loc>
+    
+    <lastmod>2021-07-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://alowree.github.io/humidifiers/index.html</loc>
+    
+    <lastmod>2021-07-19</lastmod>
     
   </url>
   
   <url>
     <loc>https://alowree.github.io/humidifiers/rh30/index.html</loc>
     
-    <lastmod>2021-07-15</lastmod>
+    <lastmod>2021-07-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://alowree.github.io/2021/07/09/Markdown-Style-Preview/</loc>
+    
+    <lastmod>2021-07-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://alowree.github.io/2021/07/09/About-Tag-Plugins/</loc>
+    
+    <lastmod>2021-07-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://alowree.github.io/2021/06/30/Auto-Setting-in-Typora-makes-pictures-missing-in-Pages/</loc>
+    
+    <lastmod>2021-07-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://alowree.github.io/2021/06/30/How-to-use-Font-Awesome-in-your-website/</loc>
+    
+    <lastmod>2021-07-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://alowree.github.io/contact/index.html</loc>
+    
+    <lastmod>2021-07-16</lastmod>
     
   </url>
   
@@ -19,13 +68,6 @@
     <loc>https://alowree.github.io/butterfly/index.html</loc>
     
     <lastmod>2021-07-13</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://alowree.github.io/humidifiers/index.html</loc>
-    
-    <lastmod>2021-07-12</lastmod>
     
   </url>
   
@@ -58,20 +100,6 @@
   </url>
   
   <url>
-    <loc>https://alowree.github.io/2021/07/09/About-Tag-Plugins/</loc>
-    
-    <lastmod>2021-07-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://alowree.github.io/2021/07/09/Markdown-Style-Preview/</loc>
-    
-    <lastmod>2021-07-09</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://alowree.github.io/services/index.html</loc>
     
     <lastmod>2021-07-05</lastmod>
@@ -93,30 +121,9 @@
   </url>
   
   <url>
-    <loc>https://alowree.github.io/contact/index.html</loc>
-    
-    <lastmod>2021-07-04</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://alowree.github.io/gallery/index.html</loc>
     
     <lastmod>2021-07-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://alowree.github.io/2021/06/30/How-to-use-Font-Awesome-in-your-website/</loc>
-    
-    <lastmod>2021-07-02</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://alowree.github.io/2021/06/30/Auto-Setting-in-Typora-makes-pictures-missing-in-Pages/</loc>
-    
-    <lastmod>2021-07-01</lastmod>
     
   </url>
   
@@ -137,50 +144,92 @@
 
   <url>
     <loc>https://alowree.github.io/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
+    <loc>https://alowree.github.io/tags/Evaporative-Humidifiers/</loc>
+    <lastmod>2021-07-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://alowree.github.io/tags/Warm-Mist-Humidifiers/</loc>
+    <lastmod>2021-07-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://alowree.github.io/tags/Steam-Vaporizers/</loc>
+    <lastmod>2021-07-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://alowree.github.io/tags/Vaporizer-Humidifiers/</loc>
+    <lastmod>2021-07-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://alowree.github.io/tags/Central-Humidifiers/</loc>
+    <lastmod>2021-07-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://alowree.github.io/tags/Impeller-Humidifiers/</loc>
+    <lastmod>2021-07-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://alowree.github.io/tags/Hexo/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://alowree.github.io/tags/Butterfly/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://alowree.github.io/tags/Markdown/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://alowree.github.io/tags/Font-Awesome/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://alowree.github.io/tags/icon/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://alowree.github.io/tags/iconfont/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -189,14 +238,14 @@
   
   <url>
     <loc>https://alowree.github.io/categories/Web/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://alowree.github.io/categories/Markdown/</loc>
-    <lastmod>2021-07-16</lastmod>
+    <lastmod>2021-07-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
