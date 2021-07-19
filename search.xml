@@ -123,35 +123,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Auto Setting in Typora makes pictures missing in Pages</title>
-    <url>/2021/06/30/Auto-Setting-in-Typora-makes-pictures-missing-in-Pages/</url>
-    <content><![CDATA[<h2 id="Demo-1-Insert-from-local-drive-with-relative-path"><a href="#Demo-1-Insert-from-local-drive-with-relative-path" class="headerlink" title="Demo 1 -Insert from local drive with relative path"></a>Demo 1 -Insert from local drive with relative path</h2><p><code>&#123;% gallery %&#125; ![](src) &#123;% endgallery %&#125;</code></p>
-<div class="justified-gallery"><p><img src="D:\csite\source\_posts\Auto-Setting-in-Typora-makes-pictures-missing-in-Pages\IMG_20160529_181142-1625121524217.jpg" alt=""></p><p><img src="D:\csite\source\_posts\Auto-Setting-in-Typora-makes-pictures-missing-in-Pages\IMG_20160530_203034-1625121524217.jpg" alt="IMG_20160530_203034"></p><p><img src="D:\csite\source\_posts\Auto-Setting-in-Typora-makes-pictures-missing-in-Pages\IMG_20160531_133425-1625121524221.jpg" alt="IMG_20160531_133425"></p>
-          </div>
-<p>Conclusion: Pictures work well in Typora, but are all missing in Page. </p>
-<h2 id="Demo-2-Insert-from-local-drive-with-relative-path"><a href="#Demo-2-Insert-from-local-drive-with-relative-path" class="headerlink" title="Demo 2 -Insert from local drive with relative path"></a>Demo 2 -Insert from local drive with relative path</h2><p><code>![](src)</code></p>
-<p><img src="D:\csite\source\_posts\Auto-Setting-in-Typora-makes-pictures-missing-in-Pages\IMG_20160529_205147-1625180574851.jpg" alt=""></p>
-<p><img src="D:\csite\source\_posts\Auto-Setting-in-Typora-makes-pictures-missing-in-Pages\IMG_20160529_194901-1625180607241.jpg" alt=""></p>
-<p>Conclusion: Pictures work well in Typora, but are all missing in Page. <code>Markdown Image Path does not exists!</code></p>
-<h2 id="Demo-3-Upload-to-external-link-and-use-src-external-link"><a href="#Demo-3-Upload-to-external-link-and-use-src-external-link" class="headerlink" title="Demo 3 -Upload to external link and use src=external link"></a>Demo 3 -Upload to external link and use src=external link</h2><p><code>&#123;% gallery %&#125; ![](external link) &#123;% endgallery %&#125;</code></p>
-<p>uncheck “allow to prioritize the use of relative path”! When copying external ink, the src becomes absolute path. No good. I need the link remains a link! Setting in Typora.</p>
-<p>uncheck “apply the rules to link based pictures”!</p>
-<div class="justified-gallery"><p><img src="https://i.loli.net/2021/07/01/mGh8iuqKTAc93Dr.jpg" alt=""></p><p><img src="https://i.loli.net/2021/07/01/jQO9JSbtUzmTqL5.jpg" alt=""></p><p><img src="https://i.loli.net/2021/07/01/mAtZsVUPSXeMgNx.jpg" alt=""></p>
-          </div>
-<h2 id="Demo-4-Upload-to-external-link-and-use-src-external-link"><a href="#Demo-4-Upload-to-external-link-and-use-src-external-link" class="headerlink" title="Demo 4 -Upload to external link and use src=external link"></a>Demo 4 -Upload to external link and use src=external link</h2><p><code>![](external link)</code></p>
-<p><img src="https://i.loli.net/2021/07/01/mAtZsVUPSXeMgNx.jpg" alt=""></p>
-<p><img src="https://i.loli.net/2021/07/01/jQO9JSbtUzmTqL5.jpg" alt=""></p>
-<p><img src="https://i.loli.net/2021/07/01/mGh8iuqKTAc93Dr.jpg" alt=""></p>
-<p>Now Demo 3 and Demo 4 work properly, each in the way it being designed to be. </p>
-<h2 id="Lesson-Learned"><a href="#Lesson-Learned" class="headerlink" title="Lesson Learned"></a>Lesson Learned</h2><h3 id="Work-Flow-of-Editing-pictures-in-a-Post"><a href="#Work-Flow-of-Editing-pictures-in-a-Post" class="headerlink" title="Work Flow of Editing pictures in a Post"></a>Work Flow of Editing pictures in a Post</h3><p>This setting in Typora may work properly:</p>
-<h3 id="Work-Flow-of-Editing-pictures-in-a-Page"><a href="#Work-Flow-of-Editing-pictures-in-a-Page" class="headerlink" title="Work Flow of Editing pictures in a Page"></a>Work Flow of Editing pictures in a Page</h3><ol>
-<li>Upload the images to external links</li>
-<li>Adjust the setting in Typora by uncheck of two boxes</li>
-<li>Copy external link to <code>![](external link)</code></li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
     <title>How to use icons from Font Awesome 5.x in your website?</title>
     <url>/2021/06/30/How-to-use-Font-Awesome-in-your-website/</url>
     <content><![CDATA[<h2 id="Referencing-Icons"><a href="#Referencing-Icons" class="headerlink" title="Referencing Icons"></a>Referencing Icons</h2><p>First of all, I suspect that the version of embedded Font Awesome to be 5, because New in Font Awesome 5 is the <strong>fas prefix</strong> or <strong>fab prefix</strong>, while Font Awesome 4 uses <strong>fa</strong>. Now let’s see which icons are already available from Font Awesome 5.x as embedded into the Butterfly theme. </p>
