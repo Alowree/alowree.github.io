@@ -3378,15 +3378,6 @@ blockquote footer cite:before {
     transform: scale(0.7);
   }
 }
-#chatra:not(.chatra--expanded) {
-  visibility: hidden !important;
-  width: 1px !important;
-  height: 1px !important;
-  opacity: 0 !important;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)" !important;
-  filter: alpha(opacity=0) !important;
-  pointer-events: none;
-}
 #post-comment .comment-head {
   margin-bottom: 1rem;
 }
@@ -4840,6 +4831,45 @@ span#inline-snow {
   vertical-align: baseline;
   border-radius: 0.1rem;
   background-color: #fffafa;
+}
+span#inline-coolgray {
+  display: inline;
+  padding: 0.2em 0.6em 0.3em;
+  font-size: 90%;
+  font-weight: normal;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.1rem;
+  background-color: #53565a;
+}
+span#inline-red {
+  display: inline;
+  padding: 0.2em 0.6em 0.3em;
+  font-size: 90%;
+  font-weight: normal;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.1rem;
+  background-color: #ef3340;
+}
+span#inline-champagne {
+  display: inline;
+  padding: 0.2em 0.6em 0.3em;
+  font-size: 90%;
+  font-weight: normal;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.1rem;
+  background-color: #fed880;
 }
 .relatedPosts {
   margin-top: 2rem;
