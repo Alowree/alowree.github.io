@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://alowree.github.io/purifiers/index.html</loc>
+    <loc>https://alowree.github.io/posts/48849.html</loc>
     
     <lastmod>2021-08-09</lastmod>
     
   </url>
   
   <url>
-    <loc>https://alowree.github.io/posts/48849.html</loc>
+    <loc>https://alowree.github.io/purifiers/index.html</loc>
     
     <lastmod>2021-08-09</lastmod>
     
@@ -144,6 +144,27 @@
 
   
   <url>
+    <loc>https://alowree.github.io/tags/Hexo/</loc>
+    <lastmod>2021-08-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://alowree.github.io/tags/Butterfly/</loc>
+    <lastmod>2021-08-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://alowree.github.io/tags/Markdown/</loc>
+    <lastmod>2021-08-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://alowree.github.io/tags/Evaporative-Humidifiers/</loc>
     <lastmod>2021-08-09</lastmod>
     <changefreq>daily</changefreq>
@@ -201,27 +222,6 @@
   
   <url>
     <loc>https://alowree.github.io/tags/iconfont/</loc>
-    <lastmod>2021-08-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://alowree.github.io/tags/Markdown/</loc>
-    <lastmod>2021-08-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://alowree.github.io/tags/Hexo/</loc>
-    <lastmod>2021-08-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://alowree.github.io/tags/Butterfly/</loc>
     <lastmod>2021-08-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
