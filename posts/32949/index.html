@@ -1,0 +1,792 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- 谷歌的html标记 updated 2021/7/27--><meta name="google-site-verification" content="mcm2nFATMqDEAgb8C_yA42yWrw4kWVU_FVksCkPAPdg"><!-- 百度的html标记 updated 2021/7/27--><meta name="baidu-site-verification" content="code-kB8uuUROTG"><meta name="viewport" content="width=device-width,initial-scale=1"><title>关于声音的常见度量参数 | FINEQ</title><meta name="keywords" content="分贝,声音"><meta name="author" content="FINEQ"><meta name="copyright" content="FINEQ"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="声压，声强和声功率声压 Sound Pressure声压，$p$，就是大气压受到声波扰动后产生的压强变化，它相当于在标准的大气压强上叠加了一个声波扰动之后，所引起的压强变化。也就是说，空气中有声场时的压强 $p_s$ 与没有声场时的压强 $p_0$ 之差即为声压。 声压的单位是帕斯卡，$Pa$，声压的参考值是 $20\mu Pa$，这个数值表示人耳在 $4000Hz$ 处的平均可听阀值，换句话说，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于声音的常见度量参数">
+<meta property="og:url" content="https://alowree.github.io/posts/32949/index.html">
+<meta property="og:site_name" content="FINEQ">
+<meta property="og:description" content="声压，声强和声功率声压 Sound Pressure声压，$p$，就是大气压受到声波扰动后产生的压强变化，它相当于在标准的大气压强上叠加了一个声波扰动之后，所引起的压强变化。也就是说，空气中有声场时的压强 $p_s$ 与没有声场时的压强 $p_0$ 之差即为声压。 声压的单位是帕斯卡，$Pa$，声压的参考值是 $20\mu Pa$，这个数值表示人耳在 $4000Hz$ 处的平均可听阀值，换句话说，">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/07/01/mAtZsVUPSXeMgNx.jpg">
+<meta property="article:published_time" content="2020-07-07T00:28:31.000Z">
+<meta property="article:modified_time" content="2021-08-18T00:29:09.361Z">
+<meta property="article:author" content="FINEQ">
+<meta property="article:tag" content="分贝">
+<meta property="article:tag" content="声音">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/07/01/mAtZsVUPSXeMgNx.jpg"><link rel="shortcut icon" href="/img/favicon-32x32-1.png"><link rel="canonical" href="https://alowree.github.io/posts/32949/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '关于声音的常见度量参数',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-08-18 08:29:09'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="//at.alicdn.com/t/font_2663193_81cv7cus1jo.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus/lib/tag_plugins.min.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar-1.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">22</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">47</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">7</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-graduation-cap"></i><span> Posts</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Products</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/humidifiers/"><i class="fa-fw iconfont icon-AirHumidifier3x"></i><span> Humidifiers</span></a></li><li><a class="site-page child" href="/purifiers/"><i class="fa-fw iconfont icon-AirPurifier3x"></i><span> Purifiers</span></a></li><li><a class="site-page child" href="/speakers/"><i class="fa-fw iconfont icon-Speaker-"></i><span> Speakers</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/bulletinboard/"><i class="fa-fw fas fa-comment"></i><span> Bulletin Board</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-heart"></i><span> About</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/company/"><i class="fa-fw fas fa-building"></i><span> Company</span></a></li><li><a class="site-page child" href="/team/"><i class="fa-fw fas fa-address-book"></i><span> Team</span></a></li><li><a class="site-page child" href="/services/"><i class="fa-fw fas fa-coffee"></i><span> Services</span></a></li><li><a class="site-page child" href="/cases/"><i class="fa-fw fas fa-suitcase"></i><span> Cases</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/contact/"><i class="fa-fw fas fa-envelope"></i><span> Contact</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://i.loli.net/2021/07/01/mAtZsVUPSXeMgNx.jpg')"><nav id="nav"><span id="blog_name"><!-- a#site-name(href=url_for('/')) #[=config.title]--><a class="blog_title" id="site-name" href="/"> <img src="/img/favicon-32x32-1.png"/></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-graduation-cap"></i><span> Posts</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Products</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/humidifiers/"><i class="fa-fw iconfont icon-AirHumidifier3x"></i><span> Humidifiers</span></a></li><li><a class="site-page child" href="/purifiers/"><i class="fa-fw iconfont icon-AirPurifier3x"></i><span> Purifiers</span></a></li><li><a class="site-page child" href="/speakers/"><i class="fa-fw iconfont icon-Speaker-"></i><span> Speakers</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/bulletinboard/"><i class="fa-fw fas fa-comment"></i><span> Bulletin Board</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-heart"></i><span> About</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/company/"><i class="fa-fw fas fa-building"></i><span> Company</span></a></li><li><a class="site-page child" href="/team/"><i class="fa-fw fas fa-address-book"></i><span> Team</span></a></li><li><a class="site-page child" href="/services/"><i class="fa-fw fas fa-coffee"></i><span> Services</span></a></li><li><a class="site-page child" href="/cases/"><i class="fa-fw fas fa-suitcase"></i><span> Cases</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/contact/"><i class="fa-fw fas fa-envelope"></i><span> Contact</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">关于声音的常见度量参数</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2020-07-07T00:28:31.000Z" title="Created 2020-07-07 08:28:31">2020-07-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-08-18T00:29:09.361Z" title="Updated 2021-08-18 08:29:09">2021-08-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/">信号处理</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word count:</span><span class="word-count">4.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading time:</span><span>17min</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="关于声音的常见度量参数"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="声压，声强和声功率"><a href="#声压，声强和声功率" class="headerlink" title="声压，声强和声功率"></a>声压，声强和声功率</h2><h3 id="声压-Sound-Pressure"><a href="#声压-Sound-Pressure" class="headerlink" title="声压 Sound Pressure"></a>声压 Sound Pressure</h3><p><strong>声压</strong>，$p$，就是大气压受到声波扰动后产生的压强变化，它相当于在标准的大气压强上叠加了一个声波扰动之后，所引起的压强变化。也就是说，空气中有声场时的压强 $p_s$ 与没有声场时的压强 $p_0$ 之差即为声压。</p>
+<p>声压的单位是帕斯卡，$Pa$，声压的参考值是 $20\mu Pa$，这个数值表示人耳在 $4000Hz$ 处的平均可听阀值，换句话说，是人耳在 $4000Hz$ 处可被感知的平均最小声压波动值。</p>
+<p><strong>听阀下限</strong>：要注意，我们这里所说的是，年轻、健康的人耳其听觉的声压<strong>阀值下限</strong>大约是 $2\times 10^{-5} N/m^2$，或者说 $20\mu Pa$，低于这个阀值人耳是无法感知的。最低可听声压点大约位于 $4,000Hz$ ，这是一个由分子热运动所造成的物理极限。 国际上一般公认地将这个阀值下限定义为<strong>参考声压</strong>$p_{ref}$。 </p>
+<p><strong>听阀上限</strong>：对正常的人耳来说，当声源产生的有效声压达到了$60Pa$级别的时候，就会感到疼痛。 为什么要使用有效声压<script type="math/tex">p_{rms}</script>？这是因为，测量的声压是变化的声压<script type="math/tex">p_s</script>与静压强<script type="math/tex">p_0</script>之差，声压的变化时正时负，其平均值为零，所以，平均声压不是一个有用的参量。而人耳对瞬时声压波动也没有响应，但对动态声压的均方根值（$RMS$）有响应，且平均响应时间间隔约为$35ms$ 。因此，声压测量的是<strong>有效声压</strong>$p_{rms}$ 。</p>
+<span id="more"></span>
+<h3 id="声强-Sound-Intensity"><a href="#声强-Sound-Intensity" class="headerlink" title="声强 Sound Intensity"></a>声强 Sound Intensity</h3><p><strong>声强</strong>，$I$，在物理学中指的是，单位时间内通过垂直于声波传播方向的单位面积的<strong>平均声能</strong>。声强用 $I$ 表示，单位为瓦/平方米 $\left(W/{m^2}\right)$。 </p>
+<script type="math/tex; mode=display">
+I = \frac{p_{rms}^2}{\rho\cdot c}</script><p>其中</p>
+<ul>
+<li>$\rho$ 是空气密度，单位是千克/立方米 $\left(kg/m^3\right)$</li>
+<li>$c$ 是声音的速度，单位是米/秒 $\left(m/s\right)$</li>
+<li>$ {\rho\cdot c}$ 的乘积被称为<strong>声阻抗</strong>，是界面上平均有效声压对通过该界面的有效体积速度之比，为复值函数，实部对应声阻，虚部对应声抗。声波传播时引起介质振动需要克服阻力，声阻抗越大，则推动介质所需要的声压就越大，声阻抗越小则所需声压就越小。</li>
+</ul>
+<h3 id="声功率-Sound-Power"><a href="#声功率-Sound-Power" class="headerlink" title="声功率 Sound Power"></a>声功率 Sound Power</h3><p><strong>声功率</strong>，$W$，通常是指声源的声功率，是<strong>声源</strong>在单位时间内发射出的<strong>总能量</strong>。声功率不能直接测量，可用声压法或声强法间接测量得到。 <script type="math/tex">W = \int A I\cdot n\quad dA</script> 其中，$I$ 是声强， $n$ 是单位向量，点乘 $I\cdot n$ 表示与包围面正交的声强。实际工程实现时，通常使用球面积分法。如果声源是理想状态，向四面八方均匀地进行球面传播，那么上面的公式可以进一步写成: <script type="math/tex">W = 4\pi r^2 I</script> 其中，$r$ 是被测球面的半径。 </p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>这一部分，我们按照从“可测量”到“可计算”的逻辑，依次介绍声压，声强和声功率 三个概念。这三个参数的数值都是绝对值，并且可以看出，它们的取值范围数量级跨度比较大。仅以人耳听觉范围来说，从听阀下限 $20\mu Pa$ 至 听阀上限 $60Pa$ ，声压数量级的跨度是$10^6$。人脑的机制并不擅长处理跨度巨大的<strong>线性数值范围</strong>，所以，在实际应用中，人们需要一种新的表述方法来描述这种跨度巨大的动态范围，这就是<strong>分贝</strong>，英文是Decibel，也简写作$dB$。</p>
+<h2 id="分贝-Decibel"><a href="#分贝-Decibel" class="headerlink" title="分贝 Decibel"></a>分贝 Decibel</h2><p><strong>分贝</strong>最初使用是在电信行业，是为了量化长导线传输电报和电话信号时的功率损失而开发出来的。是为了纪念美国电话发明家亚历山大·格雷厄姆·贝尔（Alexander Graham Bell），以他的名字命名的。虽然分贝定义为 1/10 贝尔，但单位“贝尔”（Bel）却很少用。</p>
+<h3 id="分贝的定义"><a href="#分贝的定义" class="headerlink" title="分贝的定义"></a>分贝的定义</h3><p>分贝$dB$ 定义为两个数值比率的对数，这两个数值分别是测量值和参考值（也称为基准值）。在学术界和工程界一般存在两种定义情况。</p>
+<p>一种是<strong>功率之比</strong>的对数： </p>
+<script type="math/tex; mode=display">
+1 dB = 10log_{10}\left(\frac{W}{W_{ref}}\right)</script><p>另一种是<strong>幅值平方之比</strong>的对数： </p>
+<script type="math/tex; mode=display">
+1 dB = 10log_{10}\left(\frac{X^2}{X^2_{ref}}\right) = 20log_{10}\left(\frac{X}{X_{ref}}\right)</script><h3 id="什么时候使用平方的比值？"><a href="#什么时候使用平方的比值？" class="headerlink" title="什么时候使用平方的比值？"></a>什么时候使用平方的比值？</h3><p>度量<strong>功率</strong>的时候，可以直接对功率的比率取对数，那为什么在度量<strong>幅值</strong>的时候，是对幅值平方的比率取对数呢？这是因为，分贝最初是为了量化（长导线传输电报和电话信号时的）<strong>功率损失</strong>而设计出来的，它的标定对象最初就是<strong>功率</strong>。而功率又可以根据物理公式，使用<strong>幅值</strong>标称的参数进行表示，并且功率通常表现为这些个参数的平方。 </p>
+<p>例如，电路的功率：</p>
+<script type="math/tex; mode=display">
+W = UI = U^2/R = I^2 \cdot R</script><p>其中，电压 $U$ 和电流 $I$ 都是以幅值标称的参数，当以它们两个中的任意一个来表示功率的时候，都需要以自身的平方形式出现。 </p>
+<p>再例如，声学中的声功率： </p>
+<script type="math/tex; mode=display">
+W = I \cdot A = \frac{p^2_{rms}}{\rho \cdot c} \cdot A</script><p>其中，声压 $p_{rms}$ 也是以幅值标称的参数，当使用它来表示声功率的时候，也是以自身的平方形式出现。 </p>
+<p>所以，在使用分贝作为相对度量单位的时候，一定要先弄清楚，比较的对象究竟是功率本身还是幅值参数。 </p>
+<p>如果研究对象是<strong>功率</strong>，这时分贝公式为： <script type="math/tex">1 dB = 10log_{10}\left(\frac{W}{W_{ref}}\right)</script> </p>
+<p>如果研究对象是<strong>幅值</strong>，这时分贝公式为： <script type="math/tex">1 dB = 10log_{10}\left(\frac{X^2}{X^2_{ref}}\right) = 20log_{10}\left(\frac{X}{X_{ref}}\right)</script></p>
+<h3 id="±3dB-±6dB"><a href="#±3dB-±6dB" class="headerlink" title="±3dB? ±6dB?"></a>±3dB? ±6dB?</h3><p>如果研究对象为<strong>功率</strong>，当功率以等比数列（2的倍数）增长，则其以分贝为计量形式的数值，即<strong>功率增益的分贝数</strong>，以等差数列（$3dB$）增长； 如果研究对象为<strong>幅值</strong>，当幅值以等比数列（2的倍数）增长，则其以分贝为计量形式的数值，即<strong>幅值增益的分贝数</strong>，以等差数列（$6dB$）增长。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>比率</th>
+<th>比率<br>($2^x$)</th>
+<th>功率增益<br>(dB)</th>
+<th>幅值增益<br>(dB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.0009765625</td>
+<td>$2^{ -10}$</td>
+<td>-30</td>
+<td>-60</td>
+</tr>
+<tr>
+<td>0.001953125</td>
+<td>$2^{  -9}$</td>
+<td>-27</td>
+<td>-54</td>
+</tr>
+<tr>
+<td>0.00390625</td>
+<td>$2^{  -8}$</td>
+<td>-24</td>
+<td>-48</td>
+</tr>
+<tr>
+<td>0.0078125</td>
+<td>$2^{  -7}$</td>
+<td>-21</td>
+<td>-42</td>
+</tr>
+<tr>
+<td>0.015625</td>
+<td>$2^{  -6}$</td>
+<td>-18</td>
+<td>-36</td>
+</tr>
+<tr>
+<td>0.03125</td>
+<td>$2^{  -5}$</td>
+<td>-15</td>
+<td>-30</td>
+</tr>
+<tr>
+<td>0.0625</td>
+<td>$2^{  -4}$</td>
+<td>-12</td>
+<td>-24</td>
+</tr>
+<tr>
+<td>0.125</td>
+<td>$2^{  -3}$</td>
+<td>-9</td>
+<td>-18</td>
+</tr>
+<tr>
+<td>0.25</td>
+<td>$2^{  -2}$</td>
+<td>-6</td>
+<td>-12</td>
+</tr>
+<tr>
+<td>0.5</td>
+<td>$2^{  -1}$</td>
+<td>-3</td>
+<td>-6</td>
+</tr>
+<tr>
+<td>1</td>
+<td>$2^{   0}$</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>$2^{   1}$</td>
+<td>3</td>
+<td>6</td>
+</tr>
+<tr>
+<td>4</td>
+<td>$2^{   2}$</td>
+<td>6</td>
+<td>12</td>
+</tr>
+<tr>
+<td>8</td>
+<td>$2^{   3}$</td>
+<td>9</td>
+<td>18</td>
+</tr>
+<tr>
+<td>16</td>
+<td>$2^{   4}$</td>
+<td>12</td>
+<td>24</td>
+</tr>
+<tr>
+<td>32</td>
+<td>$2^{   5}$</td>
+<td>15</td>
+<td>30</td>
+</tr>
+<tr>
+<td>64</td>
+<td>$2^{   6}$</td>
+<td>18</td>
+<td>36</td>
+</tr>
+<tr>
+<td>128</td>
+<td>$2^{   7}$</td>
+<td>21</td>
+<td>42</td>
+</tr>
+<tr>
+<td>256</td>
+<td>$2^{   8}$</td>
+<td>24</td>
+<td>48</td>
+</tr>
+<tr>
+<td>512</td>
+<td>$2^{   9}$</td>
+<td>27</td>
+<td>54</td>
+</tr>
+<tr>
+<td>1024</td>
+<td>$2^{  10}$</td>
+<td>30</td>
+<td>60</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>分贝，在本质上是一种<strong>对数化</strong>的计量方法。有了分贝这种计量方法，我们可以将数量级跨度较大的等比数列，转化为数量级跨度稍小的等差数列。由上面例子我们可以看到，<strong>功率</strong>从 $2^{-10}$ 至 $2^{10}$ 这样远超亿万级别的一个跨度，转化成分贝表示后，其跨度仅为 $60dB$；<strong>幅值</strong>从 $2^{-10}$ 至 $2^{10}$ 这样远超亿万级别的一个跨度，转化成分贝表示后，其跨度也仅为 $120dB$。在处理跨数量级的数字范围时，显然使用分贝这种计量方法更为方便。</p>
+<h2 id="声功率级，声强级和声压级"><a href="#声功率级，声强级和声压级" class="headerlink" title="声功率级，声强级和声压级"></a>声功率级，声强级和声压级</h2><p>真正理解了关于分贝的基础知识，我们回过头来再看如何使用分贝表示声功率、声强、以及声压，就是非常简单的一件事情了。</p>
+<h3 id="声功率级-Sound-Power-Level"><a href="#声功率级-Sound-Power-Level" class="headerlink" title="声功率级 Sound Power Level"></a>声功率级 Sound Power Level</h3><p><strong>声功率级</strong>，$L_W$，可以定义如下：</p>
+<script type="math/tex; mode=display">
+L_W = 10log_{10}\frac{sound\;power}{reference\;power}\quad(dB)</script><p>一般地，国际公认的<strong>参考声功率</strong>是 $10^{-12}\;W$，这样，上面的公式可以进一步写成：</p>
+<script type="math/tex; mode=display">
+L_W = 10log_{10}W + 120 \quad(dB)</script><p>其中，功率，$W$，单位是瓦。 </p>
+<p>为什么将<strong>参考声功率</strong>设定为 $10^{-12}\;W$ 呢？因为这是我们可以进行测量的最安静的声音所对应的功率数量级别。</p>
+<h3 id="声强级-Sound-Intensity-Level"><a href="#声强级-Sound-Intensity-Level" class="headerlink" title="声强级 Sound Intensity Level"></a>声强级 Sound Intensity Level</h3><p><strong>声强级</strong>，$L_I$，可以定义如下：</p>
+<script type="math/tex; mode=display">
+L_I = 10log_{10}\frac{sound\;intensity}{ref.\;sound\;intensity}\quad(dB)</script><p>一般地，国际公认的参考声强是 $10^{-12}\quad W/m^2$，这样，上面的公式可以进一步写成：</p>
+<script type="math/tex; mode=display">
+L_I = 10log_{10}I + 120 \quad(dB)</script><h3 id="声压级-Sound-Pressure-Level"><a href="#声压级-Sound-Pressure-Level" class="headerlink" title="声压级 Sound Pressure Level"></a>声压级 Sound Pressure Level</h3><p><strong>声压级</strong>，$L_p$，按照上文中介绍的第二种分贝的定义形式，可以写成： </p>
+<script type="math/tex; mode=display">
+L_p = 10log_{10} \frac{p^2_{rms}}{p^2_{ref}}\quad(dB)</script><p>对于任意的声音信号，假设其有效声压记作 <script type="math/tex">p_{rms}</script>，则根据下面公式，我们可以说：相对于参考声压 $p_{ref}$ ，其声压级是 <script type="math/tex">L_p</script> 分贝 $(dB)$。 </p>
+<script type="math/tex; mode=display">
+\begin{align}
+L_p &= 10log_{10} \frac{p^2_{rms}}{p^2_{ref}}\\ 
+&= 20log_{10} \frac{p_{rms}}{p_{ref}}\\
+&= 20log_{10}p_{rms} -\;20log_{10}p_{ref}\\ 
+&= 20log_{10}p_{rms} +\;94\quad(dB)
+\end{align}</script><p>由公式可以看得出来，有效声压 $p_{rms}$将以$1P_a$作为分界点：</p>
+<ul>
+<li><p>当$p_{rms} \geq 1P_a$时，声压级 $L_p$ 将从94分贝的位置往上递增，一直去到痛阀，$130dB$或者更高；</p>
+</li>
+<li><p>当$p_{rms} \leq 1P_a$时，声压级 $L_p$ 将从94分贝的位置向下递减，一直去到人耳的听阀下限，$0dB$。</p>
+</li>
+</ul>
+<h3 id="常见的声音测量工具"><a href="#常见的声音测量工具" class="headerlink" title="常见的声音测量工具"></a>常见的声音测量工具</h3><ul>
+<li>传统的声压计 Sound Level Meter</li>
+<li>智能手机配合下载的 App</li>
+</ul>
+<h3 id="声压水平-声压-声强之对照表"><a href="#声压水平-声压-声强之对照表" class="headerlink" title="声压水平 - 声压 - 声强之对照表"></a>声压水平 - 声压 - 声强之对照表</h3><p>一个标准大气压约等于 $101.3 \times 10^3 Pa$，即 $10^5 Pa$ ，而人耳的<strong>听阀下限</strong> 约为$20\mu Pa$ ，经过换算，这个听阀下限大约等于 $2 \times 10^{-10}$ 个大气压。 与此相对，人耳的<strong>听阀上限</strong>大约是 $60Pa$ 或者 $6 \times 10^{-4}$ 个大气压，声压超过这个上限，人耳会感觉到疼痛。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>声源实例<br>附加距离信息</th>
+<th>声压水平 $L_p$<br>($dB$ SPL)​</th>
+<th>声压 $p_{rms}$<br>$(Pa)$</th>
+<th>声强 $I$<br>$(W/m^2)$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>喷气式飞机，50米</td>
+<td>140</td>
+<td>200</td>
+<td>10</td>
+</tr>
+<tr>
+<td>疼痛阀值</td>
+<td>130</td>
+<td>63.2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>感觉不适阀值</td>
+<td>120</td>
+<td>20</td>
+<td>0.1</td>
+</tr>
+<tr>
+<td>电锯，1米</td>
+<td>110</td>
+<td>6.3</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>迪斯科舞厅，距离音响1米</td>
+<td>100</td>
+<td>2</td>
+<td>0.001</td>
+</tr>
+<tr>
+<td>柴油卡车，10米</td>
+<td>90</td>
+<td>0.63</td>
+<td>0.0001</td>
+</tr>
+<tr>
+<td>繁忙公路的路边，5米</td>
+<td>80</td>
+<td>0.2</td>
+<td>0.000 01</td>
+</tr>
+<tr>
+<td>真空吸尘器，1米</td>
+<td>70</td>
+<td>0.063</td>
+<td>0.000 001</td>
+</tr>
+<tr>
+<td>正常对话，1米</td>
+<td>60</td>
+<td>0.02</td>
+<td>0.000 000 1</td>
+</tr>
+<tr>
+<td>一般的家庭</td>
+<td>50</td>
+<td>0.0063</td>
+<td>0.000 000 1</td>
+</tr>
+<tr>
+<td>安静的图书馆</td>
+<td>40</td>
+<td>0.002</td>
+<td>0.000 000 01</td>
+</tr>
+<tr>
+<td>夜间安静的卧室</td>
+<td>30</td>
+<td>0.000 63</td>
+<td>0.000 000 001</td>
+</tr>
+<tr>
+<td>演播室背景</td>
+<td>20</td>
+<td>0.000 2</td>
+<td>0.000 000 000 1</td>
+</tr>
+<tr>
+<td>远处树叶的唦唦声</td>
+<td>10</td>
+<td>0.000 063</td>
+<td>0.000 000 000 01</td>
+</tr>
+<tr>
+<td>听阀下限</td>
+<td>0</td>
+<td>0.000 02</td>
+<td>0.000 000 000 001</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="从声学到心理声学"><a href="#从声学到心理声学" class="headerlink" title="从声学到心理声学"></a>从声学到心理声学</h2><p>正常人的听觉系统是极为灵敏的，人耳所能感觉的最低声压接近空气分子热运动产生的声压。一般来说，声音从右耳传至左大脑的速度比较快，声音从左耳传至右大脑的速度比较慢。即两耳传递速度不同。或者说，左大脑接收右耳传来的声音要快些，右大脑接收左耳传来的声音要慢些。至于接收语音的情况，两耳也有所不同，但它们辨听元音的能力大体一致。对于辅音，右耳比左耳强一些；听音调也是右耳较有优势。正常人可听声音的频率范围为$16Hz$~$16kHz$，年轻人可听到$20kHz$的声音，而老年人可听到的高频声音要减少到$10kHz$左右。 人类听觉器官对声波的音高、音强、声波的动态频谱具有分析感知能力。人耳对声音的强度和频率的主观感觉，是从响度及音调来体现的。 声压和声强都是客观物理量，声压越高，声音越强；声压越低，声音越弱，但是它们不能完全反映人耳对声音的感觉特性。 人耳对声音的感觉，不仅和声压有关，也和频率有关。一般对高频声音感觉灵敏，对低频声音感觉迟钝，声压级相同而频率不同的声音听起来可能不一样响。为了既考虑到声音的物理量效应，又考虑到声音对人耳听觉的生理效应，把声音的强度和频率用一个量统一起来，人们仿照声压级引出了一个响度级的概念。</p>
+<h3 id="响度级-Loudness-Level"><a href="#响度级-Loudness-Level" class="headerlink" title="响度级 Loudness Level"></a>响度级 Loudness Level</h3><p><strong>响度级</strong>，按人耳对声音的感觉特性，依据声压和频率定出人对声音的主观音响感觉量，称为响度级。取$1000Hz$的纯音作为参考，它的响度级就是它的声压级。举例来说，取$1000Hz$的纯音作为参考，如果它的声压级是$40dB$，它对应的响度级就是40方，如果它的声压级是$60dB$，那响度级就是60方。 方，$Phon$，响度级的单位，是响度的<strong>客观单位</strong>。简单来说，因为响度是一个主观感受量，并且会随频率不同被人耳感知程度不同，所以，将一个声音在$1000Hz$的声压数值，作为该声音响度的<strong>客观度量</strong>。</p>
+<h3 id="响度-Loudness"><a href="#响度-Loudness" class="headerlink" title="响度 Loudness"></a>响度 Loudness</h3><p><strong>响度</strong>，听觉判断声音强弱的属性，声音的强弱叫做响度。响度是人<strong>主观感觉</strong>判断的声音强弱，即声音响亮的程度，根据它可以把声音排成由轻到响的序列。如果一个$1000Hz$的纯音的响度级为 $L$ 方，那么它的<strong>响度</strong>可以表示为： <script type="math/tex">N = 2^{(L - 40)/10}</script> </p>
+<p>宋，$Sone$，响度的单位。 举例来说，如果我们仍然选用$1000Hz$的纯音作为研究对象，其响度级和响度的对应关系如下表所示：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>响度级<br>客观单位：方</th>
+<th>响度<br>主观单位：宋</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>30</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>40</td>
+<td>1</td>
+</tr>
+<tr>
+<td>50</td>
+<td>2</td>
+</tr>
+<tr>
+<td>60</td>
+<td>4</td>
+</tr>
+<tr>
+<td>70</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>这表示响度级每增加10方（$10Phon$），响度增加一倍；响度级每减小10方（$10Phon$），响度减小一半。这样的主观量与客观量之间的幂函数关系，在人对外界刺激的感知中是普遍存在的。这张对照表大约是在表示，响度级或者声压级客观上加/减$10dB$，人们主观听觉到的响度就会翻倍/减半。</p>
+<h3 id="声音度量之比率变化对比表"><a href="#声音度量之比率变化对比表" class="headerlink" title="声音度量之比率变化对比表"></a>声音度量之比率变化对比表</h3><p>主观的感知响度（音量），客观的测量声压（电压），以及理论上计算出来的声强（声功率），多少分贝（dB）的变化对应该度量指标的加倍，减半或四倍变化？ 下面列出了所有不同的比率对照表，这里的“比率”表示声音的度量指标翻了多少倍。   </p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Level Change</th>
+<th>Volume Loudness</th>
+<th>Voltage<br>Sound Pressure</th>
+<th>Acoustic Power<br>Sound Intensity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+60 dB</td>
+<td>64</td>
+<td>1 000</td>
+<td>1 000 000</td>
+</tr>
+<tr>
+<td>+50 dB</td>
+<td>32</td>
+<td>316</td>
+<td>100 000</td>
+</tr>
+<tr>
+<td>+40 dB</td>
+<td>16</td>
+<td>100</td>
+<td>10 000</td>
+</tr>
+<tr>
+<td>+30 dB</td>
+<td>8</td>
+<td>31.6</td>
+<td>1 000</td>
+</tr>
+<tr>
+<td>+20 dB</td>
+<td>4</td>
+<td>10</td>
+<td>100</td>
+</tr>
+<tr>
+<td><strong>+10 dB</strong></td>
+<td>2.0 = double</td>
+<td>3.16 = $\sqrt{10}$</td>
+<td><strong>10</strong></td>
+</tr>
+<tr>
+<td>+6 dB</td>
+<td>1.52 times</td>
+<td>2.0 = double</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>+3 dB</td>
+<td>1.23 times</td>
+<td>1.414 times = $\sqrt{2}$</td>
+<td>2.0 = double</td>
+</tr>
+<tr>
+<td><strong>- - - -</strong> ±0 dB <strong>- - - -</strong></td>
+<td><strong>- - - -</strong> 1.0 <strong>- - - - -</strong></td>
+<td><strong>- - - -</strong> 1.0 <strong>- - - - -</strong></td>
+<td><strong>- - — -</strong> 1.0 <strong>- - - -</strong></td>
+</tr>
+<tr>
+<td>−3 dB</td>
+<td>0.816 times</td>
+<td>0.707 times</td>
+<td>0.5 = half</td>
+</tr>
+<tr>
+<td>−6 dB</td>
+<td>0.660 times</td>
+<td>0.5 = half</td>
+<td>0.25</td>
+</tr>
+<tr>
+<td><strong>−10 dB</strong></td>
+<td>0.5 = half</td>
+<td>0.316</td>
+<td>0.1</td>
+</tr>
+<tr>
+<td>−20 dB</td>
+<td>1/4 = 0.25</td>
+<td>0.100</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>−30 dB</td>
+<td>1/8 = 0.125</td>
+<td>0.031 6</td>
+<td>0.001</td>
+</tr>
+<tr>
+<td>−40 dB</td>
+<td>1/16 = 0.062 5</td>
+<td>0.010 0</td>
+<td>0.000 1</td>
+</tr>
+<tr>
+<td>−50 dB</td>
+<td>1/32 = 0.031 2</td>
+<td>0.003 2</td>
+<td>0.000 01</td>
+</tr>
+<tr>
+<td>−60 dB</td>
+<td>1/64 = 0.015 6</td>
+<td>0.001 0</td>
+<td>0.000 001</td>
+</tr>
+<tr>
+<td><strong>Log. size</strong></td>
+<td><strong>Psycho size</strong></td>
+<td><strong>Field size</strong></td>
+<td><strong>Energy size</strong></td>
+</tr>
+<tr>
+<td><strong>dB change</strong></td>
+<td><strong>Loudness multipl.</strong></td>
+<td><strong>Amplitude multiplier</strong></td>
+<td><strong>Power multiplier</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>响度（音量）的加倍或减半对应的声级变化究竟是$10 dB$还是$6 dB$呢？关于声级和响度之间的联系，学界有各种理论。得到广泛传播的是心理声学先驱史丹利·史密斯·史蒂文斯（Stanley Smith Stevens）的理论，它指出，感知响度的加倍或减半对应$10 dB$的声级差别。理查德·M·沃伦（Richard M. Warren）在上世纪70年代的研究则指出，这个声级差别仅为$6dB$。这意味着声压的翻倍相当于响度的翻倍。心理学家约翰·诺伊霍夫（John G. Neuhoff）发现，与声音下降相比，我们的听力对声音上升更为敏感。对于相同的声级差异，从安静到响亮的响度变化，要比从响亮到安静更为强烈一些。以宋为单位的响度度量方法，反映了已知实验偏差的影响，所以并不能表示刺激和感觉之间的一种基本关系。当消除已知的实验偏差时，响度减半对应于声压水平的减半（$-6 dB$）。因此，确定音量（响度）不应该固守教条上的定义，而应采取更贴近现实的主张：感知音量（响度）的加倍大致等效于声压级$6 dB - 10 dB$的变化。</p>
+<h3 id="等响度曲线"><a href="#等响度曲线" class="headerlink" title="等响度曲线"></a>等响度曲线</h3><p>使用等响实验方法，可以得到一族不同频率、不同声压级的等响度曲线。实验时用$1000Hz$的某一强度（例如$40dB$）的声音为基准，用人耳试听的办法与其它频率（例如$100Hz$）声音进行比较，调节此声音的声压级，使它与$1000Hz$声音听起来响度相同，记下此频率的声压级（例如$50dB$）。再用其它频率试验并记下它们与$1000Hz$声音响度相等的声压级，将这些数据画在坐标上，就得到一条与$1000Hz$、$40dB$声压级等响的曲线。这条曲线用$1000Hz$时的声压级数值来表示它们的响度级值，单位为方，这里就是40方。同样以$1000Hz$其它声压级的声音为基准，进行不同频率的响度比较，可以得出其它的等响度曲线。经过大量试验得到的并由国际标准化组织（ISO）推荐为标准的等响度曲线示于图。 </p>
+<img src="/posts/32949/%E7%AD%89%E5%93%8D%E5%BA%A6%E6%9B%B2%E7%BA%BF.jpg" class="">
+<h3 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h3><p>严格来讲，术语“响度 Loudness”或“音量 Volume”都属于有问题的说法，因为它们都属于心理声学的范畴，而这种个人感觉通常是无法准确定义的。响度，其实可以理解为一种客观物理指标（振幅）的心理关联或者心理映射，除了声压以外，还受其他的参数影响，包括频率，带宽，频谱组成，信息内容，时间结构以及声音信号的持续时间。相同的声音信号所产生的感知响度，不会人人相同，而是因人而异。所以，在科学界或者工程界，交流时应该尽量避免使用心理声学的术语，例如感知响度（Loudness Perception）或者音量（Volume），因为这种主观的声音感觉常常是无法清晰测量的，容易引起歧义。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>[1]Colin H Hansen: <a target="_blank" rel="noopener" href="https://www.who.int/occupational_health/publications/noise1.pdf">FUNDAMENTALS OF ACOUSTICS</a> </p>
+<p>[2]Chris Parker-Jones: <a target="_blank" rel="noopener" href="https://www.parkerjonesacoustics.com/insights/articles/sound-pressure-sound-power">Sound Pressure and Sound Power - what’s the difference?</a> </p>
+<p>[3]thegeeke: <a target="_blank" rel="noopener" href="https://www.instructables.com/id/The-Concept-Of-Sound-Pressure-SPL/">The Concept of Sound Pressure (SPL)</a> </p>
+<p>[4]谭祥军：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzI5NTM0MTQwNA==&amp;mid=2247485338&amp;idx=1&amp;sn=741701e666506ec58d1b0ea311d70800&amp;chksm=ec545ba9db23d2bf1e363e2e25e5a771e368507d9d1b6494264c1dc407b22d25c82b36315e7b&amp;scene=21#wechat_redirect">什么是声波？</a> </p>
+<p>[5]《语音信号处理（第3版）》，韩纪庆，张磊，郑铁然 编著，清华大学出版社，2019-5，ISBN 978-7-302-51760-3 </p>
+<p>[6]sengpielaudio.com: <a target="_blank" rel="noopener" href="http://www.sengpielaudio.com/TableOfSoundPressureLevels.htm">Decibel Table − SPL − Loudness Comparison Chart</a> </p>
+<p>[7]shaniadolphin: <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/25f0139637b7">markdown中公式编辑教程</a></p>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%88%86%E8%B4%9D/">分贝</a><a class="post-meta__tags" href="/tags/%E5%A3%B0%E9%9F%B3/">声音</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/07/01/mAtZsVUPSXeMgNx.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/posts/5230/"><img class="prev-cover" src="https://ftp.bmp.ovh/imgs/2021/07/51c6de962fb70d46.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">Soundfreaq品牌简介</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar-1.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">FINEQ</div><div class="author-info__description">Do What You Love</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">22</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">47</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">7</div></a></div></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/alowree" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:june@fineq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/img/wechat.jpg" target="_blank" title="Wechat"><i class="fab fa-weixin"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title=""><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">We practice Being ethical, respectful, creative, and collaborative. Our culture is built on closely knitted relationships with our customers, suppliers, business partners, employees and our local community since our inception in 2008. We treat all individuals and entities within our business network fairly, with respect, dignity and mutual trust. Being ethical to us means having integrity with a social responsibility mindset to better create brilliant and lasting solutions for everyone associated with our business.</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A3%B0%E5%8E%8B%EF%BC%8C%E5%A3%B0%E5%BC%BA%E5%92%8C%E5%A3%B0%E5%8A%9F%E7%8E%87"><span class="toc-number">1.</span> <span class="toc-text">声压，声强和声功率</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A3%B0%E5%8E%8B-Sound-Pressure"><span class="toc-number">1.1.</span> <span class="toc-text">声压 Sound Pressure</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A3%B0%E5%BC%BA-Sound-Intensity"><span class="toc-number">1.2.</span> <span class="toc-text">声强 Sound Intensity</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A3%B0%E5%8A%9F%E7%8E%87-Sound-Power"><span class="toc-number">1.3.</span> <span class="toc-text">声功率 Sound Power</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-number">1.4.</span> <span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E8%B4%9D-Decibel"><span class="toc-number">2.</span> <span class="toc-text">分贝 Decibel</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E8%B4%9D%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-number">2.1.</span> <span class="toc-text">分贝的定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E4%BD%BF%E7%94%A8%E5%B9%B3%E6%96%B9%E7%9A%84%E6%AF%94%E5%80%BC%EF%BC%9F"><span class="toc-number">2.2.</span> <span class="toc-text">什么时候使用平方的比值？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%C2%B13dB-%C2%B16dB"><span class="toc-number">2.3.</span> <span class="toc-text">±3dB? ±6dB?</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A3%B0%E5%8A%9F%E7%8E%87%E7%BA%A7%EF%BC%8C%E5%A3%B0%E5%BC%BA%E7%BA%A7%E5%92%8C%E5%A3%B0%E5%8E%8B%E7%BA%A7"><span class="toc-number">3.</span> <span class="toc-text">声功率级，声强级和声压级</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A3%B0%E5%8A%9F%E7%8E%87%E7%BA%A7-Sound-Power-Level"><span class="toc-number">3.1.</span> <span class="toc-text">声功率级 Sound Power Level</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A3%B0%E5%BC%BA%E7%BA%A7-Sound-Intensity-Level"><span class="toc-number">3.2.</span> <span class="toc-text">声强级 Sound Intensity Level</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A3%B0%E5%8E%8B%E7%BA%A7-Sound-Pressure-Level"><span class="toc-number">3.3.</span> <span class="toc-text">声压级 Sound Pressure Level</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E5%A3%B0%E9%9F%B3%E6%B5%8B%E9%87%8F%E5%B7%A5%E5%85%B7"><span class="toc-number">3.4.</span> <span class="toc-text">常见的声音测量工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A3%B0%E5%8E%8B%E6%B0%B4%E5%B9%B3-%E5%A3%B0%E5%8E%8B-%E5%A3%B0%E5%BC%BA%E4%B9%8B%E5%AF%B9%E7%85%A7%E8%A1%A8"><span class="toc-number">3.5.</span> <span class="toc-text">声压水平 - 声压 - 声强之对照表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8E%E5%A3%B0%E5%AD%A6%E5%88%B0%E5%BF%83%E7%90%86%E5%A3%B0%E5%AD%A6"><span class="toc-number">4.</span> <span class="toc-text">从声学到心理声学</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%93%8D%E5%BA%A6%E7%BA%A7-Loudness-Level"><span class="toc-number">4.1.</span> <span class="toc-text">响度级 Loudness Level</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%93%8D%E5%BA%A6-Loudness"><span class="toc-number">4.2.</span> <span class="toc-text">响度 Loudness</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A3%B0%E9%9F%B3%E5%BA%A6%E9%87%8F%E4%B9%8B%E6%AF%94%E7%8E%87%E5%8F%98%E5%8C%96%E5%AF%B9%E6%AF%94%E8%A1%A8"><span class="toc-number">4.3.</span> <span class="toc-text">声音度量之比率变化对比表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AD%89%E5%93%8D%E5%BA%A6%E6%9B%B2%E7%BA%BF"><span class="toc-number">4.4.</span> <span class="toc-text">等响度曲线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93-1"><span class="toc-number">4.5.</span> <span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-number">5.</span> <span class="toc-text">参考资料</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/1462967380/" title="Glossaries About Air Purifiers"><img src="https://gitee.com/Alowree/img/raw/master/red_1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Glossaries About Air Purifiers"/></a><div class="content"><a class="title" href="/posts/1462967380/" title="Glossaries About Air Purifiers">Glossaries About Air Purifiers</a><time datetime="2021-08-11T23:20:04.000Z" title="Created 2021-08-12 07:20:04">2021-08-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/3239246065/" title="Git Rookies"><img src="https://i.loli.net/2021/07/01/mGh8iuqKTAc93Dr.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Git Rookies"/></a><div class="content"><a class="title" href="/posts/3239246065/" title="Git Rookies">Git Rookies</a><time datetime="2021-08-03T08:00:30.000Z" title="Created 2021-08-03 16:00:30">2021-08-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/106702426/" title="Github Rookies"><img src="https://i.loli.net/2021/07/01/mGh8iuqKTAc93Dr.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Github Rookies"/></a><div class="content"><a class="title" href="/posts/106702426/" title="Github Rookies">Github Rookies</a><time datetime="2021-08-03T06:52:37.000Z" title="Created 2021-08-03 14:52:37">2021-08-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/30295/" title="Soundfreaq Sound Rise II SFQ-16简介"><img src="https://ftp.bmp.ovh/imgs/2021/07/5c3eede9dfe4b4d1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Soundfreaq Sound Rise II SFQ-16简介"/></a><div class="content"><a class="title" href="/posts/30295/" title="Soundfreaq Sound Rise II SFQ-16简介">Soundfreaq Sound Rise II SFQ-16简介</a><time datetime="2021-07-30T02:52:30.124Z" title="Created 2021-07-30 10:52:30">2021-07-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/373632574/" title="开直通车应该如何出价？"><img src="https://cdn.jsdelivr.net/gh/Justlovesmile/CDN2/post/cover5.JPG" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="开直通车应该如何出价？"/></a><div class="content"><a class="title" href="/posts/373632574/" title="开直通车应该如何出价？">开直通车应该如何出价？</a><time datetime="2021-07-28T00:37:07.000Z" title="Created 2021-07-28 08:37:07">2021-07-28</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By FINEQ</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="Increase font size"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="Decrease font size"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'default',
+      })
+      false && mermaid.init()
+    })
+  }
+}</script><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'kr9Smll5Vl7bbMpMaJew7FbN-gzGzoHsz',
+      appKey: 'n5YBFhzkMELoLWfcgtEY6uG6',
+      placeholder: 'Your kudos and feedback are welcome!',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'en',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: false,
+      path: window.location.pathname,
+      requiredFields: ["nick,mail"],
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script>(function(d, w, c) {
+    w.ChatraID = 'DRu95DAW7uT6nndj6';
+    var s = d.createElement('script');
+    w[c] = w[c] || function() {
+        (w[c].q = w[c].q || []).push(arguments);
+    };
+    s.async = true;
+    s.src = 'https://call.chatra.io/chatra.js';
+    if (d.head) d.head.appendChild(s);
+})(document, window, 'Chatra');
+
+if (true) {
+  var chatBtnFn = () => {
+    var chatBtn = document.getElementById("chat_btn")
+    chatBtn.addEventListener("click", function(){
+      Chatra('openChat')
+    });
+  }
+  chatBtnFn()
+} else {
+  if (true) {
+    function chatBtnHide () {
+      Chatra('hide')
+    }
+    function chatBtnShow () {
+      Chatra('show')
+    }
+  }
+}</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>
