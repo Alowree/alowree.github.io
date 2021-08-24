@@ -1,0 +1,50 @@
+.index-card {
+    margin-top: -10px;
+    padding-top: 20px;
+}
+
+
+
+/*小屏幕下(手机类)的样式*/
+@media only screen and (max-width: 601px) {
+    .container {
+        width: 95%;
+    }
+}
+
+/*中等屏幕下(平板类)的样式*/
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/*大屏幕下(桌面类)的样式*/
+@media only screen and (min-width: 993px) {
+    .container {
+        width: 90%;
+        max-width: 1125px;
+    }
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+}
+
+.index-card .card .card-content {
+    padding: 20px 40px;
+}
+
+.dream {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.dream .title, .music-player .title, .video-player .title {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.center, .center-align {
+    text-align: center;
+}
