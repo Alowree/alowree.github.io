@@ -109,28 +109,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>How to convert your site logo from text to image in Hexo Butterfly</title>
-    <url>/posts/d19045d3/</url>
-    <content><![CDATA[<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>On the upper left corner, the rendered blog name <code>FINEQ</code> is of plain text. For some folks, they may want to use an image rather than a text-based name. In this article we will explore how to achieve the goal and discuss the basics behind the codes. </p>
-<h2 id="Simple-Fix"><a href="#Simple-Fix" class="headerlink" title="Simple Fix"></a>Simple Fix</h2><ul>
-<li>Open file <code>root/themes/butterfly/layout/includes/header/nav.pug</code> and make following changes:</li>
-</ul>
-<p>Before change:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nav#nav</span><br><span class="line">  span#blog_name</span><br><span class="line">    a#site-name(href&#x3D;url_for(&#39;&#x2F;&#39;)) #[&#x3D;config.title]</span><br></pre></td></tr></table></figure>
-<p>After change:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nav#nav</span><br><span class="line">  span#blog_name</span><br><span class="line">    &#x2F;&#x2F; a#site-name(href&#x3D;url_for(&#39;&#x2F;&#39;)) #[&#x3D;config.title]</span><br><span class="line">    a#site-name(href&#x3D;url_for(&#39;&#x2F;&#39;))</span><br><span class="line">      img(src&#x3D;&#39;&#x2F;img&#x2F;logo_39x39.png&#39;)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Put your logo image <code>logo_39x39.png</code> under path <code>root/themes/butterfly/source/img/</code></li>
-<li><code>hexo cl &amp;&amp; hexo g &amp;&amp; hexo s</code></li>
-</ul>
-<p>Merely three steps and you are all set. </p>
-<h2 id="Dig-Further-on-config-title"><a href="#Dig-Further-on-config-title" class="headerlink" title="Dig Further on #[=config.title]"></a>Dig Further on <code>#[=config.title]</code></h2><h2 id="Pug"><a href="#Pug" class="headerlink" title="Pug"></a>Pug</h2><p>npm install pug</p>
-<p>npm install pug-cli -g</p>
-<p><code>pug</code> is a lazy or automatic way of generating HTML codes, using simplified HTML tags.</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] <a href="https://pugjs.org/language/interpolation.html">Pug: Interpolation</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>Glossaries About Air Purifiers</title>
     <url>/posts/1462967380/</url>
     <content><![CDATA[<p>Now that we are in this industry, we need to talk about the jargons and understand the intrinsic meanings behind them just like like a well-trained industrial professional.  If you are new to this area, it’s never too late to get yourself familiar with these terminologies. Or if you are looking to purchase some air purifiers for your home, this post can provide with you the basics to start with. </p>
@@ -210,6 +188,28 @@
 <li>Motor quality</li>
 <li>Safety – no ozone and uses no technology that could introduce contaminants</li>
 </ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>How to convert your site logo from text to image in Hexo Butterfly</title>
+    <url>/posts/d19045d3/</url>
+    <content><![CDATA[<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>On the upper left corner, the rendered blog name <code>FINEQ</code> is of plain text. For some folks, they may want to use an image rather than a text-based name. In this article we will explore how to achieve the goal and discuss the basics behind the codes. </p>
+<h2 id="Simple-Fix"><a href="#Simple-Fix" class="headerlink" title="Simple Fix"></a>Simple Fix</h2><ul>
+<li>Open file <code>root/themes/butterfly/layout/includes/header/nav.pug</code> and make following changes:</li>
+</ul>
+<p>Before change:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nav#nav</span><br><span class="line">  span#blog_name</span><br><span class="line">    a#site-name(href&#x3D;url_for(&#39;&#x2F;&#39;)) #[&#x3D;config.title]</span><br></pre></td></tr></table></figure>
+<p>After change:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nav#nav</span><br><span class="line">  span#blog_name</span><br><span class="line">    &#x2F;&#x2F; a#site-name(href&#x3D;url_for(&#39;&#x2F;&#39;)) #[&#x3D;config.title]</span><br><span class="line">    a#site-name(href&#x3D;url_for(&#39;&#x2F;&#39;))</span><br><span class="line">      img(src&#x3D;&#39;&#x2F;img&#x2F;logo_39x39.png&#39;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Put your logo image <code>logo_39x39.png</code> under path <code>root/themes/butterfly/source/img/</code></li>
+<li><code>hexo cl &amp;&amp; hexo g &amp;&amp; hexo s</code></li>
+</ul>
+<p>Merely three steps and you are all set. </p>
+<h2 id="Dig-Further-on-config-title"><a href="#Dig-Further-on-config-title" class="headerlink" title="Dig Further on #[=config.title]"></a>Dig Further on <code>#[=config.title]</code></h2><h2 id="Pug"><a href="#Pug" class="headerlink" title="Pug"></a>Pug</h2><p>npm install pug</p>
+<p>npm install pug-cli -g</p>
+<p><code>pug</code> is a lazy or automatic way of generating HTML codes, using simplified HTML tags.</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] <a href="https://pugjs.org/language/interpolation.html">Pug: Interpolation</a></p>
 ]]></content>
   </entry>
   <entry>
