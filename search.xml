@@ -104,8 +104,8 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if page.type !&#x3D;&#x3D; &#39;404&#39;</span><br><span class="line">  #body-wrap(class&#x3D;pageType)</span><br><span class="line">    include .&#x2F;header&#x2F;index.pug</span><br><span class="line"></span><br><span class="line">    #indexCard.index-card</span><br><span class="line">      .card</span><br><span class="line">        .card-content</span><br><span class="line">          .dream</span><br><span class="line">            .title.center-align</span><br><span class="line">              i.far.fa-lightbulb</span><br><span class="line">              | &amp;nbsp;&amp;nbsp;&amp;#x6211;&amp;#x7684;&amp;#x68A6;&amp;#x60F3;</span><br><span class="line"></span><br><span class="line">    main#content-inner.layout(class&#x3D;hideAside)</span><br><span class="line">      if body</span><br><span class="line">        div!&#x3D; body</span><br><span class="line">      else</span><br><span class="line">        block content</span><br><span class="line">        if theme.aside.enable &amp;&amp; page.aside !&#x3D;&#x3D; false</span><br><span class="line">          include widget&#x2F;index.pug</span><br><span class="line">    &#x2F;&#x2F; h2 Hello World at bottom of pagination</span><br><span class="line">    - var footerBg &#x3D; theme.footer_bg</span><br><span class="line">    if (footerBg)</span><br><span class="line">      if (footerBg &#x3D;&#x3D;&#x3D; true)</span><br><span class="line">        - var footer_bg &#x3D; bg_img</span><br><span class="line">      else</span><br><span class="line">        - var footer_bg &#x3D; theme.footer_bg.indexOf(&#39;&#x2F;&#39;) !&#x3D;&#x3D; -1 ? &#96;background-image: url(&#39;$&#123;url_for(footerBg)&#125;&#39;)&#96; : &#96;background: $&#123;footerBg&#125;&#96;</span><br><span class="line">    else</span><br><span class="line">      - var footer_bg &#x3D; &#39;&#39;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>Create <code>custom.css</code> under path <code>root/themes/butterfly/source/css/custom.css</code>,  copy all css styles into this file, and save the file.</p>
 <p>Inject <code>custom.css</code> via <code>_config.butterfly.yml</code>  under root directory</p>
-<p>Done. </p>
-<p>Tune it.</p>
+<p>This is not right. Not only <code>index</code>, but all other <code>pages</code> are with this <code>dream</code> card.</p>
+<p>This revision has been Abandoned.</p>
 ]]></content>
   </entry>
   <entry>
@@ -188,6 +188,28 @@
 <li>Motor quality</li>
 <li>Safety – no ozone and uses no technology that could introduce contaminants</li>
 </ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>How to convert your site logo from text to image in Hexo Butterfly</title>
+    <url>/posts/d19045d3/</url>
+    <content><![CDATA[<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>On the upper left corner, the rendered blog name <code>FINEQ</code> is of plain text. For some folks, they may want to use an image rather than a text-based name. In this article we will explore how to achieve the goal and discuss the basics behind the codes. </p>
+<h2 id="Simple-Fix"><a href="#Simple-Fix" class="headerlink" title="Simple Fix"></a>Simple Fix</h2><ul>
+<li>Open file <code>root/themes/butterfly/layout/includes/header/nav.pug</code> and make following changes:</li>
+</ul>
+<p>Before change:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nav#nav</span><br><span class="line">  span#blog_name</span><br><span class="line">    a#site-name(href&#x3D;url_for(&#39;&#x2F;&#39;)) #[&#x3D;config.title]</span><br></pre></td></tr></table></figure>
+<p>After change:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nav#nav</span><br><span class="line">  span#blog_name</span><br><span class="line">    &#x2F;&#x2F; a#site-name(href&#x3D;url_for(&#39;&#x2F;&#39;)) #[&#x3D;config.title]</span><br><span class="line">    a#site-name(href&#x3D;url_for(&#39;&#x2F;&#39;))</span><br><span class="line">      img(src&#x3D;&#39;&#x2F;img&#x2F;logo_39x39.png&#39;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Put your logo image <code>logo_39x39.png</code> under path <code>root/themes/butterfly/source/img/</code></li>
+<li><code>hexo cl &amp;&amp; hexo g &amp;&amp; hexo s</code></li>
+</ul>
+<p>Merely three steps and you are all set. </p>
+<h2 id="Dig-Further-on-config-title"><a href="#Dig-Further-on-config-title" class="headerlink" title="Dig Further on #[=config.title]"></a>Dig Further on <code>#[=config.title]</code></h2><h2 id="Pug"><a href="#Pug" class="headerlink" title="Pug"></a>Pug</h2><p>npm install pug</p>
+<p>npm install pug-cli -g</p>
+<p><code>pug</code> is a lazy or automatic way of generating HTML codes, using simplified HTML tags.</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] <a href="https://pugjs.org/language/interpolation.html">Pug: Interpolation</a></p>
 ]]></content>
   </entry>
   <entry>
@@ -275,28 +297,6 @@
         <tag>icon</tag>
         <tag>iconfont</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>How to convert your site logo from text to image in Hexo Butterfly</title>
-    <url>/posts/d19045d3/</url>
-    <content><![CDATA[<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>On the upper left corner, the rendered blog name <code>FINEQ</code> is of plain text. For some folks, they may want to use an image rather than a text-based name. In this article we will explore how to achieve the goal and discuss the basics behind the codes. </p>
-<h2 id="Simple-Fix"><a href="#Simple-Fix" class="headerlink" title="Simple Fix"></a>Simple Fix</h2><ul>
-<li>Open file <code>root/themes/butterfly/layout/includes/header/nav.pug</code> and make following changes:</li>
-</ul>
-<p>Before change:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nav#nav</span><br><span class="line">  span#blog_name</span><br><span class="line">    a#site-name(href&#x3D;url_for(&#39;&#x2F;&#39;)) #[&#x3D;config.title]</span><br></pre></td></tr></table></figure>
-<p>After change:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nav#nav</span><br><span class="line">  span#blog_name</span><br><span class="line">    &#x2F;&#x2F; a#site-name(href&#x3D;url_for(&#39;&#x2F;&#39;)) #[&#x3D;config.title]</span><br><span class="line">    a#site-name(href&#x3D;url_for(&#39;&#x2F;&#39;))</span><br><span class="line">      img(src&#x3D;&#39;&#x2F;img&#x2F;logo_39x39.png&#39;)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Put your logo image <code>logo_39x39.png</code> under path <code>root/themes/butterfly/source/img/</code></li>
-<li><code>hexo cl &amp;&amp; hexo g &amp;&amp; hexo s</code></li>
-</ul>
-<p>Merely three steps and you are all set. </p>
-<h2 id="Dig-Further-on-config-title"><a href="#Dig-Further-on-config-title" class="headerlink" title="Dig Further on #[=config.title]"></a>Dig Further on <code>#[=config.title]</code></h2><h2 id="Pug"><a href="#Pug" class="headerlink" title="Pug"></a>Pug</h2><p>npm install pug</p>
-<p>npm install pug-cli -g</p>
-<p><code>pug</code> is a lazy or automatic way of generating HTML codes, using simplified HTML tags.</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] <a href="https://pugjs.org/language/interpolation.html">Pug: Interpolation</a></p>
-]]></content>
   </entry>
   <entry>
     <title>What Is the Best Water for Your Humidifier?</title>
