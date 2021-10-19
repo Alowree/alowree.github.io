@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://alowree.github.io/posts/alcor/</loc>
+    
+    <lastmod>2021-10-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://alowree.github.io/speakers/alcor/index.html</loc>
+    
+    <lastmod>2021-10-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://alowree.github.io/speakers/index.html</loc>
+    
+    <lastmod>2021-10-19</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://alowree.github.io/cases/index.html</loc>
     
     <lastmod>2021-10-16</lastmod>
@@ -114,13 +135,6 @@
   </url>
   
   <url>
-    <loc>https://alowree.github.io/speakers/index.html</loc>
-    
-    <lastmod>2021-07-12</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://alowree.github.io/categories/index.html</loc>
     
     <lastmod>2021-06-23</lastmod>
@@ -137,64 +151,64 @@
 
   <url>
     <loc>https://alowree.github.io/</loc>
-    <lastmod>2021-10-16</lastmod>
+    <lastmod>2021-10-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://alowree.github.io/tags/Hexo/</loc>
-    <lastmod>2021-10-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://alowree.github.io/tags/Butterfly/</loc>
-    <lastmod>2021-10-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://alowree.github.io/tags/Evaporative-Humidifiers/</loc>
-    <lastmod>2021-10-16</lastmod>
+    <lastmod>2021-10-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://alowree.github.io/tags/Warm-Mist-Humidifiers/</loc>
-    <lastmod>2021-10-16</lastmod>
+    <lastmod>2021-10-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://alowree.github.io/tags/Steam-Vaporizers/</loc>
-    <lastmod>2021-10-16</lastmod>
+    <lastmod>2021-10-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://alowree.github.io/tags/Vaporizer-Humidifiers/</loc>
-    <lastmod>2021-10-16</lastmod>
+    <lastmod>2021-10-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://alowree.github.io/tags/Central-Humidifiers/</loc>
-    <lastmod>2021-10-16</lastmod>
+    <lastmod>2021-10-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://alowree.github.io/tags/Impeller-Humidifiers/</loc>
-    <lastmod>2021-10-16</lastmod>
+    <lastmod>2021-10-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://alowree.github.io/tags/Hexo/</loc>
+    <lastmod>2021-10-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://alowree.github.io/tags/Butterfly/</loc>
+    <lastmod>2021-10-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -203,7 +217,7 @@
   
   <url>
     <loc>https://alowree.github.io/categories/Hexo/</loc>
-    <lastmod>2021-10-16</lastmod>
+    <lastmod>2021-10-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
