@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://alowree.github.io/company/index.html</loc>
+    
+    <lastmod>2022-07-08</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://alowree.github.io/team/index.html</loc>
     
     <lastmod>2022-02-16</lastmod>
@@ -47,13 +54,6 @@
     <loc>https://alowree.github.io/speakers/big-bang-q1/index.html</loc>
     
     <lastmod>2021-11-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://alowree.github.io/company/index.html</loc>
-    
-    <lastmod>2021-09-14</lastmod>
     
   </url>
   
@@ -158,7 +158,7 @@
 
   <url>
     <loc>https://alowree.github.io/</loc>
-    <lastmod>2022-02-16</lastmod>
+    <lastmod>2022-07-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -166,42 +166,42 @@
   
   <url>
     <loc>https://alowree.github.io/tags/Evaporative-Humidifiers/</loc>
-    <lastmod>2022-02-16</lastmod>
+    <lastmod>2022-07-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://alowree.github.io/tags/Warm-Mist-Humidifiers/</loc>
-    <lastmod>2022-02-16</lastmod>
+    <lastmod>2022-07-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://alowree.github.io/tags/Steam-Vaporizers/</loc>
-    <lastmod>2022-02-16</lastmod>
+    <lastmod>2022-07-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://alowree.github.io/tags/Vaporizer-Humidifiers/</loc>
-    <lastmod>2022-02-16</lastmod>
+    <lastmod>2022-07-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://alowree.github.io/tags/Central-Humidifiers/</loc>
-    <lastmod>2022-02-16</lastmod>
+    <lastmod>2022-07-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://alowree.github.io/tags/Impeller-Humidifiers/</loc>
-    <lastmod>2022-02-16</lastmod>
+    <lastmod>2022-07-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
