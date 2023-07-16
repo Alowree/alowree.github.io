@@ -1,0 +1,5 @@
+@font-face {
+  font-family: logofont;
+  src: url('./fonts/Mokoto_Glitch.otf') format('opentype'),
+    url('./fonts/Mokoto_Glitch.ttf') format('truetype');
+}
